@@ -1,0 +1,276 @@
+
+ <div class="row page-titles">
+      <div class="col-md-6 col-8 align-self-center">
+        <!--<h3 class="text-themecolor m-b-0 m-t-0">Bem Vindo {log}, ao Sistema Agregar</h3>-->
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="javascript:void(0)">INICIO</a></li>
+          <li class="breadcrumb-item active">Agregar (Manual) - <strong>{tipo}</strong></li>
+        </ol>
+      </div>                    
+  </div>
+
+ <div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-block">
+              <div class="row">                
+              <div class="col-lg-6"> 
+                <div class="form_callback">                  
+                </div>   
+                  <form method="post" action="#" id="frmmanualnotas" autocomplete="off">
+                      <input type="hidden" name="act" value="{act}"/>
+                      <input type="hidden" name="cnpjemp" value="{cnpjemp}">
+                    
+
+                        <div class="row">    
+                           <!-- START BLOCK : cfopamanual --> 
+                          <div class="col-lg-4">
+                            <label><strong>CFOP:</strong></label>
+                            <div class="input-group">                               
+                               <span class="input-group-addon fa fa-search"></span>
+                               <input type="text" name="cfop" id="cfop" required class="form-control"  />
+                               <input type="hidden" name="idcfop" id="idcfop" data-tipo="" required   />                                 
+                           </div>
+                          </div>
+                          <div class="col-lg-8">
+                            <label><strong>Cliente/Fornecedor:</strong></label>
+                            <div class="input-group">                               
+                              <span class="input-group-addon fa fa-search"></span>
+                              <input type="text" name="clifor" id="clifor" required class="form-control span4"  />
+                              <input type="hidden" name="idclifor" id="idclifor" data-tipo="" required   />                                 
+                          </div>
+                          </div>
+                          <!-- END BLOCK : cfopamanual -->
+                          <div class="col-lg-4 hide">
+                            <label><strong>Entrada/Saída</strong></label>
+                            <div class="input-group">
+                              <span class="input-group-addon fa fa-list"></span>
+                                <select name="es" class="form-control">
+                                  <option value="">Selecione</option>
+                                  <option value="E">ENTRADA</option>
+                                  <option value="S">SAÍDA</option>
+                                </select>
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <label><strong>Número Nota:</strong></label>
+                            <div class="input-group">
+                              <span class="input-group-addon fa fa-circle"></span>
+                              <input class="form-control text-right" id="numero_nota"  name="numero_nota" value="" style="width: 90px;" type="text">
+                            </div>
+                          </div> 
+                          <div class="col-lg-4 hidetipo hide">
+                            <label><strong>Data Emissão:</strong></label>
+                            <div class="input-group">
+                              <span class="input-group-addon fa fa-calendar"></span>
+                              <input class="form-control text-right" id="dataemiss"  name="dataemiss" value="" type="text" style="width: 90px;">
+                            </div>  
+                          </div>     
+                          <div class="hidetipo hide row col-lg-12">  
+                                                                    
+                            <!-- START BLOCK : cfopalteracao --> 
+                          <div class="col-lg-12">
+                              <label><strong>Cliente/Fornecedor:</strong></label>
+                              <div class="input-group">                               
+                                <span class="input-group-addon fa fa-search"></span>
+                                <input type="text" name="clifor" id="clifor" required class="form-control span4"  />
+                                <input type="hidden" name="idclifor" id="idclifor" required   />                                 
+                            </div>
+                          </div> 
+                         <!-- END BLOCK : cfopalteracao -->
+
+                        <div class="col-lg-4 tpentrada">
+                          <label><strong>Tipo</strong></label>
+                          <div class="input-group">
+                            <span class="input-group-addon fa fa-list"></span>
+                            <select name="tipo" class="form-control">
+                              <option value="">Selecione</option>
+                              <option value="V">VIVO</option>
+                              <option value="R">RENDIMENTO</option>
+                              <!--<option value="A">AMBOS</option>-->                            
+                            </select>
+                          </div>
+                        </div>
+
+
+                        <div class="col-lg-4 tpentrada">
+                          <label><strong>GTA:</strong></label>
+                           <div class="input-group">
+                            <span class="input-group-addon fa fa-circle"></span>
+                            <input class="form-control text-right" id="gta"  name="gta" value="" style="width: 90px;" type="text">
+                          </div>
+                        </div>
+
+                        <div class="col-lg-4 tpentrada">
+                          <label><strong>Condenas</strong></label>
+                          <div class="input-group">
+                            <span class="input-group-addon fa fa-list"></span>
+                            <select name="condenas" class="form-control">
+                              <option value="">Selecione</option>
+                              <option value="S">SIM</option>
+                              <option value="N">NÃO</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <div class="col-lg-4 tpentrada">
+                            <label><strong>Tipo Abate</strong></label>
+                            <div class="input-group">
+                            <span class="input-group-addon fa fa-list"></span>
+                              <select name="abate" class="form-control">
+                                <option value="">Selecione</option>
+                                <option value="P">PRÓPRIO</option>
+                                <option value="T">TERCEIROS</option>
+                              </select>
+                            </div>
+                        </div> 
+
+                        <div class="col-lg-4 tpentrada">
+                          <label><strong>Data Abate:</strong></label>
+                          <div class="input-group">
+                            <span class="input-group-addon fa fa-calendar"></span>
+                            <input class="form-control text-right" id="dataabate"  name="dataabate" value="" type="text" style="width: 90px;">
+                          </div>
+                        </div>
+                          <!-- START BLOCK : cfopalteracao --> 
+                          <div class="col-lg-12">
+                              <label><strong>CFOP:</strong></label>
+                              <div class="input-group">                               
+                                <span class="input-group-addon fa fa-search"></span>
+                                <input type="text" name="cfop" id="cfop" required class="form-control"  />
+                                <input type="hidden" name="idcfop" id="idcfop" required   />                                 
+                            </div>
+                          </div>
+                        <!-- END BLOCK : cfopalteracao -->
+                        
+                           <div class="col-lg-4 sosaida hide">
+                            <label><strong>Valor Icms:</strong></label>
+                            <div class="input-group">
+                              <span class="input-group-addon fa fa-usd"></span>
+                              <input class="form-control text-right"  id="valoricms" name="valoricms" value=""  type="text">
+                            </div>
+                           </div>
+                                            
+                          <div class="col-lg-4 sosaida hide">
+                            <label><strong>Valor Icms Subs:</strong></label>
+                            <div class="input-group">
+                              <span class="input-group-addon fa fa-usd"></span>
+                              <input class="form-control text-right"  id="valoricmssubs" name="valoricmssubs" value="" type="text">
+                            </div>
+                          </div>
+
+                        </div>                    
+
+                      </div>
+
+                     <input type="hidden" id="subtotalprodnfe" name="subtotalprodnfe" value="0.00"/>
+                   </form>
+                     
+                  </div> 
+                  
+                  <div class="col-lg-6 b-l hidetipo hide">
+                    <form id="frmmovimentacao">
+                      <input type="hidden" name="act" id="actdados" value="pegadados"/>
+                       <div class="row">  
+                        <div class="col-lg-12">
+                           <label><strong>Produto:</strong></label>
+                           <div class="input-group">                               
+                             <span class="input-group-addon fa fa-search"></span>
+                             <input type="text" name="produto" id="produto" required class="form-control"  />
+                             <input type="hidden" name="idproduto" id="idproduto" required />                                 
+                          </div>
+                        </div>
+
+                        <div class="col-lg-3 tpsaida">
+                          <label><strong>Peças:</strong></label>
+                          <div class="input-group">
+                            <span class="input-group-addon fa fa-asterisk"></span>
+                            <input class="form-control" id="pecas" name="pecas" type="text">
+                          </div>
+                       </div>
+
+                       <div class="col-lg-3 tpentrada">
+                          <label><strong>Qtd. Cabeça:</strong></label>
+                          <div class="input-group">
+                            <span class="input-group-addon fa fa-asterisk"></span>
+                            <input class="form-control" id="cabeca" name="cabeca" type="text">
+                          </div>
+                      </div>
+
+                        <div class="col-lg-3">
+                          <label><strong>Quantidade:</strong></label>
+                          <div class="input-group">
+                            <span class="input-group-addon fa fa-usd"></span>
+                            <input class="form-control text-right" id="qtd" name="qtd" type="text">
+                          </div>
+                        </div>
+
+                       
+
+                       <div class="col-lg-4">
+                        <label><strong>Preço Quilo:</strong></label>
+                        <div class="input-group">
+                          <span class="input-group-addon fa fa-usd"></span>
+                          <input class="form-control text-right" id="precoquilo" name="precoquilo" type="text">
+                        </div>
+                      </div> 
+
+                      <div class="col-lg-4">
+                        <label><strong>Total:</strong></label>
+                        <div class="input-group">
+                          <span class="input-group-addon fa fa-usd"></span>
+                          <input class="form-control text-right" id="subtotals" name="subtotals" disabled type="text">
+                          <input type="hidden" id="subtotal"/>
+                        </div>
+                     </div>
+
+                     <div class="col-lg-3">
+                     <label></label>                        
+                      <button class="btn btn-block btn-warning" type="submit">
+                      <i class="fa fa-floppy-o fa-1x" aria-hidden="true"></i><br/>ADICIONAR
+                       </button>                           
+                    </div>
+
+                     </div>
+                    </form>
+                      <form id="frmmovimentacaoprod">
+                       <table id="dyntable_movim" class="display nowrap table table-hover table-striped table-bordered dataTable">
+                        <thead>
+                        <tr>
+                          <th>Produto</th>                
+                          <th style="text-align:center;">Peça</th>
+                          <th style="text-align:center;">Quantidade</th>
+                          <th style="text-align:right;">Preço Quilo</th> 
+                          <th style="text-align:right;">Total</th>
+                          <th style="text-align:center;">Ação</th>                         
+                        </tr>
+                        </thead>
+                        <tbody>
+
+
+                        </tbody>
+                        <tfoot>
+                        <tr>
+                          <th></th>
+                          <td></td>
+                          <td></td>
+                          <td style="text-align:right;"><b>Sub total</b></td>
+                          <td style="text-align:right; font-size:18px;"><b class="totsubtotal">0.00</b></td>
+                          <td></td>
+                        </tr>
+                        </tfoot>
+                      </table>
+                     
+                    </form>
+
+                    <button class="btn btn-large btn-block btn-success" type="button" id="finaliza"><i class="fa fa-check-circle" aria-hidden="true"></i><br/>FINALIZAR</button> 
+
+                  </div>
+                </div>
+              
+            </div>
+        </div>
+    </div>
+</div>
+
+                

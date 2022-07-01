@@ -1,0 +1,189 @@
+﻿<div class="container" style="padding:0px;margin-top: 34px;">
+        <div class="row">
+            <h3 class="span12">Posto #{codigo}</h3>
+            <div class="span6">
+            	<div class="mostramovimentacao">
+            	<form action="../php/postolivrodetalhe-exec.php" id="frmmocimentacoeslivro">
+                    <input type="hidden" name="act" value="inserir"/>
+                    <input type="hidden" name="id" value="{codigo}"/>
+                    <div class="btn-group" data-toggle="buttons-radio">
+                      <button type="button" id="filtro2" class="btn btnfiltro active">Nome</button>
+                      <button type="button" id="filtro1" class="btn btnfiltro">Telefone</button>                      
+                      <button type="button" id="filtro3" class="btn btnfiltro">Fantasia</button>
+                    </div>
+                    <div class="input-prepend">
+                      <label><strong>Cliente:</strong></label>
+                      <span class="add-on fa fa-search"></span>
+                      <input name="cliente" type="text" class="form-control span5" id="xcliente" required autofocus value=""/>
+                      <input type="hidden" name="idcliente" id="idcliente"/>
+                      <input type="hidden" name="filtrocli" id="filtrocli" value="1"/>                       
+                    </div>
+                    
+                    <div class="input-prepend">
+                      <label><strong>Produto:</strong></label>
+                      <span class="add-on fa fa-search"></span>
+                      <input name="produto" type="text" class="form-control span5" id="produto" required value=""/>
+                      <input type="hidden" name="idproduto" id="idproduto"/>                     
+                      <button class="btn" type="button" id="opencod">Go!</button>
+                    </div>
+                    
+                    <div class="input-prepend">
+                        <label><strong>Quantidade:</strong></label>
+                        <span class="add-on fa fa-asterisk"></span>
+                        <input class="span1" id="quantidade" name="quantidade" type="text">
+                     </div>
+                    
+                    <div class="input-prepend">
+                        <label><strong>Valor:</strong></label>
+                        <span class="add-on fa fa-usd"></span>
+                        <input class="span1 text-right" id="valor" name="valor" type="text">
+                     </div>
+                     
+                     <div class="input-prepend">
+                        <label><strong>Total:</strong></label>
+                        <span class="add-on fa fa-usd"></span>
+                        <input class="span1 text-right" id="subtotals" name="subtotals" disabled type="text">
+                        <input type="hidden" id="subtotal"/>
+                     </div>
+                     <br/>
+                    <div style="margin-right: 66px;">
+                        <button class="btn btn-large btn-block btn-warning" type="submit"><i class="fa fa-floppy-o fa-1x" aria-hidden="true"></i><br/>ADICIONAR</button>                           
+                    </div>
+                    <input type="hidden" id="subtotalprodnfe" name="subtotalprodnfe" value="0.00"/>
+				</form>
+            </div>
+            
+            <div class="mostraformapagamento hide">
+            	<form action="" class="formName">
+					<input type="hidden" name="act" value="inserir"/>
+					<input type="hidden" name="idpedido" id="idpedido" value="'+data.pedido[0].cod+'"/>
+					<input type="hidden" name="totalpedido" id="totalpedido" value="'+data.pedido[0].total+'"/>
+					<div class="input-prepend span">
+						<label><strong>Forma Pagamento:</strong></label>	        
+						<span class="add-on fa fa-list"></span>
+						<select  name="formpagto" id="formpagto" required class="form-control">
+						<option value="">Selecione</option>
+						</select>
+					</div>
+					
+						<div class="input-prepend span">
+							<label><strong>Valor:</strong></label>
+							<span class="add-on fa fa-usd"></span>
+							<input class="span1 text-right" id="valorpagto" name="valorpagto" value="'+data.pedido[0].total+'" required type="text">
+						 </div>
+					
+						  <div class="input-prepend span">
+								<label><strong>Troco</strong></label>
+								<span class="add-on fa fa-usd"></span>
+								<input class="span1 text-right" id="troco" disabled name="troco" value="0" type="text">
+						   </div>
+					
+					<table id="dyntable_pagtos" class="table table-hover">
+							  <thead>
+								<tr>
+								  <th>Produto</th>
+								  <th style="text-align:right;">Valor Unitario</th>
+								</tr>
+							  </thead>
+							  <tbody>
+							
+							  </tbody>
+							  <tfoot>
+								<tr>
+								  <td style="text-align:right;"><b>Sub total</b></td>
+								  <td style="text-align:right; font-size:18px; padding: 0px 10px;"><b class="totsubtotalpagto">0.00</b></td>
+								</tr>
+							  </tfoot>
+							</table>
+							<input type="hidden" name="totsubtotalpagto" id="totsubtotalpagto" value="0,00"/>
+							<button class="btn btn-block btn-primary" id="sbmitfinal" type="submit">SALVAR</button>	
+					</form>
+                
+                
+            
+            </div>
+            
+                <div class="mostrafinalizado hide" align="center">
+                    <h3><strong>Compra concluida com Sucesso :D</strong></h3>
+                    <img src="../images/sucess.png"/>                
+                </div>
+            
+            </div>
+            
+            <div class="span5">
+            	<table id="dyntable_movim" class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th>Produto</th>
+                      <th style="text-align:center;">Quantidade</th>
+                      <th style="text-align:right;">Valor Unitario</th>
+                      <th style="text-align:right;">Total</th>          
+                    </tr>
+                  </thead>
+                  <tbody>
+                    
+                  <tr class="nd">
+                      <td colspan="4" align="center" style="text-align:center; background:#D7D2D2; font-size:12px;">Não a dados inseridos</td>
+                   </tr>
+                    
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <th></th>
+                      <td></td>
+                      <td style="text-align:right;"><b>Sub total</b></td>
+                      <td style="text-align:right; font-size:18px; padding: 0px 10px;"><b class="totsubtotal">0.00</b></td>
+                    </tr>
+                  </tfoot>
+                </table>
+                
+                <div align="center">
+                	 <button class="btn btn-large btn-block btn-success" type="button" id="finaliza"><i class="fa fa-check-circle" aria-hidden="true"></i><br/>FINALIZAR (F8)</button>    
+                </div>
+                
+            </div>
+                  
+        </div>        
+    </div>
+    
+ <div id="dialog-search" title="PESQUISAR PRODUTO">
+                        
+                        
+	<div id="dataTable">
+
+		<div class="ui-grid ui-widget ui-widget-content ui-corner-all">
+
+			<div class="ui-grid-header ui-widget-header ui-corner-top clearfix">
+
+				<div class="header-left">
+					<!-- Left side of table header -->
+				</div>
+
+					<div class="header-right">
+						
+							Pesquisa: <input style="width:150px;" id="searchData" type="text" class="round">
+						
+					</div>
+				</div>
+			<form action=""  method="get">
+			<table class="ui-grid-content ui-widget-content cStoreDataTable" id="cStoreDataTable" style="width: 100%;">
+				<thead>
+					<tr>						
+						<th class="ui-state-default">Codigo</th>
+						<th class="ui-state-default">Descrição</th>						
+						<th class="ui-state-default">VALOR</th>
+					</tr>
+				</thead>
+				<tbody id="results"></tbody>
+			</table>
+			</form>
+			<div class="ui-grid-footer ui-widget-header ui-corner-bottom">
+
+			</div>
+		</div>
+	</div>
+
+
+</div>  
+  
+ 

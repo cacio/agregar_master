@@ -1,0 +1,61 @@
+﻿<div class="container">
+  <div class="row">
+    <h2>Lista Movimentação</h2>
+    <br/>
+    <a href="../php/cadastro-movimentacao.php" class="btn btn-primary btn-rounded">Cadastrar Movimentação</a>
+	<button type="button" class="btn btn-primary" data-toggle="popover" data-placement="bottom" data-content="<form action='#' method='post' id='frmrecibo'>
+	<input type='hidden' name='act' value='inserir2'/>
+	<input id='numero' name='numero' value='{proxcod}' type='hidden'>
+	<input id='tipo' name='tipo' value='S' type='hidden'>
+    <input id='quantidade' name='quantidade' value='1' type='hidden'>
+	 <div class='input-prepend'>
+		<label><strong>Recebi(emos) de:</strong></label>
+		<span class='add-on icon-terminal'></span>
+		<input class='span4' id='nome' name='nome' type='text'>
+	 </div><br/>
+	 <div class='input-prepend'>
+		<label><strong>Valor:</strong></label>
+		<span class='add-on icon-usd'></span>
+		<input class='span2' id='valor' name='valor' type='text'>
+	 </div><br/>
+	 <div class='input-prepend'>
+		<label><strong>Referente:</strong></label>	
+		<textarea name='obs' class='span5'></textarea>
+	 </div>
+     <button class='btn btn-block btn-primary' type='submit'>Gerar</button>
+</form>" title="" data-html="true" data-original-title="Recibo:"><i class="icon-file"></i> Recibo</button>
+    <table id="dyntable" class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Numero</th>
+          <th style="text-align:center;">Data</th>
+          <th style="text-align:center;">Quantidade</th>
+          <th style="text-align:center;">TIPO</th>
+          <th style="text-align:right;">Valor Unitario</th>
+          <th style="text-align:right;">Total</th>          
+          <th style="text-align:center;">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <!-- START BLOCK : listar -->
+        
+        <tr id="{numero}">
+            <td>{numero}</td>
+            <td style="text-align:center;">{data}</td>
+            <td style="text-align:center;">{quanti}</td>
+            <td style="text-align:center;">{tipo}</td>
+            <td style="text-align:right;">{vlunit}</td> 
+            <td style="text-align:right;">{total}</td>            
+            <td  style="text-align:center;">
+            <a href="#" id="deletemovim" class="deletemovim"><span class="icon-remove icon-2x"></span></a> 
+            <a href="../php/atualizar-movimentacao.php?id={numero}"><span class="icon-pencil icon-2x"></span></a></td>          
+        </tr>
+        
+        <!-- END BLOCK : listar -->
+        
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="print"></div>

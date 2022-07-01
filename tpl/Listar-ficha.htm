@@ -1,0 +1,130 @@
+﻿<div class="container">
+            <div class="row">
+<h2>Lista Fichas</h2>
+
+<br/>
+
+<a href="../php/cadastro-ficha.php" class="btn btn-primary btn-rounded">Cadastrar Ficha</a>
+<button type="button" class="btn btn-primary btn-rounded" id="geratermo">Gera Termo</button>
+<br/>
+
+<br/>
+
+<ul class="nav nav-tabs" id="myTab">
+  <li class="active"><a href="#ativo">ATIVOS</a></li>
+  <li><a href="#excluido">EXCLUIDOS</a></li>
+ 
+</ul>
+ <div class="print"></div>
+<div class="tab-content">
+  <div class="tab-pane active" id="ativo">
+
+  <table id="dyntable" class="table table-bordered">
+
+       <thead>
+
+        <tr>
+            <th><input type="checkbox" id="selecionarTodos"></th>
+            <th>Codigo</th>
+            <th >Nome</th>
+            <th>Endereço</th>
+            <th>Bairro</th>
+            <th>Cidade</th>
+            <th>Telefone</th>
+            <th>Celular</th>
+             <th>Categoria</th>
+            <th>Valor da mensalidade</th>
+            <th>Ação</th>
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+     <!-- START BLOCK : ficha --> 
+
+        <tr id="{codigo}" class="gradeA">
+            <td><input type="checkbox" name="id[]" value="{codigo}" class="cficha"></td>
+            <td>{codigo}</td>
+            <td>{nome}</td>
+            <td>{endereco}</td>
+            <td>{bairro}</td>
+            <td>{cidade}</td>
+            <td>{telefone}</td>
+            <td>{celular}</td>
+            <td>{cat_nome}</td>
+            <td>{vlmensalidade}</td>          
+            <td  class="centeralign">
+			<!-- START BLOCK : per -->
+            <a href="#" id="deleteficha" class="deleteficha"><span class="icon-remove icon-2x"></span></a>
+
+            <a href="../php/atualizar-ficha.php?id={codigo}"><span class="icon-pencil icon-2x"></span></a></td>
+			<!-- END BLOCK : per -->
+            
+
+        </tr>
+
+      <!-- END BLOCK : ficha -->
+
+    </tbody>
+
+</table>
+  
+  
+  
+  </div>
+  <div class="tab-pane" id="excluido">
+	<table id="dyntable_ex" class="table table-bordered">
+
+       <thead>
+
+        <tr>
+            <th>Codigo</th>
+            <th >Nome</th>
+            <th>Endereço</th>
+            <th>Bairro</th>
+            <th>Cidade</th>
+            <th>Telefone</th>
+            <th>Celular</th>
+             <th>Categoria</th>
+            <th>Valor da mensalidade</th>
+            <th>Ação</th>
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+     <!-- START BLOCK : fichas --> 
+
+        <tr id="{codigos}" class="gradeA">
+            <td>{codigos}</td>
+            <td>{nomes}</td>
+            <td>{enderecos}</td>
+            <td>{bairros}</td>
+            <td>{cidades}</td>
+            <td>{telefones}</td>
+            <td>{celulars}</td>
+            <td>{cat_nomes}</td>
+            <td>{vlmensalidades}</td>          
+            <td  class="centeralign">
+			<!-- START BLOCK : pers -->
+            <a href="#" id="deleteficha" class="deleteficha"><span class="icon-remove icon-2x"></span></a>
+
+            <a href="../php/atualizar-ficha.php?id={codigos}"><span class="icon-pencil icon-2x"></span></a></td>
+			<!-- END BLOCK : pers -->
+            
+
+        </tr>
+
+      <!-- END BLOCK : fichas -->
+
+    </tbody>
+
+</table>
+  </div>
+</div>
+
+
+</div>
+</div>

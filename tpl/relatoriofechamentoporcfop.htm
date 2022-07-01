@@ -1,0 +1,125 @@
+<table class="table">
+
+    <thead>
+        <tr>
+            <th>ENTRADAS</th>
+            <th></th>
+            <th>R$ Base Crédito</th>
+            <th>R$ do Crédito</th>
+            <th {hide}></th>
+            <th {hide}></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        
+        <!-- START BLOCK : listcfop -->
+        
+        <tr style="background: #dcdcdc;">
+            <td class="text-dt-border-2 font-weight-bold-500 text-center">{codcfop}</td>
+            <td class="text-dt-border-2 font-weight-bold-500">{Nome}</td>
+             <!-- START BLOCK : totcfop -->
+            <td class="text-dt-border-2 font-weight-bold-500 text-right">{tot_base}</td>
+            <td class="text-dt-border-2 font-weight-bold-500 text-right">{tot_cred}</td>
+             <!-- END BLOCK : totcfop -->
+            <td class="text-center text-dt-border-2 font-weight-bold-500" style="font-size: 15px; {hide2}">Perc.</td>
+            <td class="text-center text-dt-border-2 font-weight-bold-500" style="font-size: 9px; {hide2}">Código<br/>Secretaria</td>
+        </tr>
+
+        <!-- START BLOCK : lista -->
+        <tr {hide}>
+            <td class="text-center">{xp}</td>
+            <td>{descprod}</td>
+            <td class="text-right">{base}</td>
+            <td class="text-right">{credito}</td>
+            <td {hide} class="text-center">{perc}</td>
+            <td {hide} class="text-center">{cod_secretaria}</td>
+        </tr>
+        <!-- END BLOCK : lista -->
+    <!-- END BLOCK : listcfop -->
+
+    </tbody>
+
+    <tfoot>
+        <!-- START BLOCK : total -->
+        <tr style="background: #dcdcdc;">
+            <td class="text-dt-border-2"></td>
+            <td class="text-dt-border-2 font-weight-bold-500">Valor total apuração ENTRADAS</td>
+            <td class="text-dt-border-2 font-weight-bold-500 text-right">{tot_base_cfop}</td>
+            <td class=" text-dt-border-2 font-weight-bold-500 text-right">{tot_cred_cfop}</td>
+            <td class="text-dt-border-2" {hide}></td>
+            <td class="text-dt-border-2" {hide}></td>
+        </tr>
+        <!-- END BLOCK : total -->
+    </tfoot>
+
+</table>
+
+
+<table class="table">
+
+    <thead>
+        <tr>
+            <th>SAIDA</th>
+            <th></th>
+            <th>R$ Base Crédito</th>
+            <th>R$ do Crédito</th>
+            <th {hide}></th>
+            <th {hide}></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        
+        <!-- START BLOCK : listcfop2 -->
+        
+        <tr style="background: #dcdcdc;">
+            <td class="text-dt-border-2 font-weight-bold-500 text-center">{codcfop2}</td>
+            <td class="text-dt-border-2 font-weight-bold-500">{Nome2}</td>
+             <!-- START BLOCK : totcfop2 -->
+            <td class="text-dt-border-2 font-weight-bold-500 text-right">{tot_base1}</td>
+            <td class="text-dt-border-2 font-weight-bold-500 text-right">{tot_cred1}</td>
+             <!-- END BLOCK : totcfop2 -->
+            <td class="text-center text-dt-border-2 font-weight-bold-500" style="font-size: 15px; {hide2}">Perc.</td>
+            <td class="text-center text-dt-border-2 font-weight-bold-500" style="font-size: 9px; {hide2}">Código<br/>Secretaria</td>
+        </tr>
+
+        <!-- START BLOCK : lista2 -->
+        <tr {hide}>
+            <td class="text-center">{xp2}</td>
+            <td>{descprod}</td>
+            <td class="text-right">{base1}</td>
+            <td class="text-right">{credito1}</td>
+            <td class="text-center" {hide}>{perc}</td>
+            <td class="text-center" {hide}>{cod_secretaria}</td>
+        </tr>
+        <!-- END BLOCK : lista2 -->
+    <!-- END BLOCK : listcfop2 -->
+
+    </tbody>
+
+    <tfoot>
+        <!-- START BLOCK : total1 -->
+        <tr style="background: #dcdcdc;">
+            <td class="text-dt-border-2"></td>
+            <td class="text-dt-border-2 font-weight-bold-500">Valor total apuração SAIDA</td>
+            <td class="text-dt-border-2 font-weight-bold-500 text-right">{tot_base_cfop1}</td>
+            <td class=" text-dt-border-2 font-weight-bold-500 text-right">{tot_cred_cfop1}</td>
+            <td class="text-dt-border-2" {hide}></td>
+            <td class="text-dt-border-2" {hide}></td>
+        </tr>
+        <!-- END BLOCK : total1 -->
+    </tfoot>
+
+</table>
+
+<table class="table">
+    <tbody>
+        <!-- START BLOCK : totalgeral -->
+        <tr>
+            <td  class="text-dt-border-2 font-weight-bold-500">Exportação</td>
+            <td  class="text-dt-border-2 font-weight-bold-500 text-right">{valor_glos}</td>
+        </tr>
+        <!-- END BLOCK : totalgeral -->
+    </tbody>
+</table>

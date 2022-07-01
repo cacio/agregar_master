@@ -1,0 +1,38 @@
+<div class="row">
+  <div class="col-12">
+    
+      <form method="post" action="modalidade-exec.php" >
+        <input type="hidden" name="act" value="alterar"/> 
+        <input type="hidden" name="id" value="{cod}"/>        
+        <section>
+        <fieldset>
+          <legend><span class="icon-company"></span>Alterar Modalidade</legend>
+          
+             <div class="col-md-4">                 
+                  
+                    <label><strong>Nome:</strong></label>
+                   <div class="input-group"> 
+                    <span class="input-group-addon fa fa-asterisk"></span>
+                    <input name="nome" type="text" class="form-control" id="nome" required value="{nome}"/>
+                  </div>                
+             </div>
+            
+            
+        </fieldset>
+           
+        </section>
+        <hr/>
+         <section>
+            <fieldset>
+                
+                <div class="col-md-12">       
+                  <button class="btn btn-primary">Alterar</button>
+                  <a href="../php/lista-modalidade.php" class="btn btn-default">Voltar</a>
+                </div>
+                  
+            </fieldset> 
+        </section> 
+      </form>
+    
+  </div>
+</div>

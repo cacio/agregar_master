@@ -1,0 +1,51 @@
+﻿<div class="container">
+            <div class="row">
+<h2>Lista Categoria</h2>
+
+<br/>
+
+<a href="../php/cadastro-categoria.php" class="btn btn-primary btn-rounded">Cadastrar categoria</a>
+
+<br/>
+
+<br/>
+
+
+
+<table id="dyntable" class="table table-bordered">
+
+       <thead>
+
+        <tr>
+            <th>Codigo</th>
+            <th >Nome</th>
+            <th>Action</th>
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+     <!-- START BLOCK : categoria --> 
+
+        <tr id="{codigo}" class="gradeA">
+            <td>{codigo}</td>
+            <td>{nome}</td>
+            <td  class="centeralign">
+			<!-- START BLOCK : per -->
+            <a href="#" id="deletecat" class="deletecat"><span class="icon-remove"></span></a>
+
+            <a href="../php/atualizar-categoria.php?id={codigo}"><span class="icon-pencil"></span></a></td>
+			<!-- END BLOCK : per -->
+            
+
+        </tr>
+
+      <!-- END BLOCK : categoria -->
+
+    </tbody>
+
+</table>
+
+</div>
+</div>

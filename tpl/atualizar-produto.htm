@@ -1,0 +1,45 @@
+﻿<div class="container">
+   <div class="row">
+		<form action="../php/produto-exec.php" method="post">
+        <section>
+        	
+            <input type="hidden" name="act" value="alterar"/>
+            <input type="hidden" name="id" value="{id}"/>
+            
+            <fieldset>
+                <legend>Cadastro de Produtos</legend>
+                    <div class="input-prepend">
+                        <label>Nome:</label>
+                        <span class="add-on icon-terminal"></span>
+                        <input class="span3" id="nome" name="nome" value="{nome}" type="text">
+                     </div>         
+                         
+                     <div class="input-prepend">
+                        <label>Preço:</label>
+                        <span class="add-on icon-usd"></span>
+                        <input class="span3" id="preco" name="preco" value="{preco}" type="text">
+                     </div>           
+            		<div class="input-prepend">
+                        <label>Grupo:</label>
+                        <span class="add-on icon-list"></span>
+						<select name="grupo">
+							<option value="">Selecione</option>
+							 <!-- START BLOCK : listagrupo --> 
+							<option value="{codigog}" {sel}>{nomeg}</option>
+							<!-- END BLOCK : listagrupo -->
+						</select>
+                     </div>  
+            		
+            </fieldset>                           
+        
+        </section>
+        <section>
+            <fieldset>
+                <button type="submit" class="btn btn-primary">Alterar</button>
+                <a href="../php/Listar-produto.php" class="btn btn-info">Voltar</a>
+            </fieldset>
+        </section>
+        
+         </form>
+  </div>
+</div>

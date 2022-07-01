@@ -1,0 +1,101 @@
+﻿<div class="row">
+
+
+<div class="col-12">
+    
+     <div class="card">
+        <div class="card-header">
+            FILTRAR
+            <div class="card-actions">
+                <a class="btn-minimize" data-perform="card-collapse"><i class="ti-minus"></i></a>
+                <!--<a class="btn-close"><i class="ti-close"></i></a>-->
+            </div>
+        </div>
+        <div class="card-block collapse show">
+            
+            <form action="#" method="POST">
+               <div class="row"> 
+                <div class="col-md-2">                                          
+                    <div class="form-group">
+                        <label for="exampleInputuname"><strong>COMPÊTENCIA INI.:</strong></label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="icon-calender"></i></div>
+                            <input type="text" class="form-control" name="compini" id="compini" data-date-format="mm/yyyy" placeholder="">
+                        </div>
+                    </div>
+                 </div>
+                
+                <div class="col-md-2">                                          
+                    <div class="form-group">
+                        <label for="exampleInputuname"><strong>COMPÊTENCIA FINAL:</strong></label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="icon-calender"></i></div>
+                            <input type="text" class="form-control" name="compfim" id="compfim" data-date-format="mm/yyyy" placeholder="">
+                        </div>
+                    </div>
+                 </div>
+                 <div class="col-md-5">
+                    <label><strong>EMPRESA</strong></label>
+                    <div class="input-group">
+                        <div class="input-group-addon"><i class="fa fa-search"></i></div>
+                        <input type="text" class="form-control" name="psqempresa" id="psqempresa" placeholder="">
+                        <input type="hidden" id="cnpjemp" name="cnpjemp">                   
+                    </div>
+                </div>
+             </div>
+             <div class="row">
+                <div class="col-md-3">
+                    <label><strong>PROTOCOLO</strong></label>
+                    <div class="input-group">
+                        <div class="input-group-addon"><i class="fa fa-file-text-o"></i></div>
+                        <input type="text" class="form-control" name="protocolo" placeholder="">
+                                
+                    </div>
+                </div>
+
+             </div>
+             <br/>
+             <div class="row">
+                 <div style="width: 100%;padding: .75rem 1.25rem; background: #dae6e8; border-radius: 0 0 calc(.25rem - 1px) calc(.25rem - 1px);">
+                    <div class="form-actions">
+                      <button type="submit" class="btn btn-primary"><i class="fa fa-cogs"></i> FILTRAR</button>
+                      <input type="reset" name="" class="btn btn-warning" value="LIMPA CAMPOS">                            
+                    </div>
+                 </div>
+             </div>
+            </form>
+
+        </div>
+    </div>  
+</div>
+             
+
+ <!-- START BLOCK : lista -->
+  <div class="col-md-6 col-lg-6 col-xlg-4 card-outline-info">
+        <div class="card-header">
+           <h4 class="m-b-0 text-white">COMPETÊNCIA EMPRESA</h4>
+        </div>
+        <div class="card card-block">
+            <div class="row">
+                <div class="col-md-4 col-lg-3 text-center">
+                    <a href="app-contact-detail.html"><img src="../images/users/2.png" alt="user" class="img-circle img-responsive"></a>
+                </div>
+                <div class="col-md-8 col-lg-9">
+                    <h3 class="box-title m-b-0">{razao_social}</h3> <small>{fantasia}</small>
+                    <address>
+                        {endereco}, {bairro} {cep}<br/>
+                        {cidade}, {estado}<br/>
+                        <br/>                        
+                        <abbr title="Telefone 1">Telefone 1:</abbr> {fone1}<br/>
+                        <abbr title="Telefone 2">Telefone 2:</abbr> {fone2}
+                    </address>
+                    <h3 class="box-title m-b-0">Competências</h3>
+                    <!-- START BLOCK : detalhe -->
+                    <button type="button" class="btn btn-xs {cor} btn-compentencia" data-id="{competencia}|{cnpjs}">{competencia}</button>
+                    <!-- END BLOCK : detalhe -->
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- END BLOCK : lista -->    
+</div>

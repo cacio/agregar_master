@@ -1,0 +1,51 @@
+﻿<div class="container">
+            <div class="row">
+<h2>Lista Esde</h2>
+
+<br/>
+
+<a href="../php/cadastro-Espe.php" class="btn btn-primary btn-rounded">Cadastrar Esde</a>
+
+<br/>
+
+<br/>
+
+
+
+<table id="dyntable" class="table table-bordered">
+
+       <thead>
+
+        <tr>
+            <th>Codigo</th>
+            <th >Nome</th>
+            <th>Action</th>
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+     <!-- START BLOCK : espe --> 
+
+        <tr id="{codigo}" class="gradeA">
+            <td>{codigo}</td>
+            <td>{nome}</td>
+            <td  class="centeralign">
+			<!-- START BLOCK : per -->
+            <a href="#" id="deleteesp" class="deleteesp"><span class="icon-remove"></span></a>
+
+            <a href="../php/atualizar-espe.php?id={codigo}"><span class="icon-pencil"></span></a></td>
+			<!-- END BLOCK : per -->
+            
+
+        </tr>
+
+      <!-- END BLOCK : espe -->
+
+    </tbody>
+
+</table>
+
+</div>
+</div>

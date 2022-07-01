@@ -1,0 +1,33 @@
+﻿<div class="row">
+  <div class="col-12">
+    <h2>Lista FUNDESA</h2>
+    <br/>
+    <a href="../php/cadastro-fundesa.php" class="btn btn-primary btn-rounded">Cadastrar FUNDESA</a> <br/>
+    <br/>
+    <table id="dyntable" class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Competência</th>
+          <th>Número</th>
+          <th>Valor Pago</th>
+          <th>Data Pago</th>
+          <th>Ação</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- START BLOCK : listar -->
+        <tr id="{cod}">
+          <td>{competenc}</td>
+          <td>{numero}</td>
+          <td>{valorpago}</td>
+          <td>{datapag}</td>
+          <td  class="centeralign">
+          	<a href="#" class="deletefundesa"><span class="fa fa-remove fa-2x"></span></a> 
+            <a href="../php/atualizar-fundesa.php?id={cod}"><span class="fa fa-pencil fa-2x"></span></a>
+          </td>
+        </tr>
+        <!-- END BLOCK : listar -->
+      </tbody>
+    </table>
+  </div>
+</div>

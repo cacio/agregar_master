@@ -1,0 +1,29 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>Produto</th>
+            <th class="text-right">Peso</th>
+            <th class="text-right">Valor total produto</th>
+            <!--<th></th>-->
+        </tr>
+    </thead>
+    <tbody>
+        <!-- START BLOCK : listar -->
+        <tr>
+            <td>{cod_prod} - {desc_prod}</td>
+            <td class="text-right">{peso}</td>
+            <td class="text-right">{subtotal}</td>
+            <!--<td></td>-->
+        </tr>
+        <!-- END BLOCK : listar --> 
+    </tbody>
+    <tfoot>
+        <!-- START BLOCK : total -->
+        <tr>
+            <td>Total:</td>
+            <td class="text-right"></td>
+            <td class="text-right">{tot_sub}</td>            
+        </tr>
+        <!-- END BLOCK : total --> 
+    </tfoot>
+</table>

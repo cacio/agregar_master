@@ -1,0 +1,44 @@
+﻿<div class="row">
+	<div class="col-12">
+        <h2>LISTAGEM DE CFOP</h2>
+
+		<br/>
+		<!--<a href="../php/cadastro-cfop.php" class="btn btn-primary btn-rounded"><i class="fa fa-plus-circle"></i> Cadastrar CFOP</a>-->
+		<br/>
+		<br/>
+
+		<table id="dyntable" class="table table-bordered">
+
+			<thead>
+				<tr>
+					<th>Código</th>
+					<th>Descrição</th>
+					<th>Agregar ?</th>										
+				</tr>
+
+			</thead>
+
+			<tbody>
+
+			 <!-- START BLOCK : lista --> 
+
+				<tr id="{cod}" class="gradeA">
+					<td>{cod}</td>
+					<td>{nom}</td>
+					<td>
+						<select class="agregarsn" id="agreg_{cod}">
+							<option value="">Selecione</option>
+							<option value="1|{vinculado}" {selecione}>Considerar</option>							
+							<option value="2|{vinculado}" {selecione2}>Desconsiderar</option>
+						</select>
+					</td>
+										
+				</tr>
+
+			  <!-- END BLOCK : lista -->
+
+			</tbody>
+
+		</table>
+	</div>
+</div>

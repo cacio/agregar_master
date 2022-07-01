@@ -1,0 +1,71 @@
+﻿
+<div class="row page-titles">
+    <div class="col-md-4 col-8 align-self-center">                        
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="admin.php">Início</a></li>
+            <li class="breadcrumb-item">Gerenciais</li>
+            <li class="breadcrumb-item active">Arquivos Enviados</li>
+        </ol>
+    </div>                 
+</div>
+
+<div class="row">
+  <div class="col-12">
+    
+
+        <div class="card">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="p-20">
+                        <h2 class="font-medium text-inverse">Listagem de Arquivos Enviados</h2>
+                        <h6 class="card-subtitle">Quantidade de arquivos {num}</h6>
+                        <div class="message-box m-t-30">
+                            <div class="message-widget active">
+                               
+                                <!-- START BLOCK : listaempresadocumentos -->
+                                <a href="#" id="{cod}" data-caminho="{xcaminho}" data-content="{document}" class="linkarchive">
+                                    <div class="user-img"><span class="round"><i class="fa fa-file-text-o"></i></span></div>
+                                    <div class="mail-contnet">
+                                        <h5>{nome} <span class="badge badge-default">{status}</span></h5> <span class="mail-desc">{xmotivo}</span> <span class="time">{dt_emiss}</span></div>
+                                </a>
+                                
+                               <!-- END BLOCK : listaempresadocumentos --> 
+                                <!-- START BLOCK : nonedados -->
+                                    <div class="alert alert-info">                                    
+                                    <h3 class="text-info"><i class="fa fa-exclamation-circle"></i> Informação</h3> {info}
+                                </div>
+                                <!-- END BLOCK : nonedados --> 
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 b-l">
+                    <div class="card-block">
+                        <h4 class="font-medium text-inverse">
+                            Arquivos
+                            <div class="listbtnarch hide" style="text-align: right;">
+                                <button type="button" class="btn btn-warning btn-circle btninfoarchev" data-placement="top" data-toggle="popover" data-trigger="hover"  data-original-title='Motivo' data-html='true'><i class="fa fa-info"></i> </button>
+                                <a class="btn btn-info btn-circle btninfoedit"><i class="fa fa-pencil"></i> </a>                                
+                            </div>
+                        </h4>
+                        <hr/>
+                        
+                        <div class="load"></div>
+                        <div class="row conteudo_archive"> 
+                          <div class="nonearchive"></div>
+                        
+
+
+                         </div>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>

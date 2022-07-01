@@ -1,0 +1,217 @@
+﻿<div class="container">
+   <div class="row">
+		<form action="../php/ficha-exec.php" method="post">
+        <section>
+        	
+            <input type="hidden" name="act" value="inserir"/>
+            <input type="hidden" name="codficha" id="codficha" value="{proximoid}"/>
+            <fieldset>
+                <legend>Cadastro de ficha</legend>
+                   
+                    <div class="input-prepend">
+                        <label><strong>Categoria:</strong></label>
+                        <span class="add-on icon-terminal"></span>
+                        <select name="categoria">
+                        
+                        	<option value="">Selecione a categoria</option>
+                            <!-- START BLOCK : categoria -->
+                            <option value="{codigo}">{nome}</option>
+                            <!-- END BLOCK : categoria -->
+                        </select>
+                     </div> 
+                    <br/>
+                    <div class="span12">
+                    	<legend>Dados Pessoais</legend>
+                    	
+                        <div class="input-prepend">
+                            <label><strong>Nome:</strong></label>
+                            <span class="add-on icon-terminal"></span>
+                            <input class="span3" id="nome" name="nome" type="text">
+                        </div>	
+                        <div class="input-prepend">
+                            <label><strong>Cpf:</strong></label>
+                            <span class="add-on icon-terminal"></span>
+                            <input class="span2" id="cpf" name="cpf" type="text">
+                    	</div>
+                    	<div class="input-prepend">
+                            <label><strong>Rg:</strong></label>
+                            <span class="add-on icon-terminal"></span>
+                            <input class="span2" id="rg" name="rg" type="text">
+	                    </div>
+                        
+                        <div class="input-prepend">
+                            <label><strong>Data Nascimento:</strong></label>
+                            <span class="add-on icon-calendar"></span>
+                            <input class="span2" id="dtnascimento" name="dtnascimento" type="text">
+                        </div>
+                    	
+                         <div class="input-prepend">
+                            <label><strong>Profissão:</strong></label>
+                            <span class="add-on icon-suitcase"></span>
+                            <input class="span3" id="profissao" name="profissao" type="text">
+                         </div>
+                        
+                    </div>
+                    
+                    <div class="span12">
+                    	<legend>Contato</legend>
+                    	
+                        <div class="input-prepend">
+                            <label><strong>Email:</strong></label>
+                            <span class="add-on icon-envelope"></span>
+                            <input name="email" type="email" class="form-control" id="email" value=""/>
+	                    </div>	
+                        
+                        <div class="input-prepend">
+                            <label><strong>Telefone Resid:</strong></label>
+                            <span class="add-on icon-phone"></span>
+                            <input class="span2" id="telresid" name="telresid" type="text">
+                    	</div>
+                        
+                        <div class="input-prepend">
+                            <label><strong>Celular:</strong></label>
+                            <span class="add-on icon-phone"></span>
+                            <input class="span2" id="celular" name="celular" type="text">
+                    	</div>
+                        
+                        <div class="input-prepend">
+                            <label><strong>Recados:</strong></label>
+                            <span class="add-on icon-terminal"></span>
+                            <input class="span3" id="recado" name="recado" type="text">
+                   		</div>                                                
+                        
+                    </div>
+                             
+                    <div class="span12">
+                    	<legend>Endereço</legend>
+                    	
+                        <div class="input-prepend">
+                            <label><strong>Cep:</strong></label>
+                            <span class="add-on icon-terminal"></span>
+                            <input class="span2" id="cep" name="cep" type="text">
+	                    </div>
+                    	
+                    	<div class="input-prepend">
+                            <label><strong>Endereço:</strong></label>
+                            <span class="add-on icon-terminal"></span>
+                            <input class="span3" id="endereco" name="endereco" type="text">
+                     	</div>	    
+                        
+                        <div class="input-prepend">
+                            <label><strong>N°:</strong></label>
+                            <span class="add-on icon-terminal"></span>
+                            <input class="span2" id="numero" name="numero" type="text">
+                    	</div>
+
+                    	<div class="input-prepend">
+                            <label><strong>Bairro:</strong></label>
+                            <span class="add-on icon-terminal"></span>
+                            <input class="span2" id="bairro" name="bairro" type="text">
+			            </div>
+                     
+                     	
+                        <div class="input-prepend">
+                            <label><strong>Cidade:</strong></label>
+                            <span class="add-on icon-terminal"></span>
+                            <input class="span2" id="cidade" name="cidade" type="text">
+	                    </div>                                                	                            
+                        
+                    </div>	
+                    
+                    
+                    <div class="span12">                    
+                    	<legend>Outros Dados</legend>
+                    	
+                        <div class="input-prepend">
+                            <label><strong>Data da admissão:</strong></label>
+                            <span class="add-on icon-calendar"></span>
+                            <input class="span2" id="dtadmissao" name="dtadmissao" type="text">
+	                    </div>
+                        
+    					 <div class="input-prepend">
+                            <label><strong>Data da exclusão:</strong></label>
+                            <span class="add-on icon-calendar"></span>
+                            <input class="span2" id="dtexclu" name="dtexclu" type="text">
+	                    </div>
+                                            
+                        <div class="input-prepend">
+                            <label><strong>ESDE:</strong></label>
+                            <span class="add-on icon-terminal"></span>
+                            <select name="esde">
+                            
+                                <option value="">Selecione um ESDE</option>
+                                <!-- START BLOCK : espe -->
+                                <option value="{codigoe}">{nomee}</option>
+                                 <!-- END BLOCK : espe -->
+                            </select>
+                         </div>
+                        
+                        <br/>
+                      <div class="input-prepend">
+                        <label><strong>Atividades:</strong></label>
+                        <span class="add-on icon-terminal"></span>
+                        <select name="atividades">
+                        
+                        	<option value="">Selecione a atividade</option>
+                            <!-- START BLOCK : atividade -->
+                            <option value="{codigoatv}">{nomeatv}</option>
+                             <!-- END BLOCK : atividade -->
+                        </select>
+                     </div>
+                    
+                     <div class="input-prepend">
+                        <label><strong>Ano:</strong></label>
+                        <span class="add-on icon-calendar"></span>
+                        <input class="span1" id="atano" name="atano" type="text">
+                     </div>
+                     	
+                    <div class="input-prepend"> 
+                        <div class="btn-group">
+	                      <label><strong>Ação:</strong></label>
+                          <button type="button" class="btn btn-success" id="addatividade"><span class="icon-plus"></span></button>
+                          <button type="button" class="btn btn-danger" id="removeatv"><span class="icon-minus"></span></button>                                                
+                        </div>
+                        </div>
+                     <table id="atv" class="table table-bordered atv">
+
+                       <thead>
+                
+                        <tr>
+                            <th style="width: 4%; text-align:center;"><span class="center"><input type="checkbox" name="del[]" class="checkdelput" value="" /></span></th>
+                            <th style="width: 7%;">CODIGO</th>
+                            <th>NOME</th>
+                            <th>ANO</th>
+                        </tr>
+                
+                    </thead>
+                
+                    <tbody>
+                        
+                    </tbody>
+                
+                </table>
+                <div class="input-prepend">
+                    <label><strong>Valor da Mensalidade:</strong></label>
+                    <span class="add-on icon-terminal"></span>
+                    <input class="span3" id="vlmensal" name="vlmensal" type="text">
+                </div>
+                 <div>
+                    <label><strong>Obs:</strong></label>
+                    <textarea name="obs" class="obs" id="editable"></textarea>
+                </div>
+                        
+                    </div>                       	                          
+                     
+            </fieldset>                           
+        
+        </section>
+        <section>
+            <fieldset>
+                <input style="width:150px;" type="submit" class="btn btn-primary btn-rounded" value="Salvar"/>
+                <a href="../php/Listar-ficha.php" class="btn btn-info btn-rounded">Voltar</a>
+            </fieldset>
+        </section>
+        
+         </form>
+  </div>
+</div>

@@ -1,0 +1,34 @@
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Data Emissão</th>
+            <th>Número Nota</th>
+            <th>Cfop</th>
+            <th class="text-right">Valor total nota</th>
+            <th class="text-right">Valor total produto</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <!-- START BLOCK : listar -->
+        <tr>
+            <td>{dataemissao}</td>
+            <td>{numeronota}</td>
+            <td>{cfop}</td>
+            <td class="text-right">{valortotnota}</td>
+            <td class="text-right">{valorproduto}</td>
+        </tr>
+        <!-- END BLOCK : listar -->
+    </tbody>
+    <tfoot>
+        <!-- START BLOCK : total -->
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="text-right">{tot_vlnota}</td>
+            <td class="text-right">{tot_vlprod}</td>
+        </tr>
+        <!-- END BLOCK : total -->
+    </tfoot>
+</table>

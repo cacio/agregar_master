@@ -1,0 +1,130 @@
+﻿    
+<div class="row">
+	<div class="col-12">
+              <h2>Lista Menus</h2>
+
+<br/>
+
+<a href="../php/cadastro-menu.php" class="btn btn-primary btn-rounded"><i class="fa fa-plus-circle"></i> Cadastrar Menus</a>
+
+<br/>
+
+<br/>
+
+   
+
+<table id="dyntable" class="table table-bordered">
+
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Action</th>
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+     <!-- START BLOCK : menus --> 
+
+        <tr id="{cod}" class="gradeA">
+
+            <td><span class="glyphicon {icone}"></span>&nbsp;{menu}</td>
+
+            <td  class="centeralign">
+
+            <a href="#" id="deleterowmenu" class="deleterowmenu"><span class="fa fa-remove fa-2x"></span></a>
+
+            <a href="../php/atualizar-menu.php?id={cod}"><span class="fa fa-pencil fa-2x"></span></a>
+
+            <a data-toggle="modal" href="#modalsubmenu" class="listsub"><span class="fa fa-bars fa-2x"></span></a>
+
+            </td>
+
+            
+
+        </tr>
+
+      <!-- END BLOCK : menus -->
+
+    </tbody>
+
+</table>
+</div>
+</div>
+
+<div id="modalsubmenu" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">Submenu</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>				
+			</div>
+			<div class="modal-body">
+				
+				 <form action="../php/submenu-exec.php" id="submenuexec" method="post">
+					 <input type="hidden" name="act" value="inserir"/>                     
+                   	 <input type="hidden" name="idmenu" id="idmenu" value=""/> 
+					 
+						<div class="form-group">
+							<label class="control-label">Operador:</label>
+							<select class="form-control custom-select"  name="icone" data-placeholder="Icones">
+								<option value="fa fa-th" data-icon="fa glyphicon-th">glyphicon-th</option>
+                                <option value="fa fa-plus-sign" data-icon="fa fa-plus-sign">glyphicon-plus-sign</option>
+                                <option value="fa fa-th-list" data-icon="fa fa-th-list">glyphicon-th-list</option>
+                                <option value="fa fa-list-alt"  data-icon="fa fa-list-alt">glyphicon-list-alt</option>						
+							</select>
+						</div>
+					 	
+						
+				                                         
+						<div class="form-group">
+							<label for="exampleInputuname">Nome</label>
+							<div class="input-group">
+								<div class="input-group-addon"><i class="ti-user"></i></div>
+								<input type="text" class="form-control" name="nome" id="nome" placeholder="Nome">
+							</div>
+						</div>
+				
+					
+					                                     
+						<div class="form-group">
+							<label for="exampleInputuname">link</label>
+							<div class="input-group">
+								<div class="input-group-addon"><i class="ti-user"></i></div>
+								<input type="text" class="form-control" name="link" id="link" placeholder="link">
+							</div>
+						</div>
+					
+							
+					<button class="btn btn-primary btn-block">Cadastrar</button>						
+				</form>
+				<br/>
+				<table class="table table-striped color-table info-table" id="dyntablecontaspagar">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Nome</th>
+                    <th>Action</th>
+				  </tr>
+                </thead>
+
+                <tbody id="listsubmenu">
+
+                    
+
+                </tbody>
+
+                </table>
+				
+				
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-danger waves-effect" data-dismiss="modal">Close</button>				
+			</div>
+		</div>
+	</div>
+</div>
+
+
+ 

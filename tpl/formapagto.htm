@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row">
+        <h2>Lista Forma de pagamento</h2>
+        <br/>
+        <a href="../php/cadastro-forma.php" class="btn btn-primary btn-rounded">Cadastrar Forma</a>
+        <br/>
+        <br/>
+        <table id="dyntable" class="table table-bordered">
+
+                <thead>
+
+                    <tr>
+                        <th>Codigo</th>
+                        <th >Nome</th>
+                        <th>Action</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <!-- START BLOCK : listar --> 
+
+                    <tr id="{codigo}" class="gradeA">
+                        <td>{codigo}</td>
+                        <td>{nome}</td>
+                        <td  class="centeralign">
+                        <!-- START BLOCK : per -->
+                        <a href="#" class="deleteforma"><span class="icon-remove icon-2x"></span></a>
+                        <a href="../php/atualizar-forma.php?id={codigo}"><span class="icon-pencil icon-2x"></span></a></td>
+                        <!-- END BLOCK : per -->                        
+                    </tr>
+
+                    <!-- END BLOCK : listar -->
+
+                </tbody>
+
+            </table>
+
+        </div>
+</div>

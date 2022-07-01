@@ -1,0 +1,60 @@
+
+
+                <div class="row page-titles">
+                    <div class="col-md-6 col-8 align-self-center">
+                        <h3 class="text-themecolor m-b-0 m-t-0">Bem Vindo {log}, ao Sistema Agregar</h3>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="javascript:void(0)">INICIO</a></li>
+                            <li class="breadcrumb-item active">Mensagens</li>
+                        </ol>
+                    </div>                    
+                </div>
+<div class="row">
+                    <div class="col-lg-12">
+                        <div class="card">
+                            <div class="row">
+                                <div class="col-xlg-2 col-lg-4 col-md-4">
+                                    <div class="card-block inbox-panel"><a href="app-compose.html" class="btn btn-danger m-b-20 p-10 btn-block waves-effect waves-light">NOVA MENSAGEM</a>
+                                        <ul class="list-group list-group-full">
+                                            <li class="list-group-item active"> <a href="javascript:void(0)"><i class="mdi mdi-gmail"></i> Mensagens </a><span class="badge badge-success ml-auto">{numens}</span></li>                                                                                   
+                                        </ul>
+                                        <h3 class="card-title m-t-40">Legenda</h3>
+                                        <div class="list-group b-0 mail-list"><a href="#" class="list-group-item"><span class="fa fa-circle text-warning m-r-10"></span>Não lidas</a> <a href="#" class="list-group-item"><span class="fa fa-circle text-success m-r-10"></span>Lidas</a> </div>
+                                    </div>
+                                </div>
+                                <div class="col-xlg-10 col-lg-8 col-md-8">
+                                
+                                    <div class="card-block p-t-0">
+                                        <div class="card b-all shadow-none">
+                                            <div class="inbox-center table-responsive">
+                                                <table class="table table-hover no-wrap" id="demo-foo-row-toggler" data-filtering="true" data-page-size="33">
+                                                    <div class="m-t-40">
+                                                            <div class="d-flex">
+                                                                
+                                                                <div class="ml-auto">
+                                                                    <div class="form-group">
+                                                                        <input id="demo-input-search2" type="text" placeholder="Pesquisar" class="form-control" autocomplete="off">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    <tbody>
+                                                        <!-- START BLOCK : listars -->
+                                                        <tr class="unread">                                                            
+                                                            <td style="width:40px" class="hidden-xs-down"><i class="fa fa-star text-warning"></i></td>
+                                                            <td class="hidden-xs-down">{titulos}</td>
+                                                            <td class="max-texts"> <a href="../php/detalhe-notificacao.php?id={cods}" />{mensagems}</td>
+                                                            <td class="hidden-xs-down"><span class="fa fa-circle {lida} m-r-10"></span></td>
+                                                            <td class="text-right"> {timestamps} {ampm} </td>
+                                                        </tr>
+                                                        <!-- END BLOCK : listars -->
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>

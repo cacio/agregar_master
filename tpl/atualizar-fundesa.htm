@@ -1,0 +1,67 @@
+﻿    
+<div class="row">
+  <div class="col-12">
+
+            <form method="post" action="fundesa-exec.php" >
+	              <input type="hidden" name="act" value="alterar"/>  
+                  <input type="hidden" name="id" value="{cod}"/>                     
+                  		<section>
+               
+                     	 <fieldset>
+                         	<legend><span>Atualização de FUNDESA</span></legend>
+                            
+                            <div class="row">
+                                                      
+                              <div class="col-md-2">
+                              	<label><strong>Competência:</strong></label>  
+                                <div class="input-group">                             
+                                   <span class="input-group-addon fa fa-calendar"></span>                                
+                                 	 <input type="text" name="compensa" id="competenc" required class="form-control span1 date-picker"  value="{competenc}"/>                                 
+                                 </div>  
+                         		  </div>
+
+                               <div class="input-prepend">
+                                	<label><strong>Número:</strong></label> 
+                                   <div class="input-group">                              
+                                     <span class="input-group-addon fa fa-asterisk"></span>
+                                   	 <input type="text" name="numero" id="numero" required class="form-control span1 text-right" value="{numero}"/>                                 
+                                   </div>  
+                         	    	</div>
+
+                             <div class="col-md-2">
+                              	<label><strong>Valor Pago:</strong></label>
+                                <div class="input-group">                               
+                                   <span class="input-group-addon fa fa-asterisk"></span>
+                                 	 <input type="text" name="valorpago" id="valorpago" required class="form-control span2 text-right" value="{valorpago}" />                                 
+                                </div>   
+                         		</div>
+                              
+                            <div class="col-md-2">
+                              	<label><strong>Data Pago:</strong></label> 
+                                <div class="input-group">                              
+                                   <span class="input-group-addon fa fa-calendar"></span>
+                                 	 <input type="text" name="datapago" id="dtpago" required class="form-control span2"  value="{datapag}"/>                                 
+                                </div>   
+                         		</div>
+
+                          </div>                                
+                             
+                     </fieldset>
+                          
+                 </section> 
+                 <hr/>
+            	 <section>              
+                
+                  <div class="row">
+                   <div class="col-md-2">
+                    <button class="btn btn-primary">Alterar</button>
+                      <a href="../php/listar-fundesa.php" class="btn">Voltar</a>
+                    </div>
+                 </div>   
+                
+                </section>
+            </form>
+   
+
+		</div>
+   </div>

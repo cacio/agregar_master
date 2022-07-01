@@ -1,0 +1,208 @@
+﻿<div class="container">
+  <div class="row">
+    <!--<div class="span3 bs-docs-sidebar">
+      <ul class="nav nav-list bs-docs-sidenav affix-top">
+        <li class="active"><a href="#gerar">Contas a Receber</a></li>
+     
+      </ul>
+    </div>-->
+    
+    <div class="span12">
+      
+      <section id="gerar">
+        <div class="page-header">
+          <h2>Lista Contas a Receber</h2>
+        </div>
+         <!-- START BLOCK : permis --> 
+        <a href="../php/cad-receber.php" class="btn btn-primary"><i class="icon-plus"></i> Cadastrar</a>
+        <a href="#" class="btn btn-primary" id="receber"><i class="icon-gear"></i> Receber</a> 
+        <a href="#" class="btn btn-primary" id="contribuicao" data-toggle="tooltip" data-placement="right" title=""><i class=""></i>Gerar doação</a>
+		<a href="#" class="btn btn-primary" id="promocao" data-toggle="tooltip" data-placement="right" title=""><i class=""></i>Promoção</a>
+        <a href="#" class="btn btn-primary" id="reempresao"  title=""><i class="icon-print"></i> Reimpressão</a>
+	     <!-- END BLOCK : permis -->
+        <a href="#" class="btn btn-primary" id="filtro" data-toggle="tooltip" data-placement="right" title="" data-original-title="Clique para fazer uma busca!"><i class="icon-filter"></i></a>    
+        <a href="#" class="btn btn-primary" style="float:right;" onclick="printDiv();"><i class="icon-print"></i> Imprimir</a>
+		<div class="btn-group" style="float:right; margin-right:10px;">
+			<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Colunas <span class="caret"></span></button>
+			<ul class="dropdown-menu">
+			  <li><a href="#"><input type="checkbox" checked="checked" value="0"/> #</a></li>
+			  <li><a href="#"><input type="checkbox" checked="checked" value="1"/> Codigo</a></li>
+			  <li><a href="#"><input type="checkbox" checked="checked" value="2"/> Numero</a></li>
+			  <li><a href="#"><input type="checkbox" checked="checked" value="3"/> Cliente</a></li>
+			  <li><a href="#"><input type="checkbox" checked="checked" value="4"/> Emissão</a></li>
+			  <li><a href="#"><input type="checkbox" checked="checked" value="5"/> Vencimento</a></li>
+			  <li><a href="#"><input type="checkbox" checked="checked" value="6"/> Valor</a></li>
+			  <li><a href="#"><input type="checkbox" checked="checked" value="7"/> Valor Doação</a></li>
+			  <li><a href="#"><input type="checkbox" checked="checked" value="8"/> Historico</a></li>
+			  <li><a href="#"><input type="checkbox" checked="checked" value="9"/> Data Pagamento</a></li>
+			  <li><a href="#"><input type="checkbox" checked="checked" value="10"/> Banco</a></li>			  
+			  <li><a href="#"><input type="checkbox" checked="checked" value="11"/> Ação</a></li>
+			</ul>
+		  </div>
+		<br/>
+        <br/>
+		<div id="relatorio">
+     	<table id="tbcontasreceber" class="table table-bordered">
+       <thead>
+
+        <tr>
+            <th align="center"><input type="checkbox" class="checkall" id="selecionarTodosbox" /></th>
+            <th>Codigo</th>
+            <th>Numero</th>
+            <th>Cliente</th>
+            <th>Emissão</th>
+            <th>Vencimento</th>
+            <th>Valor</th>
+			<th>Valor Doação</th>
+            <th>Historico</th>
+            <th>Data Pagamento</th>
+            <th>Banco</th>
+            <th>Ação</th>
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+     <!-- START BLOCK : listacontasreceber --> 
+
+        <tr id="{codigo}">
+            <td><input type="checkbox" name="id[]" class="cinput" value="{codigo}" /></td>
+            <td>{codigo}</td>
+            <td>{numero}</td>
+            <td>{codcli}-{nomecli}</td>
+            <td>{emissao}</td>
+            <td>{vencim}</td>
+            <td>{vldoc}</td>
+			<td>{vldoca}</td>
+            <td>{historic}</td>
+            <td>{datapag}</td> 
+            <td>{banco}</td>            
+            <td  class="centeralign">
+			<!-- START BLOCK : per -->
+	            <a href="#" id="deletecontasr" class="deletecontasr"><span class="icon-remove icon-2x"></span></a>
+    	        <a href="../php/atualizar-receber.php?id={codigo}"><span class="icon-pencil icon-2x"></span></a>           
+			<!-- END BLOCK : per -->            
+            </td>
+        </tr>
+
+      <!-- END BLOCK : listacontasreceber -->
+		<tfoot>
+		<!-- START BLOCK : total --> 	
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td style="text-align:right;"><strong>{valortotal}</strong></td>
+				<td style="text-align:right;"><strong>{vlcontritotal}</strong></td>
+				<td style="text-align:right;"><strong>= {valorestot}</strong></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+	    <!-- END BLOCK : total -->
+		</tfoot>
+    </tbody>
+
+</table>       
+   </div> 	   
+        
+        
+      </section>
+          
+      
+    </div>
+    
+  </div>
+</div>
+
+ <div id="popover-head" class="hide">Filtro Por Datas</div>
+  <div id="popover-content" class="hide span12">
+
+    <form action="../php/contasreceber.php" id="frmfiltro" method="post">
+	<input type="hidden" name="act" value="buscar" />
+    <div id="msg"></div>
+     <div class="form-group">
+        <div class="input-prepend">
+            <label><strong>Data Incial:</strong></label>
+            <span class="add-on icon-calendar"></span>
+            <input name="dtini" type="text" class="span2" id="dtini" class="dtini" value=""/>
+        </div>
+        <div class="input-prepend">
+            <label><strong>Data Final:</strong></label>
+            <span class="add-on icon-calendar"></span>
+            <input name="dtfim" type="text" class="span2" id="dtfim" class="dtfim" value=""/>
+        </div> 
+        <br/>        
+         <div class="input-prepend">
+            <label><strong>N&ordm; Doc:</strong></label>
+            <span class="add-on icon-asterisk"></span>
+            <input class="span2" id="ndoc" name="ndoc" type="text">
+         </div> 
+        <div class="input-prepend">
+          <label>Cliente:<i class="mp"></i></label>
+          <span class="add-on icon-search"></span>
+          <input class="span2" id="cliente3" name="cliente" type="text" autofocus>        
+        </div>  
+        <br/>
+        <label class="radio" style="display:inline-table;">
+          <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+         Pago
+        </label>
+        <label class="radio" style="display:inline-table;">
+          <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" checked>
+          Em aberto
+        </label>            
+        <br/>
+         <button type="submit" class="btn btn-primary"><i class="icon-filter"></i>Filtrar</button>
+     </div>     
+  </form>
+  </div>
+  
+  
+	<div class="print_receber hide"></div>  
+  
+   <div id="popover-head-contribuicao" class="hide">Cadastrar contribuição</div>
+   <div id="popover-content-contribuicao" class="hide span12">
+   	<form action="../php/contasreceber.php" id="frmcadcontribuicao" method="post">
+    <input type="hidden" name="act" value="contribuicao" />
+    <input type="hidden" name="nseq" value="1" />
+     <div class="input-prepend">
+      <label>Contribuinte:<i class="mp"></i></label>
+      <span class="add-on icon-search"></span>
+      <input class="span2" id="cliente4" name="cliente" type="text">
+      <input  id="codcli" name="codcli" type="hidden">        
+    </div>  
+    <div class="input-prepend">
+        <label><strong>Valor:</strong></label>
+        <span class="add-on icon-usd"></span>
+        <input class="span2" id="valordc" name="valor"  type="text">
+    </div>  
+	   	<button type="submit" class="btn btn-primary"><i class="icon-plus-circle"></i>Cadastrar</button>
+    </form>
+	<div class="printer"></div>
+   </div>
+   
+   <div id="popover-head-promocao" class="hide">Cadastrar Promoção</div>
+   <div id="popover-content-promocao" class="hide span12">
+   	<form action="../php/contasreceber.php" id="frmcadpromocao" method="post">
+    <input type="hidden" name="act" value="promocao" />
+    <input type="hidden" name="nseq" value="1" />
+    <div class="input-prepend">
+      <label>Codigo da promoção:<i class="mp"></i></label>
+      <span class="add-on icon-search"></span>
+      <input class="span2" id="cliente4" name="cliente" type="text">
+      <input  id="codcli" name="codcli" type="hidden">        
+    </div>  
+    <div class="input-prepend">
+        <label><strong>Valor:</strong></label>
+        <span class="add-on icon-usd"></span>
+        <input class="span2" id="valordc" name="valor"  type="text">
+    </div>  
+	   	<button type="submit" class="btn btn-primary"><i class="icon-plus-circle"></i>Cadastrar</button>
+    </form>
+	<div class="printer"></div>
+   </div>

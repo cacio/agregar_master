@@ -1,0 +1,55 @@
+﻿<div class="row">
+  <div class="col-12">
+
+            <form method="post" action="folha-exec.php" >
+	              <input type="hidden" name="act" value="inserir"/>                     
+                  		<section>
+               
+                     	 <fieldset>
+                         	<legend><span>Cadastro de Folha</span></legend>
+                            <div class="row"> 
+                            <div class="col-md-2">
+                            	<label><strong>Competência:</strong></label>      
+                                <div class="input-group">                          
+                                 <span class="input-group-addon fa fa-calendar"></span>
+                               	 <input type="text" name="dtpago" id="dtpag" required class="form-control span2" />                                 
+                                </div>
+                       	  	</div>
+                                                      
+                            <div class="col-md-3">
+                            	<label><strong>Número de funcionários:</strong></label> 
+                              <div class="input-group">                               
+                                 <span class="input-group-addon fa fa-asterisk"></span>
+                               	 <input type="text" name="numfunc" id="numfunc" required class="form-control span2"  />                                 
+                              </div>   
+                       		   </div>
+                             
+                           <div class="col-md-2">
+                            	<label><strong>Valor Pago:</strong></label> 
+                              <div class="input-group">                              
+                                 <span class="input-group-addon fa fa-usd"></span>
+                               	 <input type="text" name="valorfolha" id="valors" required class="form-control span2 text-right"  />                                 
+                              </div>  
+                       		</div>
+                            
+                        </div>  
+                             
+                             
+                             
+                     </fieldset>
+                          
+                 </section> 
+                 <hr/>
+            	 <section>              
+                <div class="row">
+                   <div class="col-md-2">
+                    <button class="btn btn-primary">Cadastrar</button>
+                    <a href="../php/listar-folha.php" class="btn">Voltar</a>
+                   </div>
+                </div>
+                </section>
+            </form>
+   
+
+		</div>
+   </div>

@@ -1,0 +1,58 @@
+<table class="table table-hover">
+	
+  <thead>
+    <tr>
+      <th style="text-align:left;padding: 0px;">CNPJ</th>
+      <th style="text-align:left;padding: 0px;">NOME</th>
+      <th style="text-align:left;padding: 0px;">CIDADE</th>
+      <th style="text-align:right;padding: 0px;"><div class="text-left">BOVINOS</div><br/>MACHO</th>
+      <th style="text-align:right;padding: 0px;">FEMEA</th>      	  
+      <th style="text-align:right;padding: 0px;">TOTAL</th>
+      <th style="text-align:right;padding: 0px;border-left: 1px #111111 solid;"><div class="text-left">BUBALINO</div><br/>MACHO</th>
+      <th style="text-align:right;padding: 0px;">FEMEA</th>      	  
+      <th style="text-align:right;padding: 0px;">TOTAL</th>
+      <th style="text-align:right;padding: 0px;border-left: 1px #111111 solid;"><div class="text-left">OVINOS</div><br/>MACHO</th>
+      <th style="text-align:right;padding: 0px;">FEMEA</th>
+      <th style="text-align:right;padding: 0px;">TOTAL</th>
+      <th style="text-align:right;padding: 0px;border-left: 1px #111111 solid;">VALOR TOTAL COMPRAS</th>          
+    </tr>
+  </thead>
+  <tbody>
+  <!-- START BLOCK : lista -->
+    <tr>
+		<td style="text-align:left;padding: 0px;">{cnpj}</td>
+		<td style="text-align:left;padding: 0px;">{razao_social}</td>
+		<td style="text-align:left;padding: 0px;">{cidade}</td>
+		<td style="text-align:right;padding: 0px;">{macho_bovinos}</td>	
+		<td style="text-align:right;padding: 0px;">{femea_bovinos}</td>	
+		<td style="text-align:right;padding: 0px;">{vl_tot_bovinos}</td>	
+		<td style="text-align:right;padding: 0px;border-left: 1px #111111 solid;">{macho_bubalinos}</td>	
+		<td style="text-align:right;padding: 0px;">{femea_bubalinos}</td>	
+		<td style="text-align:right;padding: 0px;">{vl_tot_bubalino}</td>	
+		<td style="text-align:right;padding: 0px;border-left: 1px #111111 solid;">{macho_ovinos}</td>	
+		<td style="text-align:right;padding: 0px;">{femea_ovinos}</td>	
+		<td style="text-align:right;padding: 0px;">{vl_tot_ovino}</td>	
+		<td style="text-align:right;padding: 0px;border-left: 1px #111111 solid;">{vl_tot_compras}</td>			
+    </tr>
+  <!-- END BLOCK : lista --> 
+  </tbody>
+	<tfoot>
+	 <!-- START BLOCK : total -->
+	 <tr style="background: #CBCBCB;">
+		<td style="text-align:left;padding: 0px;"><strong>TOTAL:</strong></td>
+		<td style="text-align:left;padding: 0px;"></td>
+		<td style="text-align:left;padding: 0px;"></td>
+		<td style="text-align:right;padding: 0px;"><strong>{vl_geral_macho_bovinos}</strong></td>	
+		<td style="text-align:right;padding: 0px;"><strong>{vl_geral_femea_bovinos}</strong></td>	
+		<td style="text-align:right;padding: 0px;"><strong>{vl_geral_bovinos}</strong></td>	
+		<td style="text-align:right;padding: 0px;border-left: 1px #111111 solid;"><strong>{vl_geral_macho_bubalino}</strong></td>	
+		<td style="text-align:right;padding: 0px;"><strong>{vl_geral_femea_bubalino}</strong></td>	
+		<td style="text-align:right;padding: 0px;"><strong>{vl_geral_bubalino}</strong></td>	
+		<td style="text-align:right;padding: 0px;border-left: 1px #111111 solid;"><strong>{vl_geral_macho_ovinos}</strong></td>	
+		<td style="text-align:right;padding: 0px;"><strong>{vl_geral_femea_ovinos}</strong></td>	
+		<td style="text-align:right;padding: 0px;"><strong>{vl_geral_ovinos}</strong></td>	
+		<td style="text-align:right;padding: 0px;border-left: 1px #111111 solid;"><strong>{vl_geral_compras}</strong></td>	
+	</tr>
+	 <!-- END BLOCK : total -->	
+	</tfoot>
+</table>

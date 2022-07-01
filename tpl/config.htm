@@ -1,0 +1,241 @@
+﻿<div class="row">    
+  <div class="col-md-12 m-2">
+    <h3>Configurações</h3>
+  </div>
+</div>
+  <div class="row">    
+    <div class="col-md-3">
+      <div class="stickyside">
+            <div class="list-group" id="top-menu">
+                <a href="#1" class="list-group-item">
+                  <i class="fa fa-file-text-o fa-1x m-1"></i>Configurações de importação XML
+                </a>
+                <a href="#4" class="list-group-item">
+                  <i class="fa fa-file-text-o fa-1x m-1"></i>Data Apuração do abate
+                </a>
+                <a href="#5" class="list-group-item">
+                  <i class="fa fa-file-text-o fa-1x m-1"></i>Configurações de importação TXT
+                </a>
+               
+                <a href="#2" class="list-group-item">
+                  <i class="fa fa-file-text-o fa-1x m-1"></i>N° Validação empresa
+                </a>
+                <a href="#3" class="list-group-item btnavancado">
+                  Configuração avançada  <i class="ti-angle-down m-1"></i>
+                  <a class="list-group-item hide bg-secondary" href="#3"  id="cfavancado">              
+                    <i class="fa fa-send fa-1x"></i>
+                    Forma de envio
+                  </a>
+                  
+                </a>            
+            </div>
+        </div>
+    </div>
+
+            
+    <div class="col-9">
+      <form action="config-exec.php" method="POST">   
+        <input type="hidden" name="act" value="save">
+        <div class="row" id="1">
+          <div class="col-12 m-t-0">
+              <h4 class="m-b-0">Configurações de importação XML</h4>
+              <p class="text-muted m-t-0"></p>
+              <div class="card">
+                  <div class="card-block collapse show">        
+                      <div class="col-md-6">                        
+                        <div class="form-group">
+                            <label class="control-label">Vivo/Rendimento</label>                                
+                            <select name="vr" class="form-control">
+                                <option value="">Selecione</option>
+                                <option value="V" {sel}>VIVO</option>
+                                <option value="R" {sel1}>RENDIMENTO</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">                        
+                      <div class="form-group">
+                          <label class="control-label">Próprio/Terceiros</label>                                
+                          <select name="tppt" class="form-control">
+                              <option value="">Selecione</option>
+                              <option value="P" {tpabtcheck}>Próprio</option>
+                              <option value="T" {tpabtcheck2}>Terceiros</option>
+                          </select>
+                      </div>
+                  </div>
+                  
+                  </div>
+              </div>
+          </div>
+        </div>
+
+        <div class="row" id="4">
+          <div class="col-12 m-t-0">
+              <h4 class="m-b-0">Data do abate</h4>
+              <p class="text-muted m-t-0"></p>
+              <div class="card">
+                  <div class="card-block collapse show">
+                    <div class="col-md-12">                        
+                      <ul class="feeds">
+                        <li>                             
+                          <label>Considerar data do abate por:</label>                         
+                        </li>                      
+                     </ul>
+                      <div class="form-check">
+                        <label class="custom-control custom-radio">
+                          <input id="radio1" name="radioabate" type="radio" value="1" class="custom-control-input" {abatcheck}>
+                          <span class="custom-control-indicator"></span>
+                          <span class="custom-control-description">Data de Emissão (XML)</span>
+                        </label>
+                      
+                        <label class="custom-control custom-radio">
+                          <input id="radio2" name="radioabate" type="radio" value="2" class="custom-control-input" {abatcheck2}>
+                          <span class="custom-control-indicator"></span>
+                          <span class="custom-control-description">Data de Entrada (XML)</span>
+                        </label>
+
+                        <label class="custom-control custom-radio">
+                          <input id="radio2" name="radioabate" type="radio" value="3" class="custom-control-input" {abatcheck3}>
+                          <span class="custom-control-indicator"></span>
+                          <span class="custom-control-description">Informar individualmente</span>
+                        </label>
+
+                        
+                        
+
+                      </div>
+
+
+                   </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+
+
+        <div class="row" id="5">
+          <div class="col-12 m-t-0">
+              <h4 class="m-b-0">Configurações de importação TXT</h4>
+              <p class="text-muted m-t-0"></p>
+              <div class="card">
+                  <div class="card-block collapse show">
+                    <div class="col-md-6">                        
+                      <div class="form-group">
+                          <label class="control-label">Vivo/Rendimento</label>                                
+                           <select name="vrtxt" class="form-control">
+                              <option value="">Selecione</option>
+                              <option value="V" {seltxt}>VIVO</option>
+                              <option value="R" {sel1txt}>RENDIMENTO</option>
+                          </select>
+                      </div>
+                   </div>
+                   <label class="custom-control custom-radio" title="Se marcado, considera como data de abate a data da emissão da nota. Válido apenas para registros que a data de abate não tenha sido informada.">
+                    <input id="radio1" name="radioabatetxt" type="checkbox" value="1" class="custom-control-input"  {abatchecktxt}>
+                    <span class="custom-control-indicator"></span>
+                    <span class="custom-control-description">Considerar a data de abate igual a data de emissão</span>
+                  </label>
+
+                  </div>
+              </div>
+          </div>
+        </div>
+
+        
+        <div class="row" id="2">
+          <div class="col-12 m-t-30">
+              <h4 class="m-b-0">N° Validação empresa:</h4>
+              <p class="text-muted m-t-0"></p>
+              <div class="card">
+                  <div class="card-block collapse show">
+                    <div class="col-md-8"> 
+                      <div class="form-group">
+                        <label>Número:</label>
+                        <div class="input-group">
+                          <span class="input-group-addon fa fa-terminal"></span>
+                          <input class="form-control" id="atvexcel" name="atvexcel" value="{atvexcel}" type="text">
+                          <span class="input-group-btn">
+                            <div  class="tooltipcopy">
+                              <button class="btn btn-success" type="button" onclick="copyvalida();" onmouseout="outFunc();"><span class="tooltiptext" id="myTooltip">Copiar para área de transferência</span>Copiar</button>
+                            </div>
+                          </span>
+
+                        </div>
+                      </div>  
+                    </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <h2 style="text-align: center; margin: 0px auto;">
+        <button class="btn btn-default btn-sm collapsed btnavancado" type="button">Avançado <i class="ti-angle-down"></i></button></h2>
+      <div class="row" id="3">
+        
+        <div class="col-12 m-t-30 collapse" id="avancado">
+            <h4 class="m-b-0">Forma de envio:</h4>
+            <p class="text-muted m-t-0"></p>
+            <div class="card">
+                <div class="card-block collapse show">
+                  <div class="col-md-8">
+                    <ul class="feeds">
+                      <li>                             
+                        <label>habilitar envio via (TXT)</label>
+                          <input type="checkbox" {abtxt} class="js-switch" data-color="#1a73e8" data-size="small" name="abtxt" /> 
+                      </li>
+                      <li>                             
+                        <label>habilitar envio via (MANUAL)</label>
+                          <input type="checkbox" {abmanual} class="js-switch" data-color="#1a73e8" data-size="small" name="abmanual" /> 
+                      </li>
+                  </ul>
+
+                   
+                  </div>
+                </div>
+            </div>
+
+            <h4 class="m-b-0">Apuração:</h4>
+            <p class="text-muted m-t-0"></p>
+            <div class="card">
+                <div class="card-block collapse show">
+                  <div class="col-md-8">
+                    <ul class="feeds">
+                      <li>                             
+                        <label>Considerar base de entrada:</label>                         
+                      </li>                      
+                   </ul>
+                   <div class="col-sm-6">
+                    <div class="form-check">
+                      <label class="custom-control custom-radio">
+                          <input id="radio1" name="radio" type="radio" value="1" class="custom-control-input" {apucheck}>
+                          <span class="custom-control-indicator"></span>
+                          <span class="custom-control-description">Por valor total produtos</span>
+                      </label>
+                  
+                      <label class="custom-control custom-radio">
+                          <input id="radio2" name="radio" type="radio" value="2" class="custom-control-input"{apucheck2}>
+                          <span class="custom-control-indicator"></span>
+                          <span class="custom-control-description">Por valor total da nota</span>
+                      </label>
+                  </div>
+              </div>
+                   
+                  </div>
+                </div>
+            </div>
+
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 m-t-30">            
+            <div class="card">
+                <div class="card-block collapse show">
+                  <input type="submit" name="save" class="btn btn-success" value="SALVAR">
+                </div>
+            </div>
+        </div>
+     </div>
+
+    </form>
+    </div>
+
+</div>

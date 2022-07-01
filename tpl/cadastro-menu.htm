@@ -1,0 +1,52 @@
+﻿<div class="container">
+  <div class="row">
+
+            <form method="post" action="menu-exec.php" >
+	              <input type="hidden" name="act" value="inserir"/>                     
+                  		<section>
+               
+                     	 <fieldset>
+                         	<legend class="lege glyphicon glyphicon-filter"><span>Cadastro de menu</span></legend>
+                            
+                            
+                           <div class="input-prepend" style="width: 275px;">
+                            <label><strong>Icone</strong></label> 
+                            	<span class="add-on fa fa-list"></span>           
+                              <select name="icone" class="selectpicker" data-live-search="true"  data-style="btn-primary" tabindex="1">
+                                <option value="fa fa-th" data-icon="fa fa-th">fa-th</option>
+                                <option value="fa fa-plus" data-icon="fa fa-plus">fa-plus-sign</option>
+                                <option value="fa fa-th-list" data-icon="fa fa-th-list">fa-th-list</option>
+                                <option value="fa fa-list-alt"  data-icon="fa fa-list-alt">fa-list-alt</option>
+                              </select>  
+                           </div>
+                           
+                            <div class="input-prepend">
+                            	<label><strong>Nome:</strong></label>                               
+                                    <span class="add-on fa fa-tasks"></span>
+                               	    <input type="text" name="nome" id="nome" required class="form-control"  />
+                                 
+                       		</div>
+                            
+                            <div class="input-prepend">
+                            	<label><strong>Url:</strong></label>
+                                <span class="add-on fa fa-link"></span>
+                           	    <input type="text" name="link" id="link" required class="form-control"  />
+                       		</div>
+                            
+                             
+                             
+                             
+                     </fieldset>
+                          
+                 </section> 
+            	 <section>              
+                <p class="stdformbutton">
+                    <button class="btn btn-primary">Cadastrar</button>
+                    <button type="reset" class="btn">Voltar</button>
+                </p>
+                </section>
+            </form>
+   
+
+		</div>
+   </div>

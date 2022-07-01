@@ -1,0 +1,60 @@
+﻿<div id="dashboard-left" class="span8">
+	<div id="loading"></div>
+    <div class="widgetbox box-inverse">
+        <h4 class="widgettitle">Cadastro de menu</h4>
+        <div class="widgetcontent nopadding">
+   			
+            <form class="stdform stdform2" method="post" action="menu-exec.php" />
+	              <input type="hidden" name="act" value="alterar"/>                     
+                  <input type="hidden" name="id" value="{cod}"/> 
+                  
+                   <div class="form">
+  	      			  <div class="sep">   
+                     	 <fieldset>
+                         	<legend class="lege glyphicon glyphicon-filter"><span>Cadastro de menu</span></legend>
+                            
+                            
+                           <div class="col-lg-3">
+                            <label><strong>Icone</strong></label>            
+                              <select name="icone" class="selectpicker" data-live-search="true"  data-style="btn-primary" tabindex="1">
+                                <option value="glyphicon-th" {icone} data-icon="glyphicon-th">glyphicon-th</option>
+                                <option value="glyphicon-plus-sign" {icone2} data-icon="glyphicon-plus-sign">glyphicon-plus-sign</option>
+                                <option value="glyphicon-th-list" {icone3} data-icon="glyphicon-th-list">glyphicon-th-list</option>
+                                <option value="glyphicon-list-alt" {icone4} data-icon="glyphicon-list-alt">glyphicon-list-alt</option>
+                              </select>  
+                           </div>
+                           
+                            <div class="col-lg-3">
+                            	<label><strong>Nome:</strong></label>
+                                <div class="input-group">
+                                    <span class="input-group-addon glyphicon glyphicon-tasks"></span>
+                               	    <input type="text" name="nome" id="nome" value="{menu}" required class="form-control"  />
+                                 </div>  
+                       		</div>
+                            
+                            <div class="col-lg-3">
+                            	<label><strong>Url:</strong></label>
+                                <div class="input-group">
+                                    <span class="input-group-addon glyphicon glyphicon-link"></span>
+                               	    <input type="text" name="link" id="link" value="{link}" required class="form-control"  />
+                                 </div>  
+                       		</div>
+                            
+                             
+                             
+                             
+                     </fieldset>
+                     </div>
+                 </div>       
+                  
+            	               
+                <p class="stdformbutton">
+                    <button class="btn btn-primary">Alterar</button>
+                    <button type="reset" class="btn">Voltar</button>
+                </p>
+            </form>
+   
+        </div>
+   </div>
+   
+</div>

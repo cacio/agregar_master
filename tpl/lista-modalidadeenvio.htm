@@ -1,0 +1,99 @@
+<div class="row">
+  <div class="col-12">
+<h2>Lista Modalidade</h2>
+<br/>
+<a href="../php/cadastro-modalidadeenvio.php" class="btn btn-primary btn-rounded">Cadastrar modalidade de envio</a>
+<!--<a href="#" class="btn btn-primary btn-rounded pop">link</a>-->
+<br/>
+<br/>
+<table id="dyntable" class="table table-bordered">
+
+    <thead>
+
+        <tr>
+            <th>#</th>
+            <th>Nome</th>
+            <th>Ação</th>            
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+     <!-- START BLOCK : listamodenv --> 
+
+        <tr id="{cod}" class="gradeA">
+            <td>{cod}</td> 
+            <td>{nome}</td>            
+            <td  class="centeralign">
+            	<a href="#" id="deletemodenv" class="deletemodenv"><span class="fa fa-remove fa-2x"></span></a>
+            	<a href="../php/alterar-modalidadeenvio.php?cod_modenvio={cod}"><span class="fa fa-pencil fa-2x"></span></a>
+                <a href="#"><span class="fa fa-indent fa-2x modal_documentos"></span></a>
+            </td>
+        </tr>
+
+      <!-- END BLOCK : listamodenv -->
+
+    </tbody>
+
+</table>
+
+</div>
+</div>
+
+<div class="modal" id="modal_documentos">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">DOCUMENTOS</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>        
+      </div>
+      <div class="modal-body">
+       
+       <input type="hidden" id="mod_idenv" />
+       	<div class="stack">
+      <div class="form_top"> </div>
+      <div class="float_break"></div>
+        <div class="form">
+          <br />
+          <div class="formbox">        
+            <h5>Todos os documentos</h5><br />
+            <div id="all_users">
+           		
+                            
+                <div class="float_break"></div> 
+            </div>
+            <div style="width:100px; text-align:center; margin-left:20px; padding-top: 100px; width:75px; float:left;">
+           	<a href="javascript:void(0);" id="move_right">Direita &raquo;</a><br /><br />
+            <a href="javascript:void(0);" id="move_left">&laquo; Esquerda</a>
+            <div class="float_break"></div>   
+            </div>
+            <div id="selected_users"></div>
+             <div class="float_break"></div> 
+          	 <div style="float:right; padding:0px 134px 0 0; font-weight:bold;">
+          	   <h6>Documentos relacionados.</h6>
+          	 </div>
+          </div>
+          <div class="float_break"></div>
+          <div class="formbox">
+            <input type="button" value="Salvar" id="views" class="form_button btn btn-primary btn-block btn-rounded"/>
+            <div class="float_break"></div>
+          </div>
+        </div>
+      <div class="form_bot"></div>
+    </div>
+       
+       
+       
+       
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+    <!-- /.modal-content --> 
+    
+  </div>
+  <!-- /.modal-dialog --> 
+  
+</div>

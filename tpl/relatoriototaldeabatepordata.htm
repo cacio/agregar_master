@@ -1,0 +1,63 @@
+<legend>Total de abate de por data</legend>
+<hr/>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Data</th>
+            <th>Espécie</th>
+            <th>Abate</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- START BLOCK : listar -->
+            <tr>
+                <td>{data_abate}</td>
+                <td>{especie}</td>
+                <td>{qtdcabeca}</td>
+            </tr>
+        <!-- END BLOCK : listar -->
+    </tbody>
+    <tfoot>
+        <!-- START BLOCK : total -->
+        <tr>
+            <td>Total;</td>
+            <td></td>
+            <td>{tot_cabeca}</td>
+        </tr>
+    <!-- END BLOCK : total -->
+    </tfoot>
+</table>
+
+<legend>Total de abate de por nota</legend>
+<hr/>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Data</th>
+            <th>Número nota</th>
+            <th>Espécie</th>
+            <th>Abate</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- START BLOCK : lista -->
+            <tr>
+                <td>{data_abates}</td>
+                <td>{numero_nota}</td>
+                <td>{especies}</td>
+                <td>{qtdcabecas}</td>
+            </tr>
+        <!-- END BLOCK : lista -->
+    </tbody>
+    <tfoot>
+        <!-- START BLOCK : totals -->
+        <tr>
+            <td>Total;</td>
+            <td></td>
+            <td></td>
+            <td>{tot_cabecas}</td>
+        </tr>
+    <!-- END BLOCK : totals -->
+    </tfoot>
+</table>

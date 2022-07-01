@@ -1,0 +1,95 @@
+﻿
+<!-- START BLOCK : analitico --> 
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>DATA PAGAMENTO</th>
+      <th>DATA VENCIMENTO</th>
+      <th>NUMERO</th>
+      <th>CONTRIBUINTE</th>
+      <th style="text-align:right;">VALOR</th>           
+	  <th style="text-align:right;">VALOR CONTRI.</th> 
+	  <th style="text-align:right;">VALOR PROMO.</th> 
+    </tr>
+  </thead>
+  <tbody>
+ 
+  <!-- START BLOCK : relrecebimento --> 
+    <tr>
+      <td>{datapag}</td>
+      <td>{vencimento}</td>
+      <td>{numero}</td>
+      <td>{nomecli}</td>
+      <td style="text-align:right;">{valordoc}</td> 
+	  <td style="text-align:right;">{vldoca}</td> 	  
+	  <td style="text-align:right;">{vlpromo}</td>
+    </tr>
+   <!-- END BLOCK : relrecebimento -->  
+   
+   
+  </tbody>
+</table>
+ <!-- START BLOCK : totals --> 
+<dl class="dl-horizontal">	
+  <dt><strong>Total valor:</strong></dt>
+  <dd><strong>{valortotal}</strong></dd>
+  <dt><strong>Total valor contribuição :</strong></dt>
+  <dd><strong>{vlcontritotal}</strong></dd>
+  <dt><strong>Total valor Promoção :</strong></dt>
+  <dd><strong>{vlpromototal}</strong></dd>
+  <dt><strong>Total Geral :</strong></dt>
+  <dd><strong>{totalgeral}</strong></dd>
+    
+ <!-- START BLOCK : vtlist -->
+ <dt><strong>{NOME}</strong></dt>
+ <!-- START BLOCK : vt -->
+<dd><strong>{valort}</strong></dd>
+<!-- END BLOCK : vt -->  
+<!-- END BLOCK : vtlist -->  
+</dl>
+ <!-- END BLOCK : totals --> 
+<!-- END BLOCK : analitico -->  	
+
+
+<!-- START BLOCK : sintetico --> 
+<table class="table table-hover">
+  <thead>
+    <tr>   
+      <th>CONTRIBUINTE</th>
+      <th style="text-align:right;">VALOR</th> 
+	  <th style="text-align:right;">VALOR CONTRIBUIÇÃO</th> 	  
+	  <th style="text-align:right;">VALOR PROMOÇÃO</th> 
+    </tr>
+  </thead>
+  <tbody>
+ 
+  <!-- START BLOCK : relrecebimentosintetico --> 
+    <tr>
+      <td>{nomecli}</td>
+      <td style="text-align:right;">{valordoc}</td>      
+	  <td style="text-align:right;">{valorcontri}</td>  
+	   <td style="text-align:right;">{vlpromos}</td> 
+    </tr>
+   <!-- END BLOCK : relrecebimentosintetico -->  
+   
+   
+  </tbody>
+</table>
+<!-- START BLOCK : total --> 
+<dl class="dl-horizontal">
+  <dt><strong>Total valor:</strong></dt>
+  <dd><strong>{valortotal}</strong></dd>
+  <dt><strong>Total valor contribuição :</strong></dt>
+  <dd><strong>{vlcontritotal}</strong></dd>
+    <dt><strong>Total valor promoção :</strong></dt>
+  <dd><strong>{vlpromostotal}</strong></dd>
+    <dt><strong>Total Dinheiro :</strong></dt>
+  <dd><strong>{vlrpagtodin}</strong></dd>
+  <dt><strong>Total Cartão:</strong></dt>
+  <dd><strong>{vlrpagtocart}</strong></dd>
+
+ 
+
+</dl>
+ <!-- END BLOCK : total --> 
+<!-- END BLOCK : sintetico -->  

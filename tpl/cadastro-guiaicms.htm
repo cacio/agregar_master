@@ -1,0 +1,68 @@
+﻿    
+<div class="row">
+  <div class="col-12">
+
+            <form method="post" action="guiaicms-exec.php" >
+	              <input type="hidden" name="act" value="inserir"/>                     
+                  		<section>
+                        <legend><span>Cadastro de GUIA ICMS</span></legend>                                                        
+                     	 <fieldset>
+                         	                          
+                          <div class="row">   
+                            
+                            <div class="col-md-2">                          
+                              <label><strong>Tipo ICMS:</strong></label>
+                              <div class="input-group">                                                                  
+                                   <span class="input-group-addon fa fa-list"></span>
+                                   <select name="opt">
+                                      <option value="">Selecionar</option>
+                                      <option value="1">ICMS NORMAL</option>
+                                      <option value="2">ICMS ST</option>
+                                   </select>
+                              </div>
+                             </div>
+
+                            <div class="col-md-2">                          
+                              <label><strong>Competência:</strong></label>
+                              <div class="input-group">                            	                                     
+                                   <span class="input-group-addon fa fa-calendar"></span>
+                                 	 <input type="text" name="compensa" id="competenc" required class="form-control span1 date-picker"  />                                 
+                         		  </div>
+                             </div> 
+                           
+                              <!---<div class="col-md-2">
+                                <label><strong>Codigo:</strong></label>  
+                                <div class="input-group">                                                             
+                                     <span class="input-group-addon fa fa-terminal"></span>
+                                     <input type="text" name="codigo" id="codigo" required class="form-control span2 text-right"  />                                 
+                                     <span class="input-group-addon fa fa-info alert-info" data-container="body" title="" data-trigger="hover" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-original-title="Popover title"></span>
+                                </div>
+                              </div>--> 
+                               
+                              <div class="col-md-2">
+                                <label><strong>Valor Pago:</strong></label>  
+                               <div class="input-group">                                	
+                                     <span class="input-group-addon fa fa-usd"></span>
+                                   	 <input type="text" name="valorpago" id="valorpago" required class="form-control span2 text-right"  />                                 
+                           		 </div>
+                              </div>
+
+                          </div>
+
+                     </fieldset>
+                          
+                 </section>
+                 <hr/> 
+            	 <section>              
+                <div class="row">
+                   <div class="col-md-2">
+                    <button class="btn btn-primary">Cadastrar</button>
+                    <a href="../php/listar-guiacms.php" class="btn">Voltar</a>
+                   </div>  
+                </div>
+                </section>
+            </form>
+   
+
+		</div>
+   </div>

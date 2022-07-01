@@ -1,0 +1,60 @@
+﻿<div class="container">
+   <div class="row">
+		<form action="" method="post" id="relatoriolivrocaixa">
+        <section>
+        	
+            <input type="hidden" name="act" value="inserir"/>
+            <input type="hidden" name="empresa" id="empresa" value=""/>
+            <fieldset>
+                <legend>Relatório :: Livro Caixa ::</legend>
+                 
+                    <div class="input-prepend">
+                        <label>Data  Incial:</label>
+                        <span class="add-on icon-calendar"></span>
+                        <input class="span2" id="dtadmissaoini" name="dtadmissaoini" type="text">
+                    </div>         
+            		<div class="input-prepend">
+                        <label>Data Final:</label>
+                        <span class="add-on icon-calendar"></span>
+                        <input class="span2" id="dtadmissaofin" name="dtadmissaofin" type="text">
+                    </div>                                  	   
+                    	
+                    <div class="input-prepend">
+						<label>Departamento:<i class="strdep"></i></label>
+                        <span class="add-on icon-search"></span>
+                        <input class="span2" id="tpdep" name="tpdep" type="text">
+                    </div>
+                    	
+                    <div class="input-prepend"> 
+	                    <label>Analitico/Sintetico:</label>   
+                    	<select name="analisint">
+                        	<option value="">Selecione</option>
+                            <option value="A">Analitico</option>
+                            <option value="S">Sintetico</option>	
+                        </select>
+                    </div>
+                        
+            </fieldset>                           
+        
+        </section>
+        <section>
+            <fieldset>
+                <input type="submit" style="width:150px;" class="btn btn-primary btn-rounded" value="Gerar"/>
+                <a href="../php/admin.php" class="btn btn-info">Voltar</a>
+                <a href="#" class="btn btn-info icon-print" onClick="printDiv('relatorio','livrocaixa.php');">&nbsp;Imprimir</a>
+            </fieldset>
+        </section>
+        
+         </form>
+         
+         
+         <section>        	
+            <div id="relatorio" style="margin-left: 57px;">
+            
+            
+            
+            
+            </div>            
+        </section>		 
+  </div>
+</div>

@@ -1,0 +1,85 @@
+﻿<div class="container">
+   <div class="row">
+		<form action="../php/caixa-exec.php" id="frmcaixa" method="post">
+        <section>
+        	
+            <input type="hidden" name="act" id="act" value="inserir"/>
+            <fieldset>
+                <legend>Cadastro de Livro Caixa</legend>
+                   <div class="span5"> 
+                    <div class="input-prepend">
+                       <label><strong>Data:</strong></label>
+                       <span class="add-on icon-calendar"></span>
+                       <input class="span2 text-right" id="dtcaixa" name="dtcaixa" type="text" style="width: 75px;">
+                    </div>
+                    
+                    <div class="input-prepend">
+					   <label><strong>Departamento:</strong></label>
+						<span class="add-on icon-list-alt"></span>
+					   <select name="departamento" id="departamento" class="span2">	                     
+							<option value="" selected>Selecione</option>
+						    <!-- START BLOCK : listadepartamento --> 
+						    <option value="{codigo}">{nome}</option>
+							<!-- END BLOCK : listadepartamento -->
+					   </select>           
+					 </div>
+                    
+                    <div class="input-prepend">
+					   <label><strong>Tipo:</strong></label>
+						<span class="add-on icon-list-alt"></span>
+					   <select name="tipoentsai" id="tipoentsai" class="span2">	                     
+							<option value="" selected>Selecione</option>
+							<option value="E">ENTRADA</option>
+							<option value="S">SAIDA</option>
+					   </select>           
+				    </div>
+                       
+                       
+                    <div class="input-prepend">
+                       <label><strong>Documento:</strong></label>
+                       <span class="add-on icon-circle"></span>
+                       <input class="span2" id="documento" name="documento" type="text">
+                    </div>         
+                     
+                    <div class="input-prepend">
+                       <label><strong>Valor:</strong></label>
+                       <span class="add-on icon-usd"></span>
+                       <input class="span2 text-right" id="valorcaixa" name="valorcaixa" type="text">
+                    </div>                       
+            		
+            		<div class="input-prepend">
+						<label><strong>Histórico:</strong></label>
+						<textarea rows="8" class="span5" name="historico"></textarea>
+					</div>
+           			<input type="submit" class="btn btn-primary" value="Salvar"/>
+				  <a href="../php/lista-caixa.php" class="btn btn-info">Voltar</a>
+           			
+            		</div>            		            	     
+			
+				<div class="span7">					
+					<table id="dyntablecaixa" class="table table-bordered">
+						<thead>
+							<tr>
+								<th>Data</th>
+								<th>Dep</th>
+								<th>Doc</th>
+								<th>Histórico</th>
+								<th style="text-align: right;">Entrada</th>
+								<th style="text-align: right;">Saida</th>								
+								<th style="text-align: center;">Ação</th>
+							</tr>
+						</thead>
+						<tbody>
+
+
+						</tbody>
+					</table>	
+				</div>
+												
+				</fieldset>
+          
+           </section>
+              
+         </form>
+  </div>
+</div>

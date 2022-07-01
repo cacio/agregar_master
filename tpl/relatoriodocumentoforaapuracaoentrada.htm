@@ -1,0 +1,121 @@
+<legend>Notas de entradas</legend>
+<hr>
+<table class="table">
+
+    <thead>
+        <tr>
+            <th>Número Nota</th>
+            <th>Produto Frig.</th>
+            <th>Produto Secret.</th>
+            <th class="text-right">Peso</th>
+            <th class="text-right">Preço</th>
+            <th class="text-right">Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- START BLOCK : lista -->
+        <tr>
+            <td>{numeronota}</td>
+            <td>{codigo_produto} - {desc_prod}</td>
+            <td>{cod_secretaria} - {dessecretaria}</td>
+            <td class="text-right">{peso}</td>
+            <td class="text-right">{preco_quilo}</td>
+            <td class="text-right">{total}</td>
+        </tr>
+        <!-- END BLOCK : lista -->
+    </tbody>
+    <tfoot>
+        <!-- START BLOCK : total -->
+        <tr>
+            <td>Total Diferença:</td>
+            <td></td>
+            <td></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right">{tot_nota}</td>
+        </tr>
+        <!-- END BLOCK : total -->
+
+    </tfoot>
+</table>
+
+<legend>Notas de Saida</legend>
+<hr>
+<table class="table">
+
+    <thead>
+        <tr>
+            <th>Número Nota</th>
+            <th>Produto Frig.</th>
+            <th>Produto Secret.</th>
+            <th>Tipo.</th>
+            <th class="text-right">Peso</th>
+            <th class="text-right">Preço</th>
+            <th class="text-right">Total</th>
+            <th>Cfop</th>
+            <th>Cfop Agregar</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- START BLOCK : listasaidas -->
+        <tr>
+            <td>{numero_nota}</td>
+            <td>{codigo_produto} - {desc_prod}</td>
+            <td>{cod_secretaria} - {dessecretaria}</td>
+            <td>{ent_sai}</td>
+            <td class="text-right">{peso}</td>
+            <td class="text-right">{preco_unitario}</td>
+            <td class="text-right">{sub}</td>
+            <td>{cfop}</td>
+            <td>{cfopcon}</td>
+        </tr>
+        <!-- END BLOCK : listasaidas -->
+    </tbody>
+    <tfoot>
+        <!-- START BLOCK : totalsaida -->
+        <tr>
+            <td>Total Diferença:</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="text-right"></td>
+            <td class="text-right"></td>
+            <td class="text-right">{tot_nota_saida}</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <!-- END BLOCK : totalsaida -->
+
+    </tfoot>
+</table>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Número Nota</th>
+            <th>Produto Frig.</th>
+            <th>Produto Secret.</th>
+            <th>Tipo.</th>
+            <th class="text-right">Peso</th>
+            <th class="text-right">Preço</th>
+            <th class="text-right">Total</th>
+            <th>Cfop</th>
+            <th>Motivo</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- START BLOCK : listasaidasicms -->
+        <tr>
+            <td>{numero_notas}</td>
+            <td>{codigo_produtos} - {desc_prods}</td>
+            <td>{cod_secretarias} - {dessecretarias}</td>
+            <td>{ent_sais}</td>
+            <td class="text-right">{pesos}</td>
+            <td class="text-right">{preco_unitarios}</td>
+            <td class="text-right">{subs}</td>
+            <td>{cfops}</td>
+            <td>{mot}</td>
+        </tr>
+        <!-- END BLOCK : listasaidasicms -->
+    </tbody>    
+</table>

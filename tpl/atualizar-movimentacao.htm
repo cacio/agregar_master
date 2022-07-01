@@ -1,0 +1,142 @@
+﻿<div class="container">
+  <div class="row">
+    <div class="span3 bs-docs-sidebar">
+      <ul class="nav nav-list bs-docs-sidenav affix-top">
+        <li class="active"><a href="#gerar" >Movimentações</a></li>
+        <li class=""><a href="#mostra">Mostrar</a></li>
+      </ul>
+    </div>
+    
+    <div class="span9">
+      <form action="../php/movimentacao-exec.php" method="post" id="frmmocimentacoes">
+      <section id="gerar">
+        <legend>Formulario</legend>
+         <input type="hidden" name="act" value="inserir"/>
+         <div class="input-prepend">
+           <label><strong>Tipo:</strong></label>
+            <span class="add-on icon-list-alt"></span>
+           <select name="tipo" class="span2">	                     
+                <option value="" selected>Selecione</option>
+                <option value="E" {sel1}>ENTRADA</option>
+                <option value="S" {sel2}>SAIDA</option>
+               
+           </select>           
+         </div>
+         <br/>
+         <div class="mtipo hide">
+         	 <input type="hidden" name="data" value="{data}"/>	
+             <div class="input-prepend numeromovim">
+                <label><strong>Numero Controle:</strong></label>
+                <span class="add-on icon-terminal"></span>
+                <input class="span1" id="numero" name="numero" value="{numero}" type="text">
+             </div>
+            
+              <div class="input-prepend">
+               <label><strong>Produtos:</strong></label>
+                <span class="add-on icon-list-alt"></span>
+               <select id="basic3"  name="produto" class="span2">	                     
+                    <option value="" selected>Selecione</option>
+                    <!-- START BLOCK : listarprod -->
+                        <option value="{codigo}" ><strong>{nome}</strong></option>
+                    <!-- END BLOCK : listarprod -->
+               </select>
+               <button class="btn" style="margin-left: 18px;" type="button"><i class="icon-plus-sign"></i></button>
+             </div>
+                                             
+             <div class="input-prepend">
+                <label><strong>Quantidade:</strong></label>
+                <span class="add-on icon-terminal"></span>
+                <input class="span1" id="quantidade" name="quantidade" type="text">
+             </div>
+            
+            <div class="input-prepend vlmovim">
+                <label><strong>Valor:</strong></label>
+                <span class="add-on icon-terminal"></span>
+                <input class="span1 text-right" id="valor" name="valor" type="text">
+             </div>
+             
+             <div class="input-prepend vlmovim">
+                <label><strong>Total:</strong></label>
+                <span class="add-on icon-terminal"></span>
+                <input class="span1 text-right" id="subtotals" name="subtotals" disabled type="text">
+                <input type="hidden" id="subtotal"/>
+             </div>
+               
+               <div class="input-prepend">
+             	<label><strong>AÇÃO:</strong></label>
+          		<button type="submit" class="btn btn-primary" tabindex="3"><i class="icon-plus-sign"></i> SALVAR</button>   	
+             </div> 
+                
+        </div>
+          
+        
+       </section>
+       <section>       		
+            <a href="../php/Listar-movimentacao.php" class="btn btn-info"><i class="icon-reply"></i> VOLTAR</a>	
+            <a href="#" class="btn btn-info icon-print" onClick="printDiv('relatorio','atualizar-movimentacao.php');">&nbsp;Imprimir</a>
+       </section>
+      </form>
+      <section id="mostra">
+        
+        <legend>Formulario</legend>
+        <div id="print"></div>
+        <div id="relatorio">
+            
+         <table id="dyntable_movim" class="table table-hover">
+          <thead>
+            <tr>
+              <th>Numero</th>
+              <th>Produto</th>
+              <th>Data</th>
+              <th style="text-align:center;">Tipo</th>
+              <th style="text-align:center;">Quantidade</th>
+              <th style="text-align:right;">Valor Unitario</th>
+              <th style="text-align:right;">Total</th>          
+            </tr>
+          </thead>
+          <tbody>
+            
+          <tr class="nd" style="display:none;">
+              <td colspan="7" align="center" style="text-align:center; background:#D7D2D2; font-size:12px;">Não a dados inseridos</td>
+          </tr>
+            <!-- START BLOCK : listar -->
+           <tr id="{codigo}">
+                <td>{numero}</td>
+                <td>{produto}</td>
+                <td>{data}</td>
+                <td style="text-align:center;">{tipo}</td>
+                <td style="text-align:center;">{quantidade}</td>
+                <td style="text-align:right;">{vlunit}</td>
+                <td style="text-align:right;">{total}</td>
+            </tr>
+           <!-- END BLOCK : listar --> 
+          </tbody>
+          <tfoot>
+           <!-- START BLOCK : total -->
+            <tr>
+              <th></th>
+              <th></th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td style="text-align:right;"><b>Sub total</b></td>
+              <td style="text-align:right; font-size:18px; padding: 0px 10px;"><b class="totsubtotal">{valortotal}</b><input type="hidden" id="subtotalprodnfe" name="subtotalprodnfe" value="{valortotal}"/></td>
+            </tr>
+            <!-- END BLOCK : total --> 
+          </tfoot>
+        </table>
+            
+			            
+        </div>            
+        
+      </section>
+      <section>
+      <div align="right">
+      	<a href="#" id="finalcompra" class="btn btn-success icon-share">&nbsp;FINALIZAR</a>
+      </div>  
+      </section>
+      
+    </div>
+    
+  </div>
+</div>

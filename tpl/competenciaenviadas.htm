@@ -1,0 +1,155 @@
+<div class="row">
+    <div class="col-12">
+		<div class="col-12 align-self-center text-center">
+		   <div class="btncompenv {hide}">
+				<div class="btn-group" role="group" aria-label="Basic example">
+					<button type="button" class="btn btn-info print_apura" data-container="body" title="INFORMAÇÃO" data-toggle="popover" data-placement="top" data-content="Botão de Impresão das listagem !" data-trigger="hover"><i class="fa fa-print"></i></button>
+					<button type="button" class="btn btn-success itemcomp apuitem" data-id="{mesano}|{cnpj}">APURAÇÃO</button>
+					<button type="button" class="btn btn-secondary btn-ntentrada" data-id="{mesano}|{cnpj}">RELATÓRIO NOTAS DE ENTRADA</button>
+					<button type="button" class="btn btn-secondary btn-ntsaida" data-id="{mesano}|{cnpj}">RELATÓRIO NOTAS DE SAIDA</button>
+					<button type="button" class="btn btn-secondary btn-xprorel" data-id="{mesano}|{cnpj}">RELATÓRIO PRODUTO</button>
+					<!--<button type="button" class="btn btn-danger close_apura" data-container="body" title="INFORMAÇÃO" data-toggle="popover" data-placement="top" data-content="Fechar" data-trigger="hover"><i class="fa fa-close"></i></button>-->
+				</div>
+		   </div> 
+		</div>
+	
+	</div>
+</div>
+
+<div class="row">
+    <div class="col-12">  
+		<div class="card">
+			<div class="row">
+				<div class="col-12">
+					<div class="card-block detalhecomp">
+					   <div class="load" align="center"></div>
+					   <!-- START BLOCK : nada -->
+						<div class="alert alert-warning"><i class="fa fa-exclamation-triangle"></i> {msg}</div>
+					   <!-- END BLOCK : nada -->
+						<div class="{hide}">
+							 <div  align="center">
+								<ul class="list-group list-group-full">
+									<li class="list-group-item">
+									  NUMERO PROTOCOLO<br/> {protocolo}
+									</li>
+									<li class="list-group-item">
+									  <div class="form-group"><label>STATUS</label>
+										<select name="liststatus" class="custom-select form-control btn-block" disabled>
+											<!-- START BLOCK : listar -->
+												<option value="{codstatus}" {sel}>{nomestatus}</option>
+											<!-- END BLOCK : listar -->			
+										</select>
+									  </div>
+									</li>
+									  <li class="list-group-item">
+									  <a href="#" class="btn btn-success btn-block print_apura"><i class="fa fa-print"></i> IMPRIMIR</a>
+									</li>
+							   </ul>
+							</div>
+							<div  align="center" id="content">
+								MÊS/ANO-> {mesano}<br/>
+								----------------------------------<br/>
+								<br/>
+								ANIMAIS ABATIDOS<br/>
+								---------------------------------<br/>
+								<br/>
+
+							  
+							  <div style="text-align:center; display:inline-table;">
+								<div style="display: inline-table; margin-right: 20px; text-align: left; width: 88px;">
+									BOVINOS
+								</div>
+								<div style="display: inline-table; margin-left: -20px; margin-right: -5px; text-align: right; width: 38px; ">
+									{bovinos}
+								</div>
+								<br/>
+								<div style="display:inline-table; text-align:left; margin-right:20px; width:80px; ">
+									BUBALINOS
+								</div>
+								<div style="display: inline-table; margin-left: -20px; margin-right: -5px; text-align: right; width: 38px; ">
+									{bubalinos}
+								</div>
+								<br/>
+								<div style="display:inline-table; text-align:left; margin-right:20px; width:87px; ">
+									OVINOS
+								</div>
+								<div style="display: inline-table; margin-left: -20px; margin-right: -5px; text-align: right; width: 38px; ">
+									{ovinos}
+								</div>
+								
+							  </div>
+							  <br/>
+							  <br/>
+							  APURACAO DO CREDITO<br/>
+							  ---------------------------------------- <br/>
+
+
+							  <div class="col-8">
+								<table class="table" style="width:100%;"> 
+									<thead>
+										<tr>
+											<th>NOTAS</th>
+											<th class="text-right">BASE</th>
+											<th class="text-right">CREDITO</th>
+										</tr>
+									</thead>
+			
+									<tbody>
+										<tr>
+											<td>DE PRODUTOR..........................</td>
+											<td class="text-right">{base}</td>
+											<td class="text-right">{credito}</td>
+										</tr>
+										<!-- START BLOCK : listexp -->
+										<tr>
+											<td>{nome_pt}</td>
+											<td class="text-right"></td>
+											<td class="text-right">{valor}</td>
+										</tr>
+										<!-- END BLOCK : listexp -->
+										
+										<tr>
+											<td>VENDAS RIO GRANDE DO SUL 3%</td>
+											<td class="text-right">{basers}</td>
+											<td class="text-right">{creditors}</td>
+										</tr>
+			
+										<tr>
+											<td>VENDAS RIO GRANDE DO SUL 4%</td>
+											<td class="text-right">{basers2}</td>
+											<td class="text-right">{creditors2}</td>
+										</tr>
+			
+										<tr>
+											<td>VENDAS OUTROS ESTADOS 3%</td>
+											<td class="text-right">{basedifrs}</td>
+											<td class="text-right">{creditodifrs}</td>
+										</tr>
+			
+										<tr>
+											<td>VENDAS OUTROS ESTADOS 4%</td>
+											<td class="text-right">{basedifrs2}</td>
+											<td class="text-right">{creditodifrs2}</td>
+										</tr>
+			
+									</tbody>
+									<tfoot>
+										<tr>
+											<td>TOTAL GERAIS</td>
+											<td class="text-right">{total_geral_base}</td>
+											<td class="text-right">{total_geral_credito}</td>
+										</tr>
+									</tfoot>
+			
+								</table>
+							</div>
+
+							</div>
+						
+						</div>																 
+					</div>
+				</div>
+			</div>	
+		</div>
+	</div>
+</div>

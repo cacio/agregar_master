@@ -1,0 +1,723 @@
+<div class="row">
+    <div class="col-12">
+		<div class="col-12 align-self-center text-center">
+		   <div class="btncompenv {hide}">
+				<div class="btn-group" role="group" aria-label="Basic example">
+					<button type="button" class="btn btn-info print_apura" data-container="body" title="INFORMAÇÃO" data-toggle="popover" data-placement="top" data-content="Botão de Impresão das listagem !" data-trigger="hover"><i class="fa fa-print"></i></button>
+					<button type="button" class="btn btn-success itemcomp apuitem" data-id="{mesano}|{cnpj}">APURAÇÃO</button>
+					<button type="button" class="btn btn-secondary btn-ntentrada" data-id="{mesano}|{cnpj}">RELATÓRIO NOTAS DE ENTRADA</button>
+					<button type="button" class="btn btn-secondary btn-ntsaida" data-id="{mesano}|{cnpj}">RELATÓRIO NOTAS DE SAIDA</button>
+					<button type="button" class="btn btn-secondary btn-xprorel" data-id="{mesano}|{cnpj}">RELATÓRIO PRODUTO</button>
+					<!--<button type="button" class="btn btn-danger close_apura" data-container="body" title="INFORMAÇÃO" data-toggle="popover" data-placement="top" data-content="Fechar" data-trigger="hover"><i class="fa fa-close"></i></button>-->
+				</div>
+		   </div> 
+		</div>
+	
+	</div>
+</div>
+
+<div class="row">
+    <div class="col-12">  
+		<div class="card">
+			<div class="row">
+				<div class="col-12">
+						<div class="load" align="center"></div>
+					   <!-- START BLOCK : nada -->
+						<div class="alert alert-warning"><i class="fa fa-exclamation-triangle"></i> {msg}</div>
+					   <!-- END BLOCK : nada -->
+					<div class="card-block detalhecomp" id="content">
+					   
+					   <!-- START BLOCK : sintetico -->
+						<div class="{hide}">
+							 <div  align="center">
+								<ul class="list-group list-group-full">
+									<li class="list-group-item">
+									  NUMERO PROTOCOLO<br/> {protocolo}
+									</li>
+									<li class="list-group-item">
+									  <div class="form-group"><label>STATUS</label>
+										<select name="liststatus" class="custom-select form-control btn-block" disabled>
+											<!-- START BLOCK : listar -->
+												<option value="{codstatus}" {sel}>{nomestatus}</option>
+											<!-- END BLOCK : listar -->			
+										</select>
+									  </div>
+									</li>
+									  <li class="list-group-item">
+									  <a href="#" class="btn btn-success btn-block print_apura"><i class="fa fa-print"></i> IMPRIMIR</a>
+									</li>
+							   </ul>
+							</div>
+							<div  align="center" id="content">
+								MÊS/ANO-> {mesano}<br/>
+								----------------------------------<br/>
+								<br/>
+								ANIMAIS ABATIDOS<br/>
+								---------------------------------<br/>
+								<br/>
+
+							  
+							  <div style="text-align:center; display:inline-table;">
+								<div style="display: inline-table; margin-right: 20px; text-align: left; width: 88px;">
+									BOVINOS
+								</div>
+								<div style="display: inline-table; margin-left: -20px; margin-right: -5px; text-align: right; width: 38px; ">
+									{bovinos}
+								</div>
+								<br/>
+								<div style="display:inline-table; text-align:left; margin-right:20px; width:80px; ">
+									BUBALINOS
+								</div>
+								<div style="display: inline-table; margin-left: -20px; margin-right: -5px; text-align: right; width: 38px; ">
+									{bubalinos}
+								</div>
+								<br/>
+								<div style="display:inline-table; text-align:left; margin-right:20px; width:87px; ">
+									OVINOS
+								</div>
+								<div style="display: inline-table; margin-left: -20px; margin-right: -5px; text-align: right; width: 38px; ">
+									{ovinos}
+								</div>
+								
+							  </div>
+							  <br/>
+							  <br/>
+							  APURACAO DO CREDITO<br/>
+							  ---------------------------------------- <br/>
+
+
+							  <div class="col-8">
+								<table class="table" style="width:100%;"> 
+									<thead>
+										<tr>
+											<th>NOTAS</th>
+											<th class="text-right">BASE</th>
+											<th class="text-right">CREDITO</th>
+										</tr>
+									</thead>
+			
+									<tbody>
+										<tr>
+											<td>DE PRODUTOR..........................</td>
+											<td class="text-right">{base}</td>
+											<td class="text-right">{credito}</td>
+										</tr>
+										<!-- START BLOCK : listexp -->
+										<tr>
+											<td>{nome_pt}</td>
+											<td class="text-right"></td>
+											<td class="text-right">{valor}</td>
+										</tr>
+										<!-- END BLOCK : listexp -->
+										
+										<tr>
+											<td>VENDAS RIO GRANDE DO SUL 3%</td>
+											<td class="text-right">{basers}</td>
+											<td class="text-right">{creditors}</td>
+										</tr>
+			
+										<tr>
+											<td>VENDAS RIO GRANDE DO SUL 4%</td>
+											<td class="text-right">{basers2}</td>
+											<td class="text-right">{creditors2}</td>
+										</tr>
+			
+										<tr>
+											<td>VENDAS OUTROS ESTADOS 3%</td>
+											<td class="text-right">{basedifrs}</td>
+											<td class="text-right">{creditodifrs}</td>
+										</tr>
+			
+										<tr>
+											<td>VENDAS OUTROS ESTADOS 4%</td>
+											<td class="text-right">{basedifrs2}</td>
+											<td class="text-right">{creditodifrs2}</td>
+										</tr>
+			
+									</tbody>
+									<tfoot>
+										<tr>
+											<td>TOTAL GERAIS</td>
+											<td class="text-right">{total_geral_base}</td>
+											<td class="text-right">{total_geral_credito}</td>
+										</tr>
+									</tfoot>
+			
+								</table>
+							</div>
+
+							</div>
+						
+						</div>	
+						
+						<!-- END BLOCK : sintetico -->
+
+						<!-- START BLOCK : analitico -->
+						<!-- START BLOCK : xml -->
+						<table border="0" cellpadding="0" cellspacing="0" style='border-collapse:collapse;table-layout:fixed;margin: 0 auto;'>
+
+							<col width="85" style='mso-width-source:userset;mso-width-alt:3108;width:64pt'>
+							<col width="353" style='mso-width-source:userset;mso-width-alt:12909;width:265pt'>
+							<col width="103" style='mso-width-source:userset;mso-width-alt:3766;width:77pt'>
+							<col width="156" style='mso-width-source:userset;mso-width-alt:5705;width:117pt'>
+							
+							<tr height="21" style='height:15.75pt'>
+								<td colspan="3" height="21" class="xl95" width="541" style='height:15.75pt; width:406pt'>Gerado em:agregar</td>
+								<td class="xl69" width="156" style='width:117pt'>Emitido em: {datehora}</td>
+							</tr>
+							
+							<tr height="20" style='height:15.0pt'>
+								<td colspan="4" rowspan="2" height="41" class="xl96" style='border-right:1.0pt solid black;border-bottom:1.0pt solid black;height:30.75pt'>Apuração Mensal AGREGAR -  Mês/Ano: {mesano}</td>
+							</tr>
+							
+							<tr height="21" style='height:15.75pt'>
+							</tr>
+							
+							<tr height="20" style='height:15.0pt'>
+								<td colspan="4" height="20" class="xl102" style='height:15.0pt'>{razao_social} - {cnpjemp}</td>
+							</tr>
+							
+							<tr height="20" style='height:15.0pt'>
+								<td colspan="4" rowspan="2" height="41" class="xl103" style='height:30.75pt'>Nº DE ANIMAIS ABATIDOS</td>
+							</tr>
+							
+							<tr height=21 style='height:15.75pt'>
+							</tr>
+			
+							<tr height=21 style='height:15.75pt'>
+								<td colspan=2 height=21 class=xl104 style='border-right:.5pt solid black;height:15.75pt'>Espécie</td>
+								<td colspan=2 class=xl106 style='border-right:1.0pt solid black;border-left:none'>Nº de Cabeças</td>
+							</tr>
+			
+							<tr height=20 style='height:15.0pt'>
+								<td colspan=2 height=20 class=xl133 style='border-right:.5pt solid black;height:15.0pt'>BOVINOS</td>
+								<td colspan=2 class=xl145 style='border-right:1.0pt solid black;border-left:none'>{bovinos}</td>
+							</tr>
+							<tr height=20 style='height:15.0pt'>
+								<td colspan=2 height=20 class=xl134 style='border-right:.5pt solid black;height:15.0pt'>BUBALINOS</td>
+								<td colspan=2 class=xl139 style='border-right:1.0pt solid black;border-left:none'>{bubalinos}</td>
+							</tr>
+			
+							<tr height=21 style='height:15.75pt'>
+								<td colspan=2 height=21 class=xl135 style='border-right:.5pt solid black;height:15.75pt'>OVINOS</td>
+								<td colspan=2 class=xl141 style='border-right:1.0pt solid black;border-left:none'>{ovinos}</td>
+							</tr>
+			
+							<tr height=20 style='height:15.0pt'>
+								<td colspan=2 rowspan=2 height=41 class=xl137 style='border-right:.5pt solid black;border-bottom:1.0pt solid black;height:30.75pt'>TOTAL DE CABEÇAS ABATIDAS</td>
+								<td colspan=2 rowspan=2 class=xl143 style='border-right:1.0pt solid black;border-bottom:1.0pt solid black'>{totalanimais}</td>
+							</tr>
+							
+							<tr height=21 style='height:15.75pt'>
+							</tr>
+			
+							<tr height=20 style='height:15.0pt'>
+								<td colspan=4 rowspan=3 height=61 class=xl129 style='border-bottom:1.0pt solid black;height:45.75pt'>APURAÇÃO DE CRÉDITO</td>
+							</tr>
+							
+							<tr height=20 style='height:15.0pt'>
+							</tr>
+			
+							<tr height=21 style='height:15.75pt'>
+							</tr>
+			
+							<tr height=21 style='height:15.75pt'>
+								<td colspan=4 height=21 class=xl130 style='border-right:1.0pt solid black;height:15.75pt'>COMPRAS</td>
+							</tr>
+							
+							<tr height=20 style='height:15.0pt'>
+								<td colspan=2 height=20 class=xl109 style='border-right:.5pt solid black; height:15.0pt'>Origem</td>
+								<td class=xl70 style='border-left:none'>*Valor da Base</td>
+								<td class=xl71 style='border-left:none'>Valor do Crédito</td>
+							</tr>
+			
+							<tr height=20 style='height:15.0pt'>
+								<td rowspan=4 height=81 class=xl111 width=85 style='height:60.75pt;border-top:none;width:64pt'>Crédito 3,6%</td>
+								<td class=xl72 style='border-top:none;border-left:none'>NOTAS DE COMPRA DE ANIMAIS (PRODUTORES)</td>
+								<td class=xl73 align=right style='border-top:none;border-left:none'>R$ {valorentrada}</td>
+								<td class=xl74 style='border-top:none;border-left:none'>&nbsp;</td>
+							</tr>
+
+							<!-- START BLOCK : listaexportacao -->
+								<tr height=20 style='height:15.0pt'>
+									<td height=20 class=xl75 style='height:15.0pt;border-top:none;border-left:none;padding-left: 23px;'>
+										<span style='mso-spacerun:yes'></span>( - ) Valor Glosado Exportação - ({nome})
+									</td>
+									<td class=xl76 align=right style='border-top:none;border-left:none'>
+										- R$ {valor}
+									</td>
+									<td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+								</tr>
+							<!-- END BLOCK : listaexportacao -->
+
+							<tr height=21 style='height:15.75pt'>
+								<td height=21 class=xl78 style='height:15.75pt;border-top:none;border-left:	none; padding-left: 23px;'><span style='mso-spacerun:yes'></span>( - ) Devoluções de Compra</td>
+								<td class=xl79 align=right style='border-top:none;border-left:none'>-R$	{devolucao}</td>
+								<td class=xl80 style='border-top:none;border-left:none'>&nbsp;</td>
+							</tr>
+			
+							<tr height=21 style='height:15.75pt'>
+								<td colspan={numexps} height=21 class=xl132 style='height:15.75pt'>( = ) TOTAL DE COMPRAS</td>
+								<td class=xl81 align=right>R$ {base}</td>
+								<td class=xl82 align=right>R$ {credito}</td>
+							</tr>
+			
+							<tr height=21 style='height:15.75pt'>
+								<td height=21 class=xl83 width=85 style='height:15.75pt;width:64pt'></td>
+								<td class=xl66></td>
+								<td class=xl67></td>
+								<td class=xl67></td>
+							</tr>
+			
+							<tr height=21 style='height:15.75pt'>
+								<td colspan=4 height=21 class=xl130 style='border-right:1.0pt solid black;height:15.75pt'>VENDAS</td>
+							</tr>
+			
+							<tr height=20 style='height:15.0pt'>
+								<td colspan=2 height=20 class=xl109 style='border-right:.5pt solid black;height:15.0pt'>Origem</td>
+								<td class=xl70 style='border-left:none'>*Valor da Base</td>
+								<td class=xl71 style='border-left:none'>Valor do Crédito</td>
+							</tr>
+			
+							<tr height=20 style='height:15.0pt'>
+								<td rowspan=3 height=60 class=xl111 width=85 style='border-bottom:.5pt solid black;	height:45.0pt;border-top:none;width:64pt'>Crédito 3%</td>
+								<td class=xl72 style='border-top:none;border-left:none'>VENDAS DENTRO DO ESTADO (RS)</td>
+								<td class=xl73 align=right style='border-top:none;border-left:none'>R$ {saidadevolucao}</td>
+								<td class=xl84 style='border-top:none;border-left:none'>&nbsp;</td>
+							</tr>
+			
+							<tr height=20 style='height:15.0pt'>
+								<td height=20 class=xl85 style='height:15.0pt;border-top:none;border-left:none;padding-left: 25px;'>( - ) Devoluções de Vendas DENTRO do (RS)</td>
+								<td class=xl76 align=right style='border-top:none;border-left:none'>-R$	{devolucao}</td>
+								<td class=xl84 style='border-top:none;border-left:none'>&nbsp;</td>
+							</tr>
+			
+							<tr height=20 style='height:15.0pt'>
+								<td height=20 class=xl72 style='height:15.0pt;border-top:none;border-left:none'><span style='mso-spacerun:yes'></span>( = ) TOTAL FINAL VENDAS (RS) - Crédito (3%)</td>
+								<td class=xl73 align=right style='border-top:none;border-left:none'>R$ {basers}</td>
+								<td class=xl84 align=right style='border-top:none;border-left:none'>R$ {creditors}</td>
+							</tr>
+			
+							<tr height=20 style='height:15.0pt'>
+								<td colspan=2 height=20 class=xl114 style='border-right:.5pt solid black;height:15.0pt'>Origem</td>
+								<td class=xl86 style='border-top:none;border-left:none'>*Valor da Base</td>
+								<td class=xl87 style='border-top:none;border-left:none'>Valor do Crédito</td>
+							</tr>
+			
+							<tr height=20 style='height:15.0pt'>
+								<td rowspan=3 height=61 class=xl111 width=85 style='border-bottom:.5pt solid black;	height:45.75pt;border-top:none;width:64pt'>Crédito 4%</td>
+								<td class=xl72 style='border-top:none;border-left:none'>VENDAS DENTRO DO ESTADO (RS)</td>
+								<td class=xl73 align=right style='border-top:none;border-left:none'>R$ {saidadevolucao2}</td>
+								<td class=xl84 style='border-top:none;border-left:none'>&nbsp;</td>
+							</tr>
+			
+							<tr height=20 style='height:15.0pt'>
+								<td height=20 class=xl85 style='height:15.0pt;border-top:none;border-left:none; padding-left: 25px;'>( - ) Devoluções de Vendas DENTRO do (RS)</td>
+								<td class=xl76 align=right style='border-top:none;border-left:none'>-R$	{devolucao}</td>
+								<td class=xl84 style='border-top:none;border-left:none'>&nbsp;</td>
+							</tr>
+			
+							<tr height=21 style='height:15.75pt'>
+								<td height=21 class=xl88 style='height:15.75pt;border-top:none;border-left:none;padding-left: 25px;'>( = ) TOTAL FINAL VENDAS (RS) - Crédito (4%)</td>
+								<td class=xl89 align=right style='border-top:none;border-left:none'>R$ {basers2}</td>
+								<td class=xl90 align=right style='border-top:none;border-left:none'>R$ {creditors2}</td>
+							</tr>
+							<tr height=20 style='height:15.0pt'>
+								<td colspan=2 rowspan=2 height=41 class=xl116 style='border-bottom:1.0pt solid black;height:30.75pt'>TOTAL DE VENDAS DENTRO DO ESTADO (RS)</td>
+								<td rowspan=2 class=xl117 align=right style='border-bottom:1.0pt solid black'>R$ {totalbasers}</td>
+								<td rowspan=2 class=xl118 align=right style='border-bottom:1.0pt solid black'>R$ {totalcreditors}</td>
+							</tr>
+			
+							<tr height=21 style='height:15.75pt'>
+							</tr>
+			
+							<tr height=20 style='height:15.0pt'>
+								<td colspan=2 height=20 class=xl109 style='border-right:.5pt solid black;height:15.0pt'>Origem</td>
+								<td class=xl70 style='border-left:none'>*Valor da Base</td>
+								<td class=xl71 style='border-left:none'>Valor do Crédito</td>
+							</tr>
+			
+							<tr height=20 style='height:15.0pt'>
+								<td rowspan=3 height=60 class=xl111 width=85 style='border-bottom:.5pt solid black;	height:45.0pt;border-top:none;width:64pt'>Crédito 3%</td>
+								<td class=xl72 style='border-top:none;border-left:none'>VENDAS FORA DO ESTADO (RS)</td>
+								<td class=xl73 align=right style='border-top:none;border-left:none'>R$ {saida_outros_outros2}</td>
+								<td class=xl84 style='border-top:none;border-left:none'>&nbsp;</td>
+							</tr>
+			
+							<tr height=20 style='height:15.0pt'>
+								<td height=20 class=xl85 style='height:15.0pt;border-top:none;border-left:none;padding-left: 25px;'><span style='mso-spacerun:yes'></span>( - ) Devoluções de Vendas FORA do (RS)</td>
+								<td class=xl76 align=right style='border-top:none;border-left:none'>-R$ {devolucao3_outros}</td>
+								<td class=xl84 style='border-top:none;border-left:none'>&nbsp;</td>
+							</tr>
+			
+							<tr height=20 style='height:15.0pt'>
+								<td height=20 class=xl72 style='height:15.0pt;border-top:none;border-left:none;padding-left: 25px;'><span style='mso-spacerun:yes'></span>( = ) TOTAL FINAL VENDAS FORA (RS) - Crédito 3%</td>
+								<td class=xl73 align=right style='border-top:none;border-left:none'>R$ {basedifrs}</td>
+								<td class=xl84 align=right style='border-top:none;border-left:none'>R$ {creditodifrs}</td>
+							</tr>
+			
+							<tr height=20 style='height:15.0pt'>
+								<td colspan=2 height=20 class=xl114 style='border-right:.5pt solid black;height:15.0pt'>Origem</td>
+								<td class=xl86 style='border-top:none;border-left:none'>*Valor da Base</td>
+								<td class=xl87 style='border-top:none;border-left:none'>Valor do Crédito</td>
+							</tr>
+			
+							<tr height=20 style='height:15.0pt'>
+								<td rowspan=3 height=61 class=xl111 width=85 style='border-bottom:.5pt solid black;height:45.75pt;border-top:none;width:64pt'>Crédito 4%</td>
+								<td class=xl72 style='border-top:none;border-left:none'>VENDAS FORA DO ESTADO (RS)</td>
+								<td class=xl73 align=right style='border-top:none;border-left:none'>R$ {saida_outros4}</td>
+								<td class=xl84 style='border-top:none;border-left:none'>&nbsp;</td>
+							</tr>
+			
+							<tr height=20 style='height:15.0pt'>
+								<td height=20 class=xl85 style='height:15.0pt;border-top:none;border-left:none;padding-left: 25px;'><span style='mso-spacerun:yes'></span>( - ) Devoluções de Vendas FORA do (RS)</td>
+								<td class=xl76 align=right style='border-top:none;border-left:none'>-R$ {devolucao4_outros}</td>
+								<td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+							</tr>
+			
+							<tr height=21 style='height:15.75pt'>
+								<td height=21 class=xl88 style='height:15.75pt;border-top:none;border-left:	none;padding-left: 25px;'><span style='mso-spacerun:yes'></span>( = ) TOTAL FINAL VENDAS FORA (RS) - Crédito 4%</td>
+								<td class=xl89 align=right style='border-top:none;border-left:none'>R$ {basedifrs2}</td>
+								<td class=xl90 align=right style='border-top:none;border-left:none'>R$ {creditodifrs2}</td>
+							</tr>
+			
+							<tr height=20 style='height:15.0pt'>
+								<td colspan=2 rowspan=2 height=41 class=xl116 style='border-bottom:1.0pt solid black;height:30.75pt'>TOTAL DE VENDAS FORA DO ESTADO (RS)</td>
+								<td rowspan=2 class=xl117 align=right style='border-bottom:1.0pt solid black'>R$ {tot_base_foraestado}</td>
+								<td rowspan=2 class=xl118 align=right style='border-bottom:1.0pt solid black'>R$ {tot_credito_foraestado}</td>
+							</tr>
+			
+							<tr height=21 style='height:15.75pt'>
+							</tr>
+			
+							<tr height=20 style='height:15.0pt'>
+								<td colspan=2 rowspan=2 height=41 class=xl119 style='border-right:.5pt solid black;border-bottom:1.0pt solid black;height:30.75pt'>( = ) TOTAL DE VENDAS</td>
+								<td rowspan=2 class=xl122 align=right style='border-bottom:1.0pt solid black'>R$ {tot_base_foradentro}</td>
+								<td rowspan=2 class=xl124 align=right style='border-bottom:1.0pt solid black'>R$ {tot_credito_dentrofora}</td>
+							</tr>
+			
+							<tr height=21 style='height:15.75pt'>
+							</tr>
+			
+							<tr height=21 style='height:15.75pt'>
+							<td height=21 class=xl92 width=85 style='height:15.75pt;width:64pt'></td>
+							<td class=xl68></td>
+							<td class=xl68></td>
+							<td class=xl93></td>
+							</tr>
+							
+							<tr height=20 style='height:15.0pt'>
+								<td colspan=3 rowspan=3 height=61 class=xl96 style='border-bottom:1.0pt solid black;height:45.75pt'>VALOR FINAL DA APURAÇÃO {mesano}</td>
+								<td class=xl94>VALOR DO CRÉDITO</td>
+							</tr>
+			
+							<tr height=20 style='height:15.0pt'>
+								<td rowspan=2 height=41 class=xl127 align=right style='border-bottom:1.0pt solid black;	height:30.75pt'>R$ {tot_basecredito_dentrofora}</td>
+							</tr>
+			
+							<tr height=21 style='height:15.75pt'>
+							</tr>
+			
+							<tr height=20 style='height:15.0pt'>
+								<td colspan=4 rowspan=2 height=40 class=xl108 width=697 style='height:30.0pt;width:523pt'>
+								(*) Para o Valor da Base é considerado o cálculo da QUANTIDADE
+								(x) VALOR UNITÁRIO do produto.<br>
+								NÃO são considerados descontos ou acréscimos informados na nota (Ex.:
+								ICMS-ST, FRETE, OUTRAS DESPESAS...).</td>
+							</tr>
+			
+							<tr height=20 style='height:15.0pt'>
+							</tr>
+			
+							</table>
+							<!-- END BLOCK : xml -->
+							
+							<!-- START BLOCK : txt -->
+
+							<table border="0" cellpadding="0" cellspacing="0" style='border-collapse:collapse;table-layout:fixed;margin: 0 auto;'>
+
+								<col width="85" style='mso-width-source:userset;mso-width-alt:3108;width:64pt'>
+								<col width="353" style='mso-width-source:userset;mso-width-alt:12909;width:265pt'>
+								<col width="103" style='mso-width-source:userset;mso-width-alt:3766;width:77pt'>
+								<col width="156" style='mso-width-source:userset;mso-width-alt:5705;width:117pt'>
+								
+								<tr height="21" style='height:15.75pt'>
+									<td colspan="3" height="21" class="xl95" width="541" style='height:15.75pt; width:406pt'>Gerado em:Agregar</td>
+									<td class="xl69" width="156" style='width:117pt'>Emitido em: {datehora}</td>
+								</tr>
+								
+								<tr height="20" style='height:15.0pt'>
+									<td colspan="4" rowspan="2" height="41" class="xl96" style='border-right:1.0pt solid black;border-bottom:1.0pt solid black;height:30.75pt'>Apuração Mensal AGREGAR -  Mês/Ano: {mesano}</td>
+								</tr>
+								
+								<tr height="21" style='height:15.75pt'>
+								</tr>
+								
+								<tr height="20" style='height:15.0pt'>
+									<td colspan="4" height="20" class="xl102" style='height:15.0pt'>{razao_social} - {cnpjemp}</td>
+								</tr>
+								
+								<tr height="20" style='height:15.0pt'>
+									<td colspan="4" rowspan="2" height="41" class="xl103" style='height:30.75pt'>Nº DE ANIMAIS ABATIDOS</td>
+								</tr>
+								
+								<tr height=21 style='height:15.75pt'>
+								</tr>
+				
+								<tr height=21 style='height:15.75pt'>
+									<td colspan=2 height=21 class=xl104 style='border-right:.5pt solid black;height:15.75pt'>Espécie</td>
+									<td colspan=2 class=xl106 style='border-right:1.0pt solid black;border-left:none'>Nº de Cabeças</td>
+								</tr>
+				
+								<tr height=20 style='height:15.0pt'>
+									<td colspan=2 height=20 class=xl133 style='border-right:.5pt solid black;height:15.0pt'>BOVINOS</td>
+									<td colspan=2 class=xl145 style='border-right:1.0pt solid black;border-left:none'>{bovinos}</td>
+								</tr>
+								<tr height=20 style='height:15.0pt'>
+									<td colspan=2 height=20 class=xl134 style='border-right:.5pt solid black;height:15.0pt'>BUBALINOS</td>
+									<td colspan=2 class=xl139 style='border-right:1.0pt solid black;border-left:none'>{bubalinos}</td>
+								</tr>
+				
+								<tr height=21 style='height:15.75pt'>
+									<td colspan=2 height=21 class=xl135 style='border-right:.5pt solid black;height:15.75pt'>OVINOS</td>
+									<td colspan=2 class=xl141 style='border-right:1.0pt solid black;border-left:none'>{ovinos}</td>
+								</tr>
+				
+								<tr height=20 style='height:15.0pt'>
+									<td colspan=2 rowspan=2 height=41 class=xl137 style='border-right:.5pt solid black;border-bottom:1.0pt solid black;height:30.75pt'>TOTAL DE CABEÇAS ABATIDAS</td>
+									<td colspan=2 rowspan=2 class=xl143 style='border-right:1.0pt solid black;border-bottom:1.0pt solid black'>{totalanimais}</td>
+								</tr>
+								
+								<tr height=21 style='height:15.75pt'>
+								</tr>
+				
+								<tr height=20 style='height:15.0pt'>
+									<td colspan=4 rowspan=3 height=61 class=xl129 style='border-bottom:1.0pt solid black;height:45.75pt'>APURAÇÃO DE CRÉDITO</td>
+								</tr>
+								
+								<tr height=20 style='height:15.0pt'>
+								</tr>
+				
+								<tr height=21 style='height:15.75pt'>
+								</tr>
+				
+								<tr height=21 style='height:15.75pt'>
+									<td colspan=4 height=21 class=xl130 style='border-right:1.0pt solid black;height:15.75pt'>COMPRAS</td>
+								</tr>
+								
+								<tr height=20 style='height:15.0pt'>
+									<td colspan=2 height=20 class=xl109 style='border-right:.5pt solid black; height:15.0pt'>Origem</td>
+									<td class=xl70 style='border-left:none'>*Valor da Base</td>
+									<td class=xl71 style='border-left:none'>Valor do Crédito</td>
+								</tr>
+				
+								<tr height=20 style='height:15.0pt'>
+									<td rowspan=4 height=81 class=xl111 width=85 style='height:60.75pt;border-top:none;width:64pt'>Crédito 3,6%</td>
+									<td class=xl72 style='border-top:none;border-left:none'>NOTAS DE COMPRA DE ANIMAIS (PRODUTORES)</td>
+									<td class=xl73 align=right style='border-top:none;border-left:none'>R$ {valorentrada}</td>
+									<td class=xl74 style='border-top:none;border-left:none'>&nbsp;</td>
+								</tr>
+								
+								<!-- START BLOCK : listaexportacao -->
+									<tr height=20 style='height:15.0pt'>
+										<td height=20 class=xl75 style='height:15.0pt;border-top:none;border-left:none;padding-left: 23px;'>
+											<span style='mso-spacerun:yes'></span>( - ) Valor Glosado Exportação - ({nome})
+										</td>
+										<td class=xl76 align=right style='border-top:none;border-left:none'>
+											- R$ {valor}
+										</td>
+										<td class=xl77 style='border-top:none;border-left:none'>&nbsp;</td>
+									</tr>
+								<!-- END BLOCK : listaexportacao -->
+								
+								<tr height=21 style='height:15.75pt'>
+									<td height=21 class=xl78 style='height:15.75pt;border-top:none;border-left:	none; padding-left: 23px;'><span style='mso-spacerun:yes'></span>( - ) Devoluções de Compra</td>
+									<td class=xl79 align=right style='border-top:none;border-left:none'>-R$	{devolucao}</td>
+									<td class=xl80 style='border-top:none;border-left:none'>&nbsp;</td>
+								</tr>
+				
+								<tr height=21 style='height:15.75pt'>
+									<td colspan={numexps} height=21 class=xl132 style='height:15.75pt'>( = ) TOTAL DE COMPRAS</td>
+									<td class=xl81 align=right>R$ {base}</td>
+									<td class=xl82 align=right>R$ {credito}</td>
+								</tr>
+				
+								<tr height=21 style='height:15.75pt'>
+									<td height=21 class=xl83 width=85 style='height:15.75pt;width:64pt'></td>
+									<td class=xl66></td>
+									<td class=xl67></td>
+									<td class=xl67></td>
+								</tr>
+				
+								<tr height=21 style='height:15.75pt'>
+									<td colspan=4 height=21 class=xl130 style='border-right:1.0pt solid black;height:15.75pt'>VENDAS</td>
+								</tr>
+				
+								<tr height=20 style='height:15.0pt'>
+									<td colspan=2 height=20 class=xl109 style='border-right:.5pt solid black;height:15.0pt'>Origem</td>
+									<td class=xl70 style='border-left:none'>*Valor da Base</td>
+									<td class=xl71 style='border-left:none'>Valor do Crédito</td>
+								</tr>
+				
+								<tr height=20 style='height:15.0pt'>
+									<td rowspan=3 height=60 class=xl111 width=85 style='border-bottom:.5pt solid black;	height:45.0pt;border-top:none;width:64pt'>Crédito 3%</td>
+									<td class=xl72 style='border-top:none;border-left:none'>VENDAS DENTRO DO ESTADO (RS)</td>
+									<td class=xl73 align=right style='border-top:none;border-left:none'>R$ {saida}</td>
+									<td class=xl84 style='border-top:none;border-left:none'>&nbsp;</td>
+								</tr>
+				
+								<tr height=20 style='height:15.0pt'>
+									<td height=20 class=xl85 style='height:15.0pt;border-top:none;border-left:none;padding-left: 25px;'>( - ) Devoluções de Vendas DENTRO do (RS)</td>
+									<td class=xl76 align=right style='border-top:none;border-left:none'>-R$	{devolucaosaida}</td>
+									<td class=xl84 style='border-top:none;border-left:none'>&nbsp;</td>
+								</tr>
+				
+								<tr height=20 style='height:15.0pt'>
+									<td height=20 class=xl72 style='height:15.0pt;border-top:none;border-left:none'><span style='mso-spacerun:yes'></span>( = ) TOTAL FINAL VENDAS (RS) - Crédito (3%)</td>
+									<td class=xl73 align=right style='border-top:none;border-left:none'>R$ {basers}</td>
+									<td class=xl84 align=right style='border-top:none;border-left:none'>R$ {creditors}</td>
+								</tr>
+				
+								<tr height=20 style='height:15.0pt'>
+									<td colspan=2 height=20 class=xl114 style='border-right:.5pt solid black;height:15.0pt'>Origem</td>
+									<td class=xl86 style='border-top:none;border-left:none'>*Valor da Base</td>
+									<td class=xl87 style='border-top:none;border-left:none'>Valor do Crédito</td>
+								</tr>
+				
+								<tr height=20 style='height:15.0pt'>
+									<td rowspan=3 height=61 class=xl111 width=85 style='border-bottom:.5pt solid black;	height:45.75pt;border-top:none;width:64pt'>Crédito 4%</td>
+									<td class=xl72 style='border-top:none;border-left:none'>VENDAS DENTRO DO ESTADO (RS)</td>
+									<td class=xl73 align=right style='border-top:none;border-left:none'>R$ {saida2}</td>
+									<td class=xl84 style='border-top:none;border-left:none'>&nbsp;</td>
+								</tr>
+				
+								<tr height=20 style='height:15.0pt'>
+									<td height=20 class=xl85 style='height:15.0pt;border-top:none;border-left:none; padding-left: 25px;'>( - ) Devoluções de Vendas DENTRO do (RS)</td>
+									<td class=xl76 align=right style='border-top:none;border-left:none'>-R$	{devolucao2}</td>
+									<td class=xl84 style='border-top:none;border-left:none'>&nbsp;</td>
+								</tr>
+				
+								<tr height=21 style='height:15.75pt'>
+									<td height=21 class=xl88 style='height:15.75pt;border-top:none;border-left:none;padding-left: 25px;'>( = ) TOTAL FINAL VENDAS (RS) - Crédito (4%)</td>
+									<td class=xl89 align=right style='border-top:none;border-left:none'>R$ {basers2}</td>
+									<td class=xl90 align=right style='border-top:none;border-left:none'>R$ {creditors2}</td>
+								</tr>
+								<tr height=20 style='height:15.0pt'>
+									<td colspan=2 rowspan=2 height=41 class=xl116 style='border-bottom:1.0pt solid black;height:30.75pt'>TOTAL DE VENDAS DENTRO DO ESTADO (RS)</td>
+									<td rowspan=2 class=xl117 align=right style='border-bottom:1.0pt solid black'>R$ {totalbasers}</td>
+									<td rowspan=2 class=xl118 align=right style='border-bottom:1.0pt solid black'>R$ {totalcreditors}</td>
+								</tr>
+				
+								<tr height=21 style='height:15.75pt'>
+								</tr>
+				
+								<tr height=20 style='height:15.0pt'>
+									<td colspan=2 height=20 class=xl109 style='border-right:.5pt solid black;height:15.0pt'>Origem</td>
+									<td class=xl70 style='border-left:none'>*Valor da Base</td>
+									<td class=xl71 style='border-left:none'>Valor do Crédito</td>
+								</tr>
+				
+								<tr height=20 style='height:15.0pt'>
+									<td rowspan=3 height=60 class=xl111 width=85 style='border-bottom:.5pt solid black;	height:45.0pt;border-top:none;width:64pt'>Crédito 3%</td>
+									<td class=xl72 style='border-top:none;border-left:none'>VENDAS FORA DO ESTADO (RS)</td>
+									<td class=xl73 align=right style='border-top:none;border-left:none'>R$ {saida3}</td>
+									<td class=xl84 style='border-top:none;border-left:none'>&nbsp;</td>
+								</tr>
+				
+								<tr height=20 style='height:15.0pt'>
+									<td height=20 class=xl85 style='height:15.0pt;border-top:none;border-left:none;padding-left: 25px;'><span style='mso-spacerun:yes'></span>( - ) Devoluções de Vendas FORA do (RS)</td>
+									<td class=xl76 align=right style='border-top:none;border-left:none'>-R$ {devolucao_outros3}</td>
+									<td class=xl84 style='border-top:none;border-left:none'>&nbsp;</td>
+								</tr>
+				
+								<tr height=20 style='height:15.0pt'>
+									<td height=20 class=xl72 style='height:15.0pt;border-top:none;border-left:none;padding-left: 25px;'><span style='mso-spacerun:yes'></span>( = ) TOTAL FINAL VENDAS FORA (RS) - Crédito 3%</td>
+									<td class=xl73 align=right style='border-top:none;border-left:none'>R$ {basedifrs}</td>
+									<td class=xl84 align=right style='border-top:none;border-left:none'>R$ {creditodifrs}</td>
+								</tr>
+				
+								<tr height=20 style='height:15.0pt'>
+									<td colspan=2 height=20 class=xl114 style='border-right:.5pt solid black;height:15.0pt'>Origem</td>
+									<td class=xl86 style='border-top:none;border-left:none'>*Valor da Base</td>
+									<td class=xl87 style='border-top:none;border-left:none'>Valor do Crédito</td>
+								</tr>
+				
+								<tr height=20 style='height:15.0pt'>
+									<td rowspan=3 height=61 class=xl111 width=85 style='border-bottom:.5pt solid black;height:45.75pt;border-top:none;width:64pt'>Crédito 4%</td>
+									<td class=xl72 style='border-top:none;border-left:none'>VENDAS FORA DO ESTADO (RS)</td>
+									<td class=xl73 align=right style='border-top:none;border-left:none'>R$ {saida4}</td>
+									<td class=xl84 style='border-top:none;border-left:none'>&nbsp;</td>
+								</tr>
+				
+								<tr height=20 style='height:15.0pt'>
+									<td height=20 class=xl85 style='height:15.0pt;border-top:none;border-left:none;padding-left: 25px;'><span style='mso-spacerun:yes'></span>( - ) Devoluções de Vendas FORA do (RS)</td>
+									<td class=xl76 align=right style='border-top:none;border-left:none'>-R$ {devolucao_outros4}</td>
+									<td class=xl91 style='border-top:none;border-left:none'>&nbsp;</td>
+								</tr>
+				
+								<tr height=21 style='height:15.75pt'>
+									<td height=21 class=xl88 style='height:15.75pt;border-top:none;border-left:	none;padding-left: 25px;'><span style='mso-spacerun:yes'></span>( = ) TOTAL FINAL VENDAS FORA (RS) - Crédito 4%</td>
+									<td class=xl89 align=right style='border-top:none;border-left:none'>R$ {basedifrs2}</td>
+									<td class=xl90 align=right style='border-top:none;border-left:none'>R$ {creditodifrs2}</td>
+								</tr>
+				
+								<tr height=20 style='height:15.0pt'>
+									<td colspan=2 rowspan=2 height=41 class=xl116 style='border-bottom:1.0pt solid black;height:30.75pt'>TOTAL DE VENDAS FORA DO ESTADO (RS)</td>
+									<td rowspan=2 class=xl117 align=right style='border-bottom:1.0pt solid black'>R$ {tot_base_foraestado}</td>
+									<td rowspan=2 class=xl118 align=right style='border-bottom:1.0pt solid black'>R$ {tot_credito_foraestado}</td>
+								</tr>
+				
+								<tr height=21 style='height:15.75pt'>
+								</tr>
+				
+								<tr height=20 style='height:15.0pt'>
+									<td colspan=2 rowspan=2 height=41 class=xl119 style='border-right:.5pt solid black;border-bottom:1.0pt solid black;height:30.75pt'>( = ) TOTAL DE VENDAS</td>
+									<td rowspan=2 class=xl122 align=right style='border-bottom:1.0pt solid black'>R$ {tot_base_foradentro}</td>
+									<td rowspan=2 class=xl124 align=right style='border-bottom:1.0pt solid black'>R$ {tot_credito_dentrofora}</td>
+								</tr>
+				
+								<tr height=21 style='height:15.75pt'>
+								</tr>
+				
+								<tr height=21 style='height:15.75pt'>
+								<td height=21 class=xl92 width=85 style='height:15.75pt;width:64pt'></td>
+								<td class=xl68></td>
+								<td class=xl68></td>
+								<td class=xl93></td>
+								</tr>
+								
+								<tr height=20 style='height:15.0pt'>
+									<td colspan=3 rowspan=3 height=61 class=xl96 style='border-bottom:1.0pt solid black;height:45.75pt'>VALOR FINAL DA APURAÇÃO {mesano}</td>
+									<td class=xl94>VALOR DO CRÉDITO</td>
+								</tr>
+				
+								<tr height=20 style='height:15.0pt'>
+									<td rowspan=2 height=41 class=xl127 align=right style='border-bottom:1.0pt solid black;	height:30.75pt'>R$ {tot_basecredito_dentrofora}</td>
+								</tr>
+				
+								<tr height=21 style='height:15.75pt'>
+								</tr>
+				
+								<tr height=20 style='height:15.0pt'>
+									<td colspan=4 rowspan=2 height=40 class=xl108 width=697 style='height:30.0pt;width:523pt'>
+									(*) Para o Valor da Base é considerado o cálculo da QUANTIDADE
+									(x) VALOR UNITÁRIO do produto.<br>
+									NÃO são considerados descontos ou acréscimos informados na nota (Ex.:
+									ICMS-ST, FRETE, OUTRAS DESPESAS...).</td>
+								</tr>
+				
+								<tr height=20 style='height:15.0pt'>
+								</tr>
+				
+								</table>
+
+							<!-- END BLOCK : txt -->
+
+						<!-- END BLOCK : analitico -->
+
+					</div>
+				</div>
+			</div>	
+		</div>
+	</div>
+</div>

@@ -1,0 +1,97 @@
+﻿<!-- START BLOCK : analitico --> 
+<table class="table table-hover">
+	<caption class="title"></caption>
+  <thead>
+    <tr>
+      <th>DATA</th>
+      <th>DEP</th>
+      <th>DOC</th>
+      <th>Histórico</th>
+      <th>ENTRADA</th>
+      <th>SAIDA</th>
+      <th>SALDO</th>      
+    </tr>
+  </thead>
+  <tbody>
+ 	<tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>{xnome}</td>
+      <td></td>
+      <td></td>
+      <td>{sadoini}</td>      
+    </tr>
+  <!-- START BLOCK : caixa --> 
+    <tr>
+      <td style="width: 8%;">{data}</td>
+      <td style="width: 6%;">{nomadep}</td>
+      <td style="width: 7%;">{doc}</td>
+      <td style="width: 57%;">{hist}</td>
+      <td style="width: 8%;">{entrada}</td>
+      <td style="width: 9%;">{saida}</td>
+      <td>{saldo}</td>      
+    </tr>
+   <!-- END BLOCK : caixa -->  
+   
+   <!-- START BLOCK : total --> 
+    <tr style="background: #C0C0C0;">
+      <td><strong>TOTAL:</strong></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td><strong>{tot_entrada}</strong></td>
+      <td><strong>{tot_saida}</strong></td>
+      <td><strong>{saldo}</strong></td>      
+    </tr>
+   <!-- END BLOCK : total --> 
+   
+  </tbody>
+</table>	
+<!-- END BLOCK : analitico --> 
+
+
+<!-- START BLOCK : sintetico -->
+
+
+<table class="table table-hover">
+	<caption class="title"></caption>
+  <thead>
+    <tr>      
+      <th>DEP</th>            
+      <th style="text-align: right;">ENTRADA</th>
+      <th style="text-align: right;">SAIDA</th>
+      <th style="text-align: right;">SALDO</th>      
+    </tr>
+  </thead>
+  <tbody>
+ 	<tr>     
+      <td>{xnome}</td>
+      <td></td>
+      <td></td>
+      <td style="text-align: right;">{sadoini}</td>      
+    </tr>
+  <!-- START BLOCK : listacaixa --> 
+    <tr>
+      <td>{nome}</td>            
+      <td style="text-align: right;">{entradas}</td>
+      <td style="text-align: right;">{saidas}</td>
+      <td style="text-align: right;">{saldo2}</td>      
+    </tr>
+   <!-- END BLOCK : listacaixa -->  
+     
+     <!-- START BLOCK : total2 --> 
+    <tr style="background: #C0C0C0;">
+      <td><strong>TOTAL:</strong></td>      
+      <td style="text-align: right;"><strong>{tot_entrada2}</strong></td>
+      <td style="text-align: right;"><strong>{tot_saida2}</strong></td>
+      <td style="text-align: right;"><strong>{saldo2}</strong></td>      
+    </tr>
+   <!-- END BLOCK : total2 -->   
+   
+  </tbody>
+</table>
+
+
+
+<!-- END BLOCK : sintetico -->

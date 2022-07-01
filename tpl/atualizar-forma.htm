@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+         <form action="../php/formapagto-exec.php" method="post">
+         <section>
+             
+             <input type="hidden" name="act" value="alterar"/>
+             <input type="hidden" name="id" value="{codigo}"/>
+             <fieldset>
+                 <legend>Atualização de Forma</legend>
+                     <div class="input-prepend">
+                         <label>Nome:</label>
+                         <span class="add-on icon-terminal"></span>
+                         <input class="span3" id="nome" name="nome" type="text" value="{nome}">
+                    </div>         
+                                 
+             
+             </fieldset>                           
+         
+         </section>
+         <section>
+             <fieldset>
+                 <input type="submit" class="btn btn-primary" value="Alterar"/>
+                 <a href="../php/formapagto.php" class="btn btn-info">Voltar</a>
+             </fieldset>
+         </section>
+         
+          </form>
+   </div>
+ </div>

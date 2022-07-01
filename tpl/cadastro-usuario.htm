@@ -1,0 +1,161 @@
+﻿<style>
+    .select2-container .select2-selection--single{
+        height: 36px !important;
+    }
+</style>
+    <div class="row">                 
+      <div class="col-12">
+        <form  method="post" id="signupForm" action="usuario-exec.php">
+            <input type="hidden" name="act" value="inserir"/>
+            <input type="hidden" name="coduser" value="{coduser}"/>
+          <div class="row" id="1">
+            <div class="col-12 m-t-0">
+                <h4 class="m-b-0">Cadastro de Usuário</h4>
+                <p class="text-muted m-t-0"></p>
+                <div class="card">
+                    <div class="card-block">
+                    
+                        <div class="row">       	            
+		 
+                            <div class="col-md-3">                                          
+                               <div class="form-group">
+                                   <label for="exampleInputuname">Nome</label>
+                                   <div class="input-group">
+                                       <div class="input-group-addon"><i class="ti-user"></i></div>
+                                       <input type="text" class="form-control" name="nome" id="nome" placeholder="Nome" required>
+                                   </div>
+                               </div>
+                            </div>
+                            
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                   <label for="exampleInputEmail1">Email</label>
+                                   <div class="input-group">
+                                       <div class="input-group-addon"><i class="ti-email"></i></div>
+                                       <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" required>
+                                   </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-3">                                          
+                               <div class="form-group">
+                                   <label for="exampleInputuname">Login</label>
+                                   <div class="input-group">
+                                       <div class="input-group-addon"><i class="ti-user"></i></div>
+                                       <input type="text" class="form-control" name="login" id="login" placeholder="Cnpj login" required>
+                                   </div>
+                               </div>
+                            </div>
+                            
+                                    
+                           <div class="col-md-3">   
+                               <div class="form-group">
+                                   <label for="exampleInputpwd2">Senha</label>
+                                   <div class="input-group">
+                                       <div class="input-group-addon"><i class="ti-lock"></i></div>
+                                       <input type="password" class="form-control" name="senha" id="senha" placeholder="Senha" required>					
+                                   </div>
+                               </div>
+                           </div>
+                         
+                             <div class="col-md-3">   
+                               <div class="form-group">
+                                   <label for="exampleInputpwd2">Senha</label>
+                                   <div class="input-group">
+                                       <div class="input-group-addon"><i class="ti-lock"></i></div>
+                                       <input type="password" class="form-control" name="confsenha" id="confsenha" placeholder="Confirma senha" data-toggle="popover"  data-placement="top" data-content="As senhas informadas não coincidem!" data-original-title="" required>					
+                                   </div>
+                               </div>
+                           </div>
+                           <div class="col-md-3">
+                                   <div class="form-group">
+                                       <label class="control-label">Permissão:</label>
+                                       <select class="form-control custom-select" name="sys" data-placeholder="Operador" required>
+                                           <option value="0">Selecione o operdor</option>
+                                           <option value="1">Administrador</option>
+                                           <option value="2">Usuário</option>						
+                                       </select>
+                                   </div>
+                               </div>
+                               <div class="col-md-3">
+                                   <div class="form-group">
+                                       <label class="control-label">Empresa:</label>
+                                       <select class="form-control custom-select select2usuario" name="id_emp" data-placeholder="Operador" required>
+                                           <option value="0">Selecione a empresa vinculada</option>	
+                                           <!-- START BLOCK : listaempresa -->
+                                           <option value="{code}">{razao_social} - <strong>{fantasia}</strong></option>
+                                           <!-- END BLOCK : listaempresa -->					
+                                       </select>
+                                   </div>
+                               </div>
+                               
+                          </div>
+
+
+                    </div>
+                </div>
+            </div>
+          </div>
+  
+          <div class="row permicoes hide" id="2">
+            <div class="col-12 m-t-30">
+                <h4 class="m-b-0">Permissões do Usuário:</h4>
+                <p class="text-muted m-t-0"></p>
+                <div class="card">
+                    <div class="card-block collapse show">
+                        <div class="form-group ">                                                        
+                                <div class="input-group">
+                             <ul class="ul-permi list-permissao">
+                             
+                              <li>
+                                <label>
+                                  <input type="checkbox" name="todos" value="todos" id="selecionarTodos" class="check checkbox-circle">
+                                  Todos </label>                      
+                              </li>
+                              
+                              <!-- START BLOCK : menus -->
+                              
+                              <li>
+                                <label>
+                                  <input type="checkbox" name="peruser" class="marcar check check-custom toggle-switch" data-size="small" value="{cod}" id="CheckboxGroup1_{cod}" data-checkbox="icheckbox_square-blue">
+                                  <span class="check-toggle"></span> {nom} </label>
+                                <ul>
+                                  
+                                  <!-- START BLOCK : submenus -->
+                                  
+                                  <li class="tipo_{idtipo}">
+                                    <label>
+                                      <input type="checkbox" name="perusers[]" class="marcar check check-custom toggle-switch peruser_{idmenu}" data-color="#55ce63" value="{idmenu},{cods}" id="CheckboxGroup_{cods}" data-checkbox="icheckbox_square-blue">
+                                      <span class="check-toggle"></span> {noms} </label>
+                                  </li>
+                                  
+                                  <!-- END BLOCK : submenus -->
+                                  
+                                </ul>
+                              </li>
+                              
+                              <!-- END BLOCK : menus -->
+                              
+                            </ul>
+                                </div> 
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+        <div class="row">
+          <div class="col-12 m-t-30">            
+              <div class="card">
+                  <div class="card-block collapse show">
+                    <button class="btn btn-primary">Cadastrar</button>
+                    <a href="../php/Listar-usuario.php" class="btn btn-inverse">Voltar</a> 
+                  </div>
+              </div>
+          </div>
+       </div>
+  
+      </form>
+      </div>
+  
+  </div>

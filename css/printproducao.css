@@ -1,0 +1,44 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+.relatorioprudocao {
+	width: 600px;
+	border: 1px #000000 solid;
+}
+.rltopo img{
+	display:inline-table;
+	margin-right:5px;
+}
+.rltopo{
+	padding:10px;
+	margin-bottom:-10px;
+	height:87px;
+}
+.rltopo strong{
+	display:inline-table;
+	float: right;
+	margin-top:32px;
+	margin-right: 132px;
+	font-size:24px;
+}
+
+.rlprodlocal{
+	height:54px;
+	background:#969494;
+	border-bottom:1px #000000 solid;	
+
+}
+.rlprodlocal span{
+	float: left;
+	
+}
+.rlprodlocal strong{
+	float:left;
+}
+.rlprod{
+	margin-right:121px;
+}
+.rllocal{
+	margin-right:10px;
+}
+.dataTables_length{	display:none;}.dataTables_filter{	display:none;}.dataTables_paginate{	display:none;}.dataTables_info{	display:none;}	

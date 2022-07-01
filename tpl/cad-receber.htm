@@ -1,0 +1,80 @@
+﻿<div class="container">
+  <div class="row">
+    <div class="span3 bs-docs-sidebar">
+      <ul class="nav nav-list bs-docs-sidenav affix-top">
+        <li class="active"><a href="#gerar">Cadastrar Contas Receber</a></li>
+     
+      </ul>
+    </div>
+    
+    <div class="span9">
+      
+      <section id="gerar">
+        <div class="page-header">
+          <h2>Cadastrar</h2>
+        </div>
+        	
+            
+     	 <form action="../php/contasreceber-exec.php" method="post" id="">
+         	
+            <input  name="act" type="hidden" value="inserir">
+			
+                       
+          <div class="input-prepend">
+            <label><strong>N&ordm; Doc:</strong></label>
+            <span class="add-on icon-asterisk"></span>
+            <input class="span2" id="ndoc" name="ndoc"  type="text">
+          </div>
+            
+          <div class="input-prepend">
+            <label><strong>Emissão:</strong></label>
+            <span class="add-on icon-calendar"></span>
+            <input class="span2" id="dtemis" name="dtemis" value="{dtemis}" type="text">
+         </div>  
+         
+         <div class="input-prepend">
+            <label><strong>Vencimento:</strong></label>
+            <span class="add-on icon-calendar"></span>
+            <input class="span2" id="dtvenc" name="dtvenc"  type="text">
+         </div>
+    <!--      <div class="input-prepend">
+            <label><strong>Data pagamento:</strong></label>
+            <span class="add-on icon-calendar"></span>
+            <input class="span2" id="dtpag" name="dtpag" type="text">
+         </div>-->
+          <div class="input-prepend">
+            <label><strong>Valor:</strong></label>
+            <span class="add-on icon-usd"></span>
+            <input class="span2" id="valor" name="valor"  type="text">
+          </div>
+           <div class="input-prepend">
+              <label><strong>Cliente:</strong><i class="mp">{nomecli}</i></label>
+              <span class="add-on icon-search"></span>
+              <input class="span3" id="cliente2" name="cliente"  type="text"> 
+              <input id="codcli" name="codcli" type="hidden" >        
+          </div>
+         	
+          <div class="input-prepend">
+            <label><strong>N&ordm; Banco:</strong></label>
+            <span class="add-on icon-asterisk"></span>
+            <input class="span2" id="banco" name="banco"  type="text">
+          </div>
+          
+         <div class="input-prepend">
+          <label><strong>Historico:</strong></label> 
+          <textarea rows="5" class="span9" name="hist">{historic}</textarea>
+         </div>
+         
+         <button type="submit" class="btn btn-primary" >Cadastrar</button>
+         <a href="../php/contasreceber.php" class="btn btn-info">Voltar</a>
+         
+         </form>   
+     	 
+        
+      </section>
+          
+      
+    </div>
+    
+  </div>
+</div>

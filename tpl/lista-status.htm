@@ -1,0 +1,41 @@
+﻿<div class="row">
+  <div class="col-12">
+<h2>Lista Status</h2>
+<br/>
+<a href="../php/cadastro-status.php" class="btn btn-primary btn-rounded">Cadastrar Status</a>
+<!--<a href="#" class="btn btn-primary btn-rounded pop">link</a>-->
+<br/>
+<br/>
+<table id="dyntable" class="table table-bordered">
+
+    <thead>
+
+        <tr>
+            <th>#</th>
+            <th>Nome</th>
+            <th>Ação</th>            
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+     <!-- START BLOCK : liststatus --> 
+
+        <tr id="{cod}" class="gradeA">
+            <td>{cod}</td> 
+            <td>{nome}</td>            
+            <td  class="centeralign">
+            	<a href="#" id="deletestatus" class="deletestatus"><span class="fa fa-remove fa-2x"></span></a>
+            	<a href="../php/alterar-status.php?cod_stat={cod}"><span class="fa fa-pencil fa-2x"></span></a>
+            </td>
+        </tr>
+
+      <!-- END BLOCK : liststatus -->
+
+    </tbody>
+
+</table>
+
+</div>
+</div>

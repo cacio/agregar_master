@@ -1,0 +1,56 @@
+﻿<div class="container">
+   <div class="row">
+		<form action="#" id="frmrecibo" method="post">
+        <section>
+        	
+            
+            <fieldset>
+                <legend>Recibo</legend>
+                   
+					<input type="hidden" name="act" value="inserir2"/>
+					<input id="numero" name="numero" value="{proxcod}" type="hidden">
+					<input id="tipo" name="tipo" value="S" type="hidden">
+					<input id="quantidade" name="quantidade" value="1" type="hidden">
+					 <div class="input-prepend">
+						<label><strong>Recebi(emos) de:</strong></label>
+						<span class="add-on icon-terminal"></span>
+						<input class="span4" id="nome" name="nome" type="text" required>
+					 </div><br/>
+					 <div class="input-prepend">
+						<label><strong>Valor:</strong></label>
+						<span class="add-on icon-usd"></span>
+						<input class="span2" id="valor" name="valor" type="text" required>
+					 </div><br/>
+					 <div class="input-prepend">
+						<label><strong>Referente:</strong></label>	
+						<textarea name="obs" class="span5" required></textarea>
+					 </div>
+					 <br/>
+					 <div class="input-prepend">
+						<label><strong>Nome:</strong></label>
+						<span class="add-on icon-terminal"></span>
+						<input class="span4" id="xnome" name="xnome" type="text" required>
+					 </div>
+					 
+					 <div class="input-prepend">
+						<label><strong>CPF:</strong></label>
+						<span class="add-on icon-terminal"></span>
+						<input class="span2" id="cpf" name="cpf" type="text" required>
+					 </div>
+					 
+					<!-- <button class="btn btn-block btn-primary" type="submit">Gerar</button>-->
+				
+                 
+            </fieldset>                           
+        
+        </section>
+        <section>
+            <fieldset>
+                <input type="submit" class="btn btn-primary" value="Gerar"/>                
+            </fieldset>
+        </section>
+        
+         </form>
+         <div class="print"></div>
+  </div>
+</div>

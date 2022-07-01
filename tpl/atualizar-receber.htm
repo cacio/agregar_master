@@ -1,0 +1,143 @@
+﻿<div class="container">
+  <div class="row">
+       	
+            
+     	 <form action="../php/contasreceber-exec.php" method="post" id="">
+        <section id="gerar" class="span6">
+          <div class="page-header">
+            <h2>Alterar</h2>
+          </div>
+            <input  name="act" type="hidden" value="alterar">
+            <input  name="cod" type="hidden" value="{codigo}">
+                               
+          <div class="input-prepend">
+            <label><strong>N&ordm; Doc:</strong></label>
+            <span class="add-on icon-asterisk"></span>
+            <input class="span2" id="ndoc" name="ndoc" value="{numero}" disabled type="text">
+          </div>
+            
+          <div class="input-prepend">
+            <label><strong>Emissão:</strong></label>
+            <span class="add-on icon-calendar"></span>
+            <input class="span2" id="dtemis" name="dtemis" value="{emissao}" type="text">
+         </div>  
+         
+         <div class="input-prepend">
+            <label><strong>Vencimento:</strong></label>
+            <span class="add-on icon-calendar"></span>
+            <input class="span2" id="dtvenc" name="dtvenc" value="{vencim}" type="text">
+         </div>
+          <div class="input-prepend">
+            <label><strong>Data pagamento:</strong></label>
+            <span class="add-on icon-calendar"></span>
+            <input class="span2" id="dtpag" name="dtpag" value="{datapag}" type="text">
+         </div>
+          <div class="input-prepend">
+            <label><strong>Valor:</strong></label>
+            <span class="add-on icon-usd"></span>
+            <input class="span2" id="valor" name="valor" value="{vldoc}" type="text">
+          </div>
+           <div class="input-prepend">
+              <label><strong>Cliente:</strong><i class="mp">{nomecli}</i></label>
+              <span class="add-on icon-search"></span>
+              <input class="span3" id="cliente2" name="cliente" value="{nomecli}" type="text"> 
+              <input id="codcli" name="codcli" type="hidden" value="{codcli}">        
+          </div>
+         	
+          <div class="input-prepend">
+            <label><strong>N&ordm; Banco:</strong></label>
+            <span class="add-on icon-asterisk"></span>
+            <input class="span2" id="banco" name="banco" value="{banco}" type="text">
+          </div>
+          
+         <div class="input-prepend">
+          <label><strong>Historico:</strong></label> 
+          <textarea rows="5" class="span5" name="hist">{historic}</textarea>
+         </div>
+         <div class="span6">
+          <button type="submit" class="btn btn-primary">Alterar</button>
+          <a href="../php/contasreceber.php" class="btn btn-info">Voltar</a>
+        </div>
+        </section>
+        <section class="span5">
+          <fieldset>
+          
+            
+              <div class="card-header"><h4 class="card-title">Receber</h4></div>
+              
+   
+                <div class="input-prepend">                                          							
+                  <label for="exampleInputuname"><strong>VALOR:</strong></label>							
+                  <span class="add-on fa fa-usd"></span>
+                  <input type="text" class="form-control text-right span2" name="vldocrec" id="vldocrec" placeholder="" value="{valor}">							
+                 </div>
+                
+                                                         
+                <div class="input-prepend">
+                  <label for="exampleInputuname"><strong>FORMA RECEBIMENTO:</strong></label>								
+                  <span class="add-on fa fa-list"></span>
+                  <select  name="formceb" class="form-control">
+                      <option value="" selected>Selecionar Forma Pagamento</option>
+                      <!-- START BLOCK : listar -->
+                  <option value="{codigof}" {sel}>{nome}</option>                
+                  <!-- END BLOCK : listar -->
+                  </select>
+                  
+                </div>
+              
+                <div class="table-responsive">
+                  <table id="tbreb" class="table color-bordered-table info-bordered-table table-striped">
+                    <thead>
+                      <tr>
+                        <th>FORMA</th>
+                        <th>DATA RECEB.</th>
+                        <th>VALOR</th>
+                        <th>AÇÃO</th>																
+                      </tr>
+                    </thead>
+                    <tbody>
+                    <!-- START BLOCK : listapagtos -->	
+                      <tr id="{idreb}">
+                        <td>{xformarecbto}</td>
+                        <td>{dtrecbto}</td>
+                        <td>{valor}</td>
+                        <td><button type="button" class="btn btn-sm btn-icon btn-pure btn-outline btn-danger delreb" data-toggle="tooltip" data-original-title="Deletar"><i class="fa icon-remove" aria-hidden="true"></i></button></td>								
+                      </tr>
+                    <!-- END BLOCK : listapagtos -->
+                    </tbody>
+                    <tfoot>
+                      <!-- START BLOCK : totalpagtos -->
+                      <tr>
+                        <td><strong>Total</strong></td>
+                        <td></td>
+                        <td><strong>{total}</strong></td>
+                        <td></td>								
+                      </tr>
+                      <tr id="saldo">
+                        <td><strong>Saldo</strong></td>
+                        <td></td>
+                        <td><strong>{saldo}</strong></td>	
+                        <td><input type="hidden" name="saldo" value="{saldo}" /></td>							
+                      </tr>
+                      <!-- END BLOCK : totalpagtos -->
+                    </tfoot>
+                  </table>
+                </div>
+              
+  
+                  
+          
+        
+        
+          </fieldset>
+        </section>
+         </form>   
+     	 
+        
+    
+          
+      
+
+    
+  </div>
+</div>

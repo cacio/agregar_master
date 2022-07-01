@@ -1,0 +1,34 @@
+<div id="content">
+	<div align="center">LISTAGEM DE PRODUTOS RELACIONADO COM A SECRETARIA </div>
+	<hr/>
+
+<table class="table table-hover table-striped tbrelprod">
+	
+  <thead>
+  	
+  	<tr>
+      <th colspan="2" class="text-center" style="border-right: 1px #000000 solid; background: #ffbc34;">PRODUTOS SECRETAR.</th>      
+      <th colspan="2" class="text-center" style="background: #ffbc34;">PRODUTOS FRIGORÍFICO</th>      
+    </tr>
+
+    <tr>
+      <th class="text-center">COD/SECRETAR.</th>
+      <th class="text-center" style="border-right: 1px #000000 solid;">DESCRIÇÃO</th>
+      <th class="text-center" >COD/FRIGORÍFICO</th>
+      <th class="text-center">DESCRIÇÃO</th>      
+    </tr>
+  </thead>
+  <tbody>
+ <!-- START BLOCK : lista -->
+    <tr data-id="cod_{cod_prod}">
+		<td>{cod_secretaria}</td>		
+		<td style="border-right: 1px #000000 solid;"><a href="javascript:void(0);" class="editprodsecret" data-type="select2" data-url="relaciona-exec.php?act=upinsert" data-pk="{cod_prod}|{pkid}" data-title="Enter">{descricao}</a></td>
+		<td>{cod_prod}</td>
+		<td>{desc_prod}</td>		
+    </tr>
+  <!-- END BLOCK : lista --> 
+  </tbody>
+	
+</table>
+
+</div>

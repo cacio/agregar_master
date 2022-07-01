@@ -1,0 +1,32 @@
+﻿
+  <div class="row">
+   	<div class="col-12">
+    <h2>Lista Usuário</h2>
+    <br/>
+    <a href="../php/cadastro-usuario.php" class="btn btn-primary btn-rounded">Cadastrar usuário</a> <br/>
+    <br/>
+    <table id="dyntable" class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>E-Mail</th>
+          <th>Login</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- START BLOCK : usuario -->
+        <tr id="{cod}">
+          <td>{nom}</td>
+          <td>{ema}</td>
+          <td>{login}</td>
+          <td  class="centeralign">
+          	<a href="#" id="deleteuser" class="deleteuser"><span class="fa fa-remove fa-2x"></span></a> 
+            <a href="../php/atualizar-usuario.php?id={cod}"><span class="fa fa-pencil fa-2x"></span></a>
+          </td>
+        </tr>
+        <!-- END BLOCK : usuario -->
+      </tbody>
+    </table>
+  </div>
+</div>

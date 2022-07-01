@@ -1,0 +1,106 @@
+<div class="row">
+    <div class="col-12">
+     <div class="card card-outline-info">
+     <form  method="post" action="#" id="frmnotasdesaidasimplificada" data-toggle="validator">  	
+     <div class="card-header">
+           <h4 class="m-b-0 text-white"><span class="fa fa-pie-chart"></span> Relatório :: LISTAGEM DE NOTAS (SIMPLIFICADA) ::</h4>
+       </div>
+      <div class="card-block">
+                
+      
+         <input type="hidden" name="empresa" id="empresa" value="{empresa}"/>
+           <div class="form-body">                        
+               <div class="row">       
+   
+                <!--<div class="col-sm-2">
+                    <div class="form-check">
+                        <label class="custom-control custom-radio">
+                            <input id="radio1" name="radio" value="1" type="radio" checked class="custom-control-input">
+                            <span class="custom-control-indicator"></span>
+                            <span class="custom-control-description">Data Abate</span>
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="custom-control custom-radio">
+                            <input id="radio2" name="radio" value="2" type="radio" class="custom-control-input">
+                            <span class="custom-control-indicator"></span>
+                            <span class="custom-control-description">Data Emissão</span>
+                        </label>
+                    </div>
+                </div>-->
+
+                <div class="col-md-2">                                          
+                   <div class="form-group">
+                       <label for="exampleInputuname"><strong>DATA INICIAL:</strong></label>
+                       <div class="input-group">
+                           <div class="input-group-addon"><i class="icon-calender"></i></div>
+                           <input type="text" class="form-control mydatepicker" name="dataini" id="dataini" data-date-format="dd/mm/yyyy" placeholder="" required  >
+                       </div>
+                   </div>
+                </div>
+   
+                <div class="col-md-2">                                          
+                   <div class="form-group">
+                       <label for="exampleInputuname"><strong>DATA FINAL:</strong></label>
+                       <div class="input-group">
+                           <div class="input-group-addon"><i class="icon-calender"></i></div>
+                           <input type="text" class="form-control mydatepicker" name="datafin" id="datafin" data-date-format="dd/mm/yyyy" placeholder="" required  >
+                       </div>
+                   </div>
+                </div>		   					 
+					
+				 <div class="col-md-2">                                          
+                    <div class="form-group">
+                        <label><strong>CFOP:</strong></label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="icon-TERMINAL"></i></div>
+                            <input type="text" class="form-control" name="cfop" id="cfop">
+                        </div>
+                    </div>
+                 </div>
+				 
+                <!--<div class="col-md-5">
+                   <label><strong>EMPRESA</strong></label>
+                   <div class="input-group">
+                       <div class="input-group-addon"><i class="fa fa-search"></i></div>
+                       <input type="text" class="form-control" name="psqempresa" id="psqempresa" placeholder="">
+                       <input type="hidden" id="cnpjemp" name="cnpjemp">					
+                   </div>
+               </div>-->
+   
+   
+               </div>                
+                               
+        </div>
+        
+                
+       
+     </div>
+         <div style="width: 100%;padding: .75rem 1.25rem; background: #dae6e8; border-radius: 0 0 calc(.25rem - 1px) calc(.25rem - 1px);">
+             <div class="form-actions">
+             <button type="submit" class="btn btn-primary"><i class="fa fa-cogs"></i> GERAR</button>
+                <a href="#" class="btn btn-info icon-print" onClick="printDiv();"><i class="fa fa-print"></i> Imprimir</a>
+           <!--<a href="../php/Listar-usuario.php" class="btn btn-inverse">Voltar</a> -->
+         </div>
+   
+         </div>
+     </form>
+     </div>
+   </div>
+   </div>
+   
+   <div class="row xrel hide">
+    <div class="col-12">
+     <div class="card">
+        <div class="card-block relatorio">
+                                        
+   
+   
+         </div>
+     </div>
+   </div>
+   </div>
+   
+   
+   
+   

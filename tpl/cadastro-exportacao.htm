@@ -1,0 +1,126 @@
+<style>
+  .select2-selection__rendered {
+    line-height: 32px !important;
+    }
+
+    .select2-selection {
+    height: 34px !important;
+    }
+</style>
+<div class="row">
+    <div class="col-12">
+  
+              <form method="post" action="exportacao-exec.php" >
+                    <input type="hidden" name="act" value="inserir"/>                     
+                            <section>
+                                
+                            <fieldset>
+                               <legend><span>Cadastro de Informação de Exportação</span></legend>
+                            <hr>
+                            <div class="row" id="1">
+                                <div class="col-12 m-t-0">
+                                    <h4 class="m-b-0">Informação de Competência</h4>
+                                    <p class="text-muted m-t-0"></p>
+                                    <div class="card">
+                                        <div class="card-block">
+                                            <div class="row">
+                                                <div class="col-md-2">
+                                                        <label><strong>Competência:</strong></label>      
+                                                        <div class="input-group">                          
+                                                        <span class="input-group-addon fa fa-calendar"></span>
+                                                            <input type="text" name="competenc" id="dtpag" required class="form-control span2" />                                 
+                                                        </div>
+                                                </div>
+                                                                            
+                                                <div class="col-md-3">
+                                                    <label><strong>Pais:</strong></label> 
+                                                    <div class="input-group">                               
+                                                        <span class="input-group-addon fa fa-list"></span>
+                                                            <select name="pais" class="form-control selectpickerpais" data-live-search="true" style="height:20px">
+                                                                <option value="" selected>Selecione o pais</option>
+                                                                <!-- START BLOCK : lista -->
+                                                                <option value="{id}">{nome}</option>   
+                                                                <!-- END BLOCK : lista --> 
+                                                            </select>                                 
+                                                    </div>   
+                                                </div>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                              </div>  
+                                                                                    
+                            <div class="row" id="1">
+                                <div class="col-12 m-t-0">
+                                    <h4 class="m-b-0">Abater das Compras (Valor Glosado)</h4>
+                                    <p class="text-muted m-t-0"></p>
+                                    <div class="card">
+                                        <div class="card-block">
+                                        
+                                          <div class="row">
+                                               <div class="col-md-2">
+                                                <label><strong>Quantidade (KG):</strong></label> 
+                                                <div class="input-group">                              
+                                                   <span class="input-group-addon">KG</span>
+                                                      <input type="text" name="kg_glos" id="kg_glos" required class="form-control span2 text-right"  />                                 
+                                                </div>  
+                                              </div>
+                                              <div class="col-md-2">
+                                                  <label><strong>Valor (R$):</strong></label> 
+                                                  <div class="input-group">                              
+                                                     <span class="input-group-addon fa fa-usd"></span>
+                                                        <input type="text" name="valor_glos" id="valor_glos" required class="form-control span2 text-right"  />                                 
+                                                  </div>  
+                                                </div>	
+                                          </div>		
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>   
+       
+                            <div class="row" id="1">
+                                <div class="col-12 m-t-0">
+                                    <h4 class="m-b-0">Total Vendido</h4>
+                                    <p class="text-muted m-t-0"></p>
+                                    <div class="card">
+                                        <div class="card-block">
+                                        
+                                          <div class="row">
+                                               <div class="col-md-2">
+                                                <label><strong>Quantidade (KG):</strong></label> 
+                                                <div class="input-group">                              
+                                                   <span class="input-group-addon">KG</span>
+                                                      <input type="text" name="kg_venda" id="kg_venda" required class="form-control span2 text-right"  />                                 
+                                                </div>  
+                                              </div>
+                                              <div class="col-md-2">
+                                                  <label><strong>Valor (R$):</strong></label> 
+                                                  <div class="input-group">                              
+                                                     <span class="input-group-addon fa fa-usd"></span>
+                                                        <input type="text" name="valor_venda" id="valor_venda" required class="form-control span2 text-right"  />                                 
+                                                  </div>  
+                                                </div>	
+                                          </div>		
+                                        </div>
+                                    </div>
+                                </div>
+                              </div> 
+                             
+                       </fieldset>
+                            
+                   </section> 
+                   <hr/>
+                   <section>              
+                  <div class="row">
+                     <div class="col-md-2">
+                      <button class="btn btn-primary">Cadastrar</button>
+                      <a href="../php/informacaoexportacao.php" class="btn">Voltar</a>
+                     </div>
+                  </div>
+                  </section>
+              </form>
+     
+  
+          </div>
+     </div>
+  

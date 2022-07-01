@@ -1,0 +1,122 @@
+﻿<!-- START BLOCK : analitico -->
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>DOCUMENTO</th>
+      <th style="text-align:right;">DINHEIRO</th>
+      <th style="text-align:right;">CARTÃO</th>
+      <th style="text-align:right;">OUTROS</th>
+      <th style="text-align:center;">TIPO</th>
+      <th style="text-align:right;">TOTAL</th>
+      <th style="text-align:right;">QTD</th>
+      <th style="text-align:right;">MEDIA</th>     
+     
+    </tr>
+  </thead>
+  <tbody>
+ 
+  <!-- START BLOCK : listar --> 
+    <tr>
+      <td>{numero}</td>
+      <td style="text-align:right;">{dinheiro}</td>
+      <td style="text-align:right;">{cartão}</td>
+      <td style="text-align:right;">{outros}</td>
+      <td style="text-align:center;">{pagto}</td>
+      <td style="text-align:right;">{total}</td>
+      <td style="text-align:right;">{quanti}</td>
+      <td style="text-align:right;">{media}</td>      
+    </tr>
+   <!-- END BLOCK : listar --> 
+    
+  
+  </tbody>
+  <tfoot>
+  	 <!-- START BLOCK : total --> 
+   <tr style="background:#B3AFAF;">
+      <td><strong>TOTALS:</strong></td>
+      <td style="text-align:right;">{tot_dinheiro}</td>
+      <td style="text-align:right;">{tot_cartao}</td>
+      <td style="text-align:right;">{tot_outros}</td>
+      <td></td>
+      <td style="text-align:right;"><strong>{tot_total}</strong></td>
+      <td style="text-align:right;"><strong>{tot_quantidade}</strong></td>
+      <td style="text-align:right;"><strong>{tot_media}</strong></td>      
+    </tr>
+   <!-- END BLOCK : total --> 
+  </tfoot>
+</table>
+ <!-- START BLOCK : totaltipo --> 	
+ <dl class="dl-horizontal">
+  <dt><strong>DINHEIRO:</strong></dt>
+  <dd><strong>{tot_dinheiro}</strong></dd>
+  <dt><strong>CARTÃO:</strong></dt>
+  <dd><strong>{tot_cartao}</strong></dd>
+  <dt><strong>OUTROS:</strong></dt>
+  <dd><strong>{tot_outros}</strong></dd>
+  <dt><strong>TOTAL:</strong></dt>
+  <dd><strong>{total_dincart}</strong></dd>
+</dl>   
+ <!-- END BLOCK : totaltipo -->
+ 
+<!-- END BLOCK : analitico -->
+
+<!-- START BLOCK : sintetico -->
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>DATA</th>
+      <th style="text-align:right;">DINHEIRO</th>
+      <th style="text-align:right;">CARTÃO</th>
+      <th style="text-align:right;">OUTROS</th>
+      <th style="text-align:right;">TOTAL</th>
+      <th style="text-align:right;">QTD</th>
+      <th style="text-align:right;">MEDIA</th>     
+     
+    </tr>
+  </thead>
+  <tbody>
+ 
+  <!-- START BLOCK : listars --> 
+    <tr>
+      <td>{data}</td>
+      <td style="text-align:right;">{dinheiro}</td>
+      <td style="text-align:right;">{cartão}</td>
+      <td style="text-align:right;">{outros}</td>
+      <td style="text-align:right;">{total}</td>
+      <td style="text-align:right;">{quanti}</td>
+      <td style="text-align:right;">{media}</td>      
+    </tr>
+   <!-- END BLOCK : listars --> 
+       
+  </tbody>
+  <tfoot>
+  	<!-- START BLOCK : totals --> 
+   <tr style="background:#B3AFAF;">
+      <td><strong>TOTALS:</strong></td>
+      <td style="text-align:right;"><strong>{tot_dinheiro}</strong></td>
+      <td style="text-align:right;"><strong>{tot_cartao}</strong></td>
+      <td style="text-align:right;"><strong>{tot_outros}</strong></td>
+      <td style="text-align:right;"><strong>{tot_total}</strong></td>
+      <td style="text-align:right;"><strong>{tot_quantidade}</strong></td>
+      <td style="text-align:right;"><strong>{tot_media}</strong></td>      
+    </tr>
+   <!-- END BLOCK : totals --> 
+  
+  </tfoot>
+</table>
+<!-- START BLOCK : totaltipos --> 	
+ <dl class="dl-horizontal">
+  <dt><strong>DINHEIRO:</strong></dt>
+  <dd><strong>{tot_dinheiro}</strong></dd>
+  <dt><strong>CARTÃO:</strong></dt>
+  <dd><strong>{tot_cartaos}</strong></dd>
+  
+  <dt><strong>OUTROS:</strong></dt>
+  <dd><strong>{tot_outros}</strong></dd>
+  
+  <dt><strong>TOTAL:</strong></dt>
+  <dd><strong>{total_dincart}</strong></dd>
+</dl>   
+ <!-- END BLOCK : totaltipos -->
+<!-- END BLOCK : sintetico -->

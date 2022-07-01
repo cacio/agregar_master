@@ -1,0 +1,291 @@
+
+                <div class="row page-titles">
+                    <div class="col-md-12 col-12 align-self-center">
+                        <h3 class="text-themecolor m-b-0 m-t-0 text-center">{log}</h3>
+                        <!--<ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="javascript:void(0)">Início</a></li>
+                            <li class="breadcrumb-item active">Painel de Controle</li>
+                        </ol>-->
+						  
+                    </div> 
+                                      
+                </div>
+                <!-- START BLOCK : empresa -->
+                <div class="row">
+                    <!-- Column -->
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="card-block">       
+                                        <!-- START BLOCK : senhafranca -->	                                
+										<div class="alert alert-info alert-rounded"> 
+                                            <i class="fa fa-exclamation-circle"></i> ATENÇÃO! Sua senha não atende os padrões de segurança indicados. 
+                                            <a href="../php/visualiza-empresas.php#5">CLIQUE AQUI</a> para redefinir sua senha de acesso
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"> <span aria-hidden="true">×</span> </button>
+                                        </div>
+                                         <!-- END BLOCK : senhafranca -->
+										<div class="p-20">
+												<div class="row">
+													<div class="col-md-12">
+														<h3 class="font-medium text-inverse text-center">Importar nova competência!</h3>
+														<h6 class="card-subtitle"></h6>
+													</div>                                             
+												</div>
+												<div class="message-box m-t-30">
+													<ul class="menuadm">						
+                                                           <li class="linkmen">Clique aqui!</li>
+                                                            <li>
+																<a href="../php/importa_agregar_xml.php"><img src="https://img.icons8.com/material/96/000000/xml-file.png" data-toggle="tooltip" title="Forma de envio por XML" /><br/>XML</a>							
+                                                            </li>
+                                                         	<!-- START BLOCK : ativaabtxt -->					
+															<li class="{ativaabtxt}">
+																<a href="../php/importa_agregar_txt.php"><img src="https://img.icons8.com/material/96/000000/txt.png" data-toggle="tooltip" title="Forma de envio por TXT"/><br/>TXT</a>
+                                                            </li>
+                                                           <!-- END BLOCK : ativaabtxt -->
+                                                            <!-- START BLOCK : ativaabmanual -->
+															<li class="{ativaabtxt}">
+																<a href="#" id="clickmanual"><img src="https://img.icons8.com/material/96/000000/manual.png" data-toggle="tooltip" title="Forma de envio por MANUAL"/><br/>MANUAL</a>
+                                                                <div class="toltipmanual">
+                                                                <ul>
+                                                                    <li><a href="../php/notasmanuais.php?act=lancamento">Lançamento</a></li>
+                                                                    <li><a href="../php/notasmanuais.php?act=alteracao">Alteração</a></li>
+                                                                </ul>
+                                                                </div>
+                                                            </li>						
+                                                            <!-- END BLOCK : ativaabmanual -->
+														</ul>
+												</div>
+											</div>
+								
+                                      	
+                                        <!--<div class="total-revenue4" style="height: 350px;"></div>-->
+                                        
+                                    </div>
+                                </div>
+                                
+                                <div class="col-lg-6">
+                                
+                                        <div class="container_comp">
+                                             <div class="container_comp_titulo">
+                                                <div class="pesquisacomp2 hide container_comp_separa">
+                                                    <form class="app-search">
+                                                        <div class="input-group" style="display: flex !important; width: 100%;">
+                                                            <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                                                            <input type="text" class="form-control" id="autocomplete2" placeholder="">
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                <div class="container_comp_separa titlecompetenc2">
+                                                    <h3>Competência em andamento</h3>
+                                                    <!-- START BLOCK : numtotal2 -->
+                                                    <p>Número de Competência <span class="badge badge-pill badge-default">{total2}</span></p>
+                                                    <!-- END BLOCK : numtotal2 -->
+                                                    
+                                                </div>
+                                                <div>
+                                                    <div class="col-xs-2 col-sm-2" style="text-align: center; padding: 19px;" data-toggle="tooltip" title="Clique aqui para pesquisar alguma competência que esta em andamento">
+                                                        <a href="javascript:void(0);" class="compsearch3"><i class="fa fa-search fa-2x"></i></a>
+                                                     </div>
+                                                </div>
+                                             </div>   
+                                            <div class="container_comp_body">
+                                                <table class="table stylish-table tbcompand display" style="width:100%">
+                                                    <thead class="hide">
+                                                        <tr>
+                                                            <th></th>
+                                                            <th></th>
+                                                            <th></th>                                                
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <!-- START BLOCK : listar2 -->
+                                                        <tr>
+                                                            <td style="width:50px;"><a href="{url}?act={nome}&anomes={competencia}" data-id="{competencia}|{cnpj2}"><div class="user-img"> <span class="round">{nomesme}</span> <span class="profile-status online pull-right"></span> </div></a></td>
+                                                            <td>
+                                                                <a href="{url}?act={nome}&anomes={competencia}" data-id="{competencia}|{cnpj2}">
+                                                                    <div class="mail-contnet">
+                                                                        <h5>{nome}</h5> 
+                                                                        <span class="mail-desc" style="font-size: 16px;">{competencia}</span> 
+                                                                        <span class="time"></span>
+                                                                    </div>
+                                                                </a>
+                                                            </td>                                                            
+                                                            <td><button type="button" class="btn btn-circle btn-danger" onclick="excluicompetencia('{competencia}','{cnpj2}');"><i class="fa fa-close"></i></button></td>
+                                                        </tr>
+                                                       <!-- END BLOCK : listar2 -->         
+                                                    </tbody>
+                                                </table>                                                        
+                                            </div>
+
+                                        </div>
+
+                                    
+                                
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="container_comp">
+                                        <div class="container_comp_titulo">
+                                           <div class="pesquisacomp hide container_comp_separa">
+                                               <form class="app-search">
+                                                   <div class="input-group" style="display: flex !important; width: 100%;">
+                                                       <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                                                       <input type="text" class="form-control" id="autocomplete" placeholder="">
+                                                   </div>
+                                               </form>
+                                           </div>
+                                           <div class="container_comp_separa titlecompetenc">
+                                               <h3>Competência Enviadas</h3>
+                                               <!-- START BLOCK : numtotal -->
+                                               <p>Número de Competência <span class="badge badge-pill badge-default">{total}</span></p>
+                                               <!-- END BLOCK : numtotal -->
+                                               
+                                           </div>
+                                           <div>
+                                               <div class="col-xs-2 col-sm-2" style="text-align: center; padding: 19px;" data-toggle="tooltip" title="Clique aqui para pesquisar alguma competência que enviou">
+                                                   <a href="javascript:void(0);" class="compsearch"><i class="fa fa-search fa-2x"></i></a>
+                                                </div>
+                                           </div>
+                                        </div>   
+                                       <div class="container_comp_body">
+                                           <table class="table stylish-table tbcompenv display" style="width:100%">
+                                               <thead class="hide">
+                                                   <tr>
+                                                       <th></th>
+                                                       <th></th>
+                                                       <th></th>                                                
+                                                   </tr>
+                                               </thead>
+                                               <tbody>
+                                                   <!-- START BLOCK : listar -->
+                                                   <tr>
+                                                       <td style="width:50px;"><a href="competenciaenviadas.php?mesano={competenc}&tipo={tipoarq}"> <div class="user-img"> <span class="round">{nomesmes}</span> <span class="profile-status online pull-right"></span> </div></a></td>
+                                                       <td>
+                                                           <a href="competenciaenviadas.php?mesano={competenc}&tipo={tipoarq}"> 
+                                                               <div class="mail-contnet">
+                                                               <h5>{codigo}</h5> 
+                                                               <span class="mail-desc" style="font-size: 16px;">{competenc}</span> 
+                                                               <span class="time"></span>
+                                                               </div> 
+                                                           </a>
+                                                       </td>
+                                                       <td>
+                                                        <div class="btn-group">
+                                                            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                <i class="fa fa-cog" aria-hidden="true"></i>
+                                                            </button>
+                                                            <div class="dropdown-menu">
+                                                              <a class="dropdown-item" href="#" onclick="excluicompetencia('{competenc}','{cnpj}');">Excluir</a>
+                                                              <a class="dropdown-item" href="../php/protocolo-exec.php?act=alterarstatus&prot={protocolo}&tipo={tipoarq}&mesano={competenc}">Alterar</a>
+                                                              <a class="dropdown-item" href="#" onclick="reenviardbfs('{competenc}');">Reenviar Competência</a>                                                              
+                                                            </div>
+                                                          </div>
+                                                       </td>         
+                                                   </tr>
+                                                   <!-- END BLOCK : listar -->
+                                               </tbody>
+                                           </table>                                                       
+                                       </div>
+
+                                   </div>
+                                    </div>
+								
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                </div>
+                <!-- END BLOCK : empresa -->
+
+                <!-- START BLOCK : adm -->
+
+                <div class="row">
+                   
+                    <!-- Column -->
+                    <div class="col-lg-12">
+                        <!-- Row -->
+                        <div class="row">
+                            <!-- Column -->
+                            <div class="col-sm-3">
+                                <div class="card card-block">
+                                    <!-- Row -->
+                                    <a href="../php/lista-notificacao.php" class="row p-t-10 p-b-10" id="nummsg">
+                                        
+                                            <!-- Column -->
+                                            <div class="col text-right align-self-center">
+                                                <div data-label="100%" class="css-bar m-b-0 css-bar-primary css-bar-100"><i class="mdi mdi-comment-text-outline"></i></div>
+                                            </div>
+                                            <!-- Column -->
+                                            <div class="col p-r-0">
+                                                <h1 class="font-light numeronaolida">{naolidas}</h1>
+                                                <h6 class="text-muted">Mensagens Não lidas</h6></div>   
+                                        
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Column -->
+                            <div class="col-sm-3">
+                                <div class="card card-block">
+                                    <!-- Row -->
+                                    <a href="../php/competencias.php" class="row p-t-10 p-b-10">
+                                         <!-- Column -->
+                                        <div class="col text-right align-self-center">
+                                            <div data-label="30%" class="css-bar m-b-0 css-bar-danger css-bar-100"><i class="mdi mdi-briefcase-check"></i></div>
+                                        </div>
+                                        <!-- Column -->
+                                        <div class="col p-r-0">
+                                            <h1 class="font-light">{numcomp}</h1>
+                                            <h6 class="text-muted">Competências Enviadas</h6></div>                                       
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Column -->
+                            <div class="col-sm-3">
+                                <div class="card card-block">
+                                    <!-- Row -->
+                                    <a href="#" class="row p-t-10 p-b-10">
+                                         <!-- Column -->
+                                        <div class="col text-right align-self-center">
+                                            <div data-label="40%" class="css-bar m-b-0 css-bar-warning css-bar-100"><i class="mdi mdi-folder-outline"></i></div>
+                                        </div>
+                                        <!-- Column -->
+                                        <div class="col p-r-0">
+                                            <h1 class="font-light">{num_arq}</h1>
+                                            <h6 class="text-muted">Arquivos Enviados</h6></div>                                       
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- Column 
+                            <div class="col-sm-3">
+                                <div class="card card-block">
+                                    
+                                    <div class="row p-t-10 p-b-10">
+                                        
+                                        <div class="col text-right align-self-center">
+                                            <div data-label="60%" class="css-bar m-b-0 css-bar-info css-bar-60"><i class="mdi mdi-receipt"></i></div>
+                                        </div>
+                                        
+                                        <div class="col p-r-0">
+                                            <h1 class="font-light">159</h1>
+                                            <h6 class="text-muted">Invoices</h6></div>                                        
+                                    </div>
+                                </div>
+                            </div>-->
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-block">
+                                <div class="notifyautoriza"></div>
+                                Area do adminstrador do sistema                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END BLOCK : adm -->
+                
+				

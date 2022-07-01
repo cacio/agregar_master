@@ -1,0 +1,131 @@
+﻿<div class="container">
+  <div class="row">
+    <section> 
+      <fieldset>
+		  <legend>Lançamentos</legend>
+    <div class="span6">
+      <form action="../php/movimentacao-exec.php" method="post" id="frmmocimentacoes">
+      
+         <input type="hidden" name="act" value="inserir"/>
+         <div class="input-prepend">
+           <label><strong>Tipo:</strong></label>
+            <span class="add-on icon-list-alt"></span>
+           <select name="tipo" class="span2">	                     
+                <option value="" selected>Selecione</option>
+                <option value="E">ENTRADA</option>
+                <option value="S">SAIDA</option>
+               
+           </select>           
+         </div>
+         <br/>
+         <div class="mtipo hide">
+         	 <input type="hidden" name="data" value="{data}"/>	
+             <div class="input-prepend numeromovim">
+                <label><strong>Numero Controle:</strong></label>
+                <span class="add-on icon-terminal"></span>
+                <input class="span1" id="numero" name="numero" value="{proxcod}" type="text">
+             </div>
+            
+              <div class="input-prepend">
+               <label><strong>Produtos:</strong></label>
+                <span class="add-on icon-list-alt"></span>
+               <select id="basic3"  name="produto" class="span4">	                     
+                    <option value="" selected>Selecione</option>
+                    <!-- START BLOCK : listarprod -->
+                        <option value="{codigo}" ><strong>{nome}</strong></option>
+                    <!-- END BLOCK : listarprod -->
+               </select>
+               <button class="btn" style="margin-left: 18px;" type="button"><i class="icon-plus-sign"></i></button>
+             </div>
+                                             
+             <div class="input-prepend">
+                <label><strong>Quantidade:</strong></label>
+                <span class="add-on icon-terminal"></span>
+                <input class="span1" id="quantidade" name="quantidade" type="text" tabindex="1">
+             </div>
+            
+            <div class="input-prepend vlmovim">
+                <label><strong>Valor:</strong></label>
+                <span class="add-on icon-terminal"></span>
+                <input class="span1 text-right" id="valor" name="valor" type="text" tabindex="2">
+             </div>
+             
+             <div class="input-prepend vlmovim">
+                <label><strong>Total:</strong></label>
+                <span class="add-on icon-terminal"></span>
+                <input class="span1 text-right" id="subtotals" name="subtotals" disabled type="text">
+                <input type="hidden" id="subtotal"/>
+             </div>
+                
+             <div class="input-prepend">
+             	<label><strong>AÇÃO:</strong></label>
+          		<button type="submit" class="btn btn-primary" tabindex="3"><i class="icon-plus-sign"></i> SALVAR</button>   	
+             </div>   
+                
+        </div>
+          
+        
+            <a href="../php/Listar-movimentacao.php" class="btn btn-info"><i class="icon-reply"></i> VOLTAR</a>	
+            <a href="#" class="btn btn-info icon-print" onClick="printDiv('relatorio','cadastro-movimentacao.php');">&nbsp;Imprimir</a>
+      
+      </form>
+      </div>
+       <div class="span6">
+     
+        <div id="print"></div>
+        <div id="relatorio">
+            
+         <table id="dyntable_movim" class="table table-hover">
+          <thead>
+            <tr>
+              <th>Numero</th>
+              <th>Produto</th>
+              <th>Data</th>
+              <th style="text-align:center;">Tipo</th>
+              <th style="text-align:center;">Quantidade</th>
+              <th style="text-align:right;">Valor Unitario</th>
+              <th style="text-align:right;">Total</th>          
+            </tr>
+          </thead>
+          <tbody>
+            
+          <tr class="nd">
+              <td colspan="7" align="center" style="text-align:center; background:#D7D2D2; font-size:12px;">Não a dados inseridos</td>
+			  <th style="display:none;"></th>
+              <th style="display:none;"></th>
+              <td style="display:none;"></td>
+              <td style="display:none;"></td>
+              <td style="display:none;"></td>
+			  <td style="display:none;"></td>
+            </tr>
+            
+          </tbody>
+          <tfoot>
+            <tr>
+              <th></th>
+              <th></th>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td style="text-align:right;"><b>Sub total</b></td>
+              <td style="text-align:right; font-size:18px; padding: 0px 10px;"><b class="totsubtotal">0.00</b></td>
+            </tr>
+          </tfoot>
+        </table>
+           <input type="hidden" id="subtotalprodnfe" name="subtotalprodnfe" value="0.00"/> 
+			            
+        </div>            
+        
+      
+	  </div>
+     <div class="span6">      
+      <div align="right">
+      	<a href="#" id="finalcompra" class="btn btn-success icon-share">&nbsp;FINALIZAR</a>
+      </div>        
+	 </div>
+	  
+</fieldset>
+    </section>
+    
+  </div>
+</div>

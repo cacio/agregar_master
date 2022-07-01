@@ -1,0 +1,47 @@
+﻿
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>CATEG.</th>
+      <th>NOME</th>
+      <th>END.</th>
+      <th>TEL.</th>
+      <th>E-MAIL</th>
+      <!--<th>RECADOS</th>-->     
+      <th>DATA ADMISSÃO</th>
+      <th>DATA EXCLUSÃO</th>
+      <th>DATA NACI.</th>
+      <th>ESDE</th>
+      <th>ATIV.</th>
+      <th>VAL.</th>
+      <!--<th>OBS</th>-->
+    </tr>
+  </thead>
+  <tbody>
+ 
+  <!-- START BLOCK : ficha --> 
+    <tr>
+      <td>{cat_nome}</td>
+      <td style="width: 273px;">{codigo}-{nome}</td>
+      <td style="width: 255px;">{endereco}, {numero}, {bairro}, {cidade}</td>
+      <td>{telefone} {celular}</td>
+      <td>{email}</td>
+      <!--<td>{recado}</td>-->
+      <td>{dataadmissao}</td>
+      <td>{dataexclusao}</td>
+      <td>{datanascimento}</td>
+      <td>{esd_nome}</td>
+      <td>
+      <!-- START BLOCK : atividade -->
+      <div>{at_nome}</div>
+	  <!-- END BLOCK : atividade --> 	   
+      </td>
+      <td>{vlmensalidade}</td>
+      <!--<td>{obs}</td>-->
+    </tr>
+   <!-- END BLOCK : ficha -->  
+   
+   
+  </tbody>
+</table>
+	

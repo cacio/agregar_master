@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon.png">
+    <title>:: Agregar ::&rarr; Acesso Restrito</title>        
+    <!-- Custom CSS -->          
+    <!-- You can change the theme colors from here -->
+    <link href="../css/colors/green.css" id="theme" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body>
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <svg class="circular" viewBox="25 25 50 50">
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" /> </svg>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+	
+	<div class="container">
+		
+		<section class="containerLogin">		
+			<!--<a href="https://www.agregars.com.br/">
+                <img src="../images/logoagregarrs.png" width="170">
+            </a>-->
+			<div>
+				<a href="loginrestrito.php" class="linkAcessoRestrito">
+					<span>Acesso Restrito</span>
+					<img src="https://img.icons8.com/material/24/000000/double-right--v1.png">
+				</a>
+			</div>
+            <h2 class="subTitulo">Acessar o sistema AgregaRS</h2>
+            <!-- START BLOCK : info -->
+            <div class="alerta">{alerta} <i class="fechar">X</i></div>
+            <!-- END BLOCK : info -->
+            <form action="login-exec.php" method="post">
+                <input type="hidden" name="act" value="login" />
+				<input type="hidden" name="options" value="EMPRESA">
+                <label for="ema">CNPJ</label>
+                <input type="text" name="ema" id="ema" autocapitalize="off" autofocus="autofocus" required="" autocorrect="off" class="inputTexto" placeholder="Digite seu Cnpj">
+                
+
+                <label for="sen">Senha</label>
+                <input type="password" name="sen" required="" class="inputTexto" id="sen" placeholder="Sua senha">
+                
+
+                <!--<div class="linkEsqueceuSenha">
+                    <a href="#">Esqueci minha senha</a>
+                </div>-->
+
+                <button type="submit" class="btnEnviar" id="btnEfetuarLogin">ENTRAR</button>
+            </form>
+
+           <!-- <p class="infoNovaConta">Ainda não possui uma conta? <a href="#">Crie uma agora</a></p>-->
+			
+			
+		</section>
+		<section class="containerBanner">		
+			<div class="bannerAgrega">
+				<div class="agregaNoticia">
+                    <div><span class="novidade">{titulo}</span></div>
+                    {corpo}
+					<!--<p>Agrega RS Agora é Web. <br>Mudamos porque evoluimos.</p>
+					<a class="botao" href="#" target="_blank">Entenda essa mudança</a>
+					<p class="dadosAcesso">Você pode usar sem medo de ser <br>Feliz.</p>-->
+				</div>	
+			</div>
+		</section>
+		<a href="#" class="link-voltar-topo" Style="display:none;">
+            <span>Voltar para a página inicial</span>
+            <img src="https://img.icons8.com/material/24/000000/double-left--v1.png">
+        </a>
+	</div>
+	
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="../plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="../plugins/bootstrap/js/tether.min.js"></script>
+    <script src="../plugins/bootstrap/js/bootstrap.min.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="../js/jquery.slimscroll.js"></script>
+    <!--Wave Effects -->
+    <script src="../js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="../js/sidebarmenu.js"></script>
+    <!--stickey kit -->
+    <script src="../plugins/sticky-kit-master/dist/sticky-kit.min.js"></script>
+    <!--Custom JavaScript -->
+    <script src="../js/custom.min.js"></script>
+    <!-- ============================================================== -->
+    <!-- Style switcher -->
+    <!-- ============================================================== -->
+    <script src="../plugins/styleswitcher/jQuery.style.switcher.js"></script>
+    <script src="../plugins/Mask/src/jquery.mask.js"></script>
+    <script src="../js/login.js"></script>
+	<script>
+		$(document).ready(function(){
+			
+			$('input[name="ema"]').mask('00.000.000/0000-00', {reverse: true});           
+			$(".fechar").on('click',function(){
+               $(".alerta").fadeOut();
+            });
+		});
+		
+	</script>
+    
+</body>
+
+</html>

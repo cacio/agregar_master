@@ -1,0 +1,280 @@
+
+		<div class="row page-titles">
+			<div class="col-md-6 col-8 align-self-center">
+				<!--<h3 class="text-themecolor m-b-0 m-t-0">Bem Vindo {log}, ao Sistema Agregar</h3>-->
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item"><a href="javascript:void(0)">INICIO</a></li>
+					<li class="breadcrumb-item active">Agregar</li>
+				</ol>
+			</div>                    
+		</div>
+
+		 <div class="row">
+				<div>
+					<input type="hidden" name="setmesanocomp">
+					<input type="hidden" name="tipoimport" value="xml">
+					<div class="card">
+						<div class="card-block wizard-content">
+							<h4 class="card-title">AGREGAR &rsaquo; Importação via Arquivo XML</h4>
+							<h6 class="card-subtitle">Selecione os arquivos XML ou  ZIP, com os arquivos para importação, e siga as etapas para apuração</h6>
+							<div class="tab-wizard wizard-circle">
+								
+								<!-- Step 1 -->
+								<h6>Arquivos/Validação</h6>
+								<section>
+									<form method="post" action="#" id="upload">
+
+										<div class="row">
+
+											<div class="col-md-2">
+												<label>Competência:</label>
+												<div class="input-group">
+													<span class="input-group-addon"><i class="icon-calender"></i></span>
+													<input type="text" class="form-control date-picker" id="datepicker-autoclose" name="mesanocomp" placeholder="MM/AAAA">
+													 
+												</div>
+											</div>
+											<div class="col-md-6">
+												<label>Selecione um ou mais arquivo(s) XML:</label>
+												<i class="help-block"><small>Obs: .XML ou .ZIP</small></i>
+												<label class="custom-file d-block">
+
+													<input type="file" id="file_upload" name="file_upload" class="custom-file-input" aria-describedby="fileHelp" accept=".xml,.zip,.rar" multiple>
+													<span class="custom-file-control"></span>
+
+												</label>
+											</div>
+											<!--<div class="col-md-3">
+												<label>&emsp;</label>
+												<button type="button" class="btn btn-block btn-secondary" id="agresemmovi">Gerar sem movimentações</button>
+											</div>-->
+										</div>
+										<div class="row">
+											<div class="col-md-3 m-t-10">
+												<label class="custom-control custom-checkbox">
+													<input type="checkbox" class="custom-control-input" id="agresemmovi">
+													<span class="custom-control-indicator"></span>
+													<span class="custom-control-description">Gerar sem movimentações</span>
+												</label>
+											</div>
+										</div>
+										<hr>																								
+									</form>	
+									<div class="col-lg-12 b-l validacaoarquivos">	
+										
+									<div id="notificaimp" class="accordion hide" role="tablist" aria-multiselectable="true">
+										<div class="card">
+											<div class="card-header" role="tab" id="headingOne">
+											<h5 class="mb-0">
+												<a data-toggle="collapse" data-parent="#notificaimp" href="#collapseexaOne" aria-expanded="false" aria-controls="collapseexaOne">
+													Alerta de importação do XML  (<em>Clique aqui para expandir</em>)
+												</a>
+											</h5>
+											</div>
+										
+											<div id="collapseexaOne" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+											<div class="card-block notificacaosn">
+												
+											</div>
+											</div>
+										</div>
+										</div>
+
+										<div class="card-block">
+											
+											<h4 class="font-medium text-inverse">Validação dos arquivos <button type="button" class="btn btn-info btn-circle btn-lg revalidarprocesso"><i class="fa fa-refresh"></i> </button> <!--<button type="button" class="btn btn-warning btn-circle btn-lg printer_erros_infos"><i class="fa fa-print"></i> </button>--></h4>
+											<div><hr></div>
+										   <div class="row">	
+												<div class="col-md-6 col-lg-3 col-xlg-3">
+													<div class="card card-inverse card-danger">
+														<div class="box bg-danger text-center">
+															<button type="button" class="btn btn-danger btn-circle list_erros"><i class="fa fa-list"></i> </button>
+															<h1 class="font-light text-white num_erros">00</h1>
+															<h6 class="text-white">NÚMERO DE ERROS</h6>
+														</div>
+													</div>
+												</div>
+												
+												<div class="col-md-6 col-lg-3 col-xlg-3">
+													<div class="card card-inverse card-warning">
+														<div class="box text-center">
+															<button type="button" class="btn btn-warning btn-circle list_infos"><i class="fa fa-list"></i> </button>
+															<h1 class="font-light text-white num_info">00</h1>
+															<h6 class="text-white">NÚMERO DE ALERTAS</h6>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-6 col-lg-3 col-xlg-3">
+													<div class="loader-l card-info loadentrada">
+														<h5>Carregando <br/>Notas De Entrada</h5>
+														<span></span>
+														<span></span>
+														<span></span>
+													</div>
+													<div class="card card-inverse card-info">
+														<div class="box bg-info text-center">
+															<button type="button" class="btn btn-info btn-circle listanotaentrada"><i class="fa fa-list"></i> </button>
+															<h1 class="font-light text-white num_entradas">00</h1>
+															<h6 class="text-white">NOTAS DE ENTRADA</h6>
+														</div>
+													</div>
+												</div>
+												<div class="col-md-6 col-lg-3 col-xlg-3">
+													<div class="loader-l card-warning loadsaida">
+														<h5>Carregando <br/>Notas De Saída</h5>
+														<span></span>
+														<span></span>
+														<span></span>
+													</div>
+													<div class="card card-inverse card-warning">
+														<div class="box text-center">
+														    <button type="button" class="btn btn-warning btn-circle listanotasaida"><i class="fa fa-list"></i> </button>
+															<h1 class="font-light text-white num_saida">00</h1>
+															<h6 class="text-white">NOTAS DE SAÍDA</h6>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<!--<div class="printer_content">
+												<div class="titulovalidacao text-center hide">
+														<div style="text-align:right; margin-right: 50px;">{dthj}</div>
+														<div style="font-size: 18px; font-weight: bold;border: 1px #000000 solid;">VALIDAÇÕES AGREGAR</div>
+												</div>
+												<hr>
+												<div class="valid_erros hide" style="border-left: 5px solid #009efb;"></div>
+												<div class="valid_infos hide" style="border-left: 5px solid #009efb;"></div>
+											</div>-->
+
+											<div><hr></div>
+												
+											<!--<div class="total-revenue4" style="height: 350px;"></div>-->                                        
+										</div>
+										
+										<a href="#" class="btn btn-primary func">Mostrar todos os XML importados</a> 
+										<div class="box" style="display: none;">
+											<table id="dyntable_notas_valid" class="table table-bordered">
+											  <thead>
+												<tr>
+												  <th style="text-align:center;">NOTA</th>
+												  <th style="text-align:center;">DATA</th>
+												  <th style="text-align:center;">CHAVE DE ACESSO</th>
+												  <th style="text-align:center;">ENTRADA/SAIDA</th>
+												  <th style="text-align:center;">CLIENTE/FORNECEDOR</th>
+												  <th style="text-align:center;">VALOR</th>
+												  <th style="text-align:center;">AÇÃO</th>
+												</tr>
+											  </thead>
+											  <tbody>
+
+
+
+											  </tbody>
+											</table>
+										</div>
+										<div id="boxprodnota">  
+											  <form id="frmnotaxml" action="lancamentos-exec.php">
+												<input type="hidden" name="act" value="updatenotas"/>
+												<input type="hidden" name="numeronota" id="numeronota" value=""/>
+												<input type="hidden" name="filenames[]" id="filenames" value=""/>
+											   <div id="dadosprodnota" class="hide">
+
+													                        	
+													<br/>
+													<br/>
+												 <p class="stdformbutton">
+													<button class="btn btn-large btn-block btn-primary">GRAVAR DADOS</button>
+													<!--<button type="reset" class="btn">Voltar</button>-->
+												 </p>
+											   </div>
+
+										     </form>			
+									   </div>
+										
+									
+									</div>
+
+								</section>
+								<!-- Step 2 -->
+								<h6>Apuração</h6>
+								<section>
+									
+								    <div class="container panel panel-default">								    
+
+										<div class="row">
+											<div class="col-lg-3 col-md-4 offset-md-1">
+												<button type="button" class="btn btn-block btn-info send_apura"><i class="fa fa-send"></i> ENVIAR APURAÇÃO</button>
+											</div>
+											<div class="col-lg-4 col-md-4">
+												<button type="button" class="btn btn-block btn-success print_apura"><i class="fa fa-print"></i> IMPRIMIR APURAÇÃO</button>
+											</div>
+											<div class="col-lg-3 col-md-4 offset-md-1">
+												<button type="button" class="btn btn-block btn-warning apura_layout" data-container="body" data-trigger="manual" title="Novidade" data-toggle="popover" data-placement="top" data-content="Clique no botão e veja o novo layout da apuração do agregar !" data-id="1">VER LAYOUT NOVO</button>
+											</div>
+										</div>
+										<div id="content" class="panel-body"></div>
+
+								    </div>	
+
+
+								</section>
+								<!-- Step 3 -->
+								<h6>Geração</h6>
+								<section>
+
+									<div class="codigoprotocolo" style="text-align: center;">
+										
+
+									</div>	
+
+								</section>
+							</div>
+						</div>
+					</div>
+				</div>
+		</div>
+		<div id="modalemail" class="modal fade" data-backdrop="false" role="dialog" aria-labelledby="myModalLabel"  style="display: none;">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title">Enviar Apuração</h4>
+						<button type="button" class="close btn-close" data-dismiss="modal" aria-hidden="true">×</button>                
+					</div>
+					<div class="modal-body">
+						
+						<form class="form-horizontal" id="form-envmail-pdf">
+							<input type="hidden" name="act" value="enviarpdfapuracao" />						
+				
+							<div class="input-prepend ">							  
+							  <span class="add-on" style="border: 0px;"><strong>Para:</strong></span>
+							  <input name="env-para" type="text" style="border: 0px;" placeholder="EX: fulano@fulano.com.br" class="col-10" id="env-para">
+							</div>
+							
+							<br/><br/><div style="border: 0px;border-top: 1px #000000 solid;border-bottom: 1px #000000 solid;"><div class="input-prepend ">					
+							  <input name="env-assunto" type="text" style="border: 0px;" class="col-12" placeholder="Assunto" id="env-assunto">
+							</div></div>
+							<div class="input-prepend ">								  
+							  <textarea name="obs" style="border: 0px;border-bottom: 1px #000000 solid;"" rows="4" class="col-12" placeholder="">Ola Sr(a). </textarea>
+							</div>
+							<div class="anexo">
+								<div class="icon">
+									<i class="fa fa-file-pdf-o fa-2x"></i>
+								</div>
+								<div class="anexo-nome">
+									Apuração Mensal AGREGAR Mês/Ano: 12/2021
+								</div>
+								<div class="anexo-view-head">
+									<div class="anexo-view">
+										<i class="fa fa-chevron-down fa-1x"></i>
+									</div>
+								</div>
+							</div>
+							<br/><button type="submit" class="btn btn-block btn-primary"><i class="fa fa-paper-plane fa-2x" aria-hidden="true"></i> Enviar</button>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Fechar</button>                
+					</div>
+				</div>
+			</div>
+		</div>

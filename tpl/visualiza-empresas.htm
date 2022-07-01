@@ -1,0 +1,711 @@
+<div class="row">    
+  <div class="col-md-12 m-2">
+    <h3>Alteração da empresa</h3>
+  </div>
+</div>
+<div class="row">    
+  <div class="col-md-3">
+    <div class="stickyside">
+        <div class="list-group" id="top-menu">
+            <a href="#1" class="list-group-item">
+              <i class="fa fa-envelope fa-1x m-1"></i>Dados empresa
+            </a>
+            <a href="#2" class="list-group-item">
+              <i class="fa fa-file-text-o fa-1x m-1"></i>Endereço
+            </a>  
+            <a href="#3" class="list-group-item">
+              <i class="fa fa-file-text-o fa-1x m-1"></i>Contato
+            </a>
+            <a href="#5" class="list-group-item">
+              <i class="fa fa-file-text-o fa-1x m-1"></i>Segurança
+            </a> 
+            <a href="#4" class="list-group-item">
+              <i class="fa fa-file-text-o fa-1x m-1"></i>Outros
+            </a>            
+        </div>
+    </div>
+</div>
+    
+    <div class="col-9">
+      <form method="post" action="empresa-exec.php" >
+        <input type="hidden" name="act" value="alteraruserempresa"/> 
+        
+        <div class="row" id="1">
+          <div class="col-12 m-t-0">
+              <h4 class="m-b-0">Dados empresa</h4>
+              <p class="text-muted m-t-0"></p>
+              <div class="card">
+                  <div class="card-block collapse show">              
+                    
+                    <div class="row">
+                      <div class="col-md-4">
+                        <label><strong>CNPJ:</strong></label>
+                         <div class="input-group"> 
+                         <span class="input-group-addon fa fa-asterisk"></span>
+                         <input name="cnpj2" type="text" class="form-control" id="cnpj2" disabled value="{cnpj}"/>                     
+                        </div>
+                      </div>
+    
+                      <div class="col-md-3">
+                        <label><strong>Ins. Estadual.:</strong></label>
+                          <div class="input-group"> 
+                          <span class="input-group-addon fa fa-asterisk"></span>
+                          <input name="ins2" type="text" class="form-control" id="ins2" disabled  value="{insc_estadual}"/>                      
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-4">
+                        <label><strong>Razão Social:</strong></label>
+                        <div class="input-group"> 
+                          <span class="input-group-addon fa fa-asterisk"></span>
+                          <input name="nome" type="text" class="form-control" id="nome"  value="{razao_social}"/>
+                        </div>
+                      </div>
+                    
+                      <div class="col-md-4">
+                        <label><strong>Nome Fantasia:</strong></label>
+                        <div class="input-group">
+                          <span class="input-group-addon icon-asterisk"></span>
+                          <input name="fantasia" type="text" class="form-control" id="fantasia"  value="{fantasia}"/>
+                        </div>
+                      </div>
+                    
+                    <div class="col-md-4">
+                        <label><strong>Marca:</strong></label>
+                        <div class="input-group">
+                          <span class="input-group-addon fa fa-asterisk"></span>
+                          <input name="marca" type="text" class="form-control" id="marca"  value="{marca}"/>
+                        </div>
+                    </div>
+                   </div>
+
+
+                  </div>
+              </div>
+          </div>
+        </div>
+
+        <div class="row" id="2">
+          <div class="col-12 m-t-0">
+              <h4 class="m-b-0">Endereço</h4>
+              <p class="text-muted m-t-0"></p>
+              <div class="card">
+                  <div class="card-block collapse show">              
+                      
+                    <div class="row">
+                      <div class="col-md-4">
+                          <label><strong>Cep:</strong></label>
+                        <div class="input-group">  
+                          <span class="input-group-addon fa fa-asterisk"></span>
+                          <input name="cep" type="text" class="form-control" id="cep"  value="{cep}"/>
+                        </div>  
+                      </div>
+                      
+                       <div class="col-md-4">
+                          <label><strong>Endereço:</strong></label>
+                           <div class="input-group">
+                            <span class="input-group-addon icon-asterisk"></span>
+                            <input name="ende" type="text" class="form-control" id="ende"  value="{endereco}"/>
+                          </div>
+                      </div>
+                       
+                      <div class="col-md-4">
+                        <label><strong>Numero:</strong></label>
+                        <div class="input-group">
+                          <span class="input-group-addon fa fa-asterisk"></span>
+                          <input name="nro" type="text" class="form-control" id="nro"  value="{numero}"/>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-4">
+                          <label><strong>Bairro:</strong></label>
+                          <div class="input-group">
+                            <span class="input-group-addon fa fa-asterisk"></span>
+                            <input name="bairro" type="text" class="form-control" id="bairro"  value="{bairro}"/>
+                          </div>
+                      </div>
+    
+                      <div class="col-md-4">
+                          <label><strong>Cidade:</strong></label>
+                          <div class="input-group">
+                            <span class="input-group-addon fa fa-asterisk"></span>
+                            <input name="cidade" type="text" class="form-control" id="cidade"  value="{cidade}"/>
+                          </div>
+                      </div>
+                      <div class="col-md-2">
+                          <label><strong>Estado:</strong></label>
+                          <div class="input-group">
+                            <span class="input-group-addon fa fa-asterisk"></span>
+                            <input name="uf" type="text" class="form-control" id="uf"  value="{Estado}"/>
+                          </div>
+                      </div>
+                      
+                      <div class="col-md-4">
+                          <label><strong>Complemento:</strong></label>
+                          <div class="input-group">
+                            <span class="input-group-addon fa fa-asterisk"></span>
+                            <input name="cpl" type="text" class="form-control" id="cpl"  value="{complemento}"/>
+                          </div>
+                      </div>           
+                    </div> 
+
+                  </div>
+              </div>
+          </div>
+        </div>
+        
+        <div class="row" id="3">
+          <div class="col-12 m-t-0">
+              <h4 class="m-b-0">Contato</h4>
+              <p class="text-muted m-t-0"></p>
+              <div class="card">
+                  <div class="card-block collapse show">              
+                    <div class="row">
+                      <div class="col-md-4">
+                         <label><strong>Email:</strong></label>
+                        <div class="input-group"> 
+                         <span class="input-group-addon fa fa-asterisk"></span>
+                         <input name="email" type="email" class="form-control" id="email"  value="{email}"/>
+                        </div> 
+                     </div>
+                  
+                      <div class="col-md-4">
+                         <label><strong>Fone Principal:</strong></label>
+                         <div class="input-group">
+                           <span class="input-group-addon fa fa-asterisk"></span>
+                           <input name="fone" type="text" class="form-control" id="fone"  value="{fone1}"/>
+                         </div>
+                     </div>
+                     
+                      <div class="col-md-4">
+                         <label><strong>Fone Secundário:</strong></label>
+                         <div class="input-group">
+                           <span class="input-group-addon fa fa-asterisk"></span>
+                           <input name="fone2" type="text" class="form-control" id="fone2"  value="{fone2}"/>
+                         </div>
+                     </div>
+                   </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+        <div class="row" id="5">
+          <div class="col-12 m-t-0">
+              <h4 class="m-b-0">Segurança</h4>
+              <p class="text-muted m-t-0"></p>
+              <div class="card">
+                  <div class="card-block collapse show">              
+                      
+                      <div class="form_calback"></div>
+                      <div class="row">
+                      <div class="col-4">    
+                        <h4>Alterar sua senha</h4>                   
+                        <div class="col-md-12">   
+                          <div class="form-group">
+                              <label for="exampleInputpwd2">Senha atual:</label>
+                              <div class="input-group">
+                                  <div class="input-group-addon"><i class="ti-lock"></i></div>
+                                  <input type="password" class="form-control" name="atusenha" id="atusenha" placeholder="Digite a senha atual">					
+                              </div>
+                          </div>
+                        </div>
+
+                        <div class="col-md-12">   
+                          <div class="form-group">
+                              <label for="exampleInputpwd2">Nova senha:</label>
+                              <div class="input-group">
+                                  <div class="input-group-addon"><i class="ti-lock"></i></div>
+                                  <input type="password" class="form-control" name="nsenha" id="nsenha" placeholder="Digite a nova senha" />					
+                              </div>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="col-8">
+                      <h4>Regras de validação de senha:</h4>
+                      <blockquote>
+                      <ul class="list-icons">
+                        <li><a href="javascript:void(0)"><strong>Regra 1 –</strong> A senha deve ter no mínimo 8 e no máximo 36 caracteres.</a></li> 
+                        <li><a href="javascript:void(0)"><strong>Regra 2 –</strong> A senha deve ser composta de ao menos 1 número, ao menos uma letra maiúscula, e ao menos uma letra minúscula.</a></li>
+                        <li><a href="javascript:void(0)"><strong>Regra 3 –</strong> A senha deve ser composta de apenas letras e números. </a></li> 
+                        <li><a href="javascript:void(0)"><strong>Regra 4 -</strong> Possua pelo menos 1 caractere especial;</a></li>
+                      </ul>
+                    </blockquote>
+                     
+                    </div>
+                  </div>
+
+                    <div class="col-md-4">  
+                      <button type="button" id="btnalterapass" class="btn btn-primary">Salvar as alterações de senha</button>
+                    </div>
+
+                  </div>
+              </div>
+          </div>
+        </div>
+        <div class="row" id="4">
+          <div class="col-12 m-t-0">
+              <h4 class="m-b-0">Outros</h4>
+              <p class="text-muted m-t-0"></p>
+              <div class="card">
+                  <div class="card-block collapse show">              
+                    <div class="row">
+                      <div class="col-md-4">
+                          <label><strong>Inspeção:</strong></label>
+                          <div class="input-group">
+                          <span class="input-group-addon fa fa-list"></span>
+                           <select name="inspecao" class="form-control" id="inspecao">
+                              <option value="">Selecione</option>
+                              <option value="SIF" {sel1}>SIF</option>
+                              <option value="CISPOA" {sel2}>CISPOA</option>
+                              <option value="SIM" {sel3}>SIM</option>
+                              <option value="SISB" {sel4}>SISB</option>
+                           </select>               
+                          </div>
+                      </div>
+      
+                      <div class="col-md-4">
+                          <label><strong>Modalidade:</strong></label>
+                          <div class="input-group">
+                            <span class="input-group-addon fa fa-asterisk"></span>
+                            <select name="modalidade2" class="form-control" disabled id="modalidade2">
+                                <option value="">Selecione</option>	
+                                <!-- START BLOCK : listmod --> 
+                                  <option value="{cod_mod}" {sel_mod}>{nome_mod}</option>	
+                                <!-- END BLOCK : listmod -->
+                            </select>               
+                          </div>
+                      </div>
+                        <input type="hidden" name="modalidade" id="modalidade" value="{idmodalidade}"/>             
+                      
+                      <div class="col-md-4">
+                          <label><strong>Responsavel:</strong></label>
+                          <div class="input-group">
+                           <span class="input-group-addon fa fa-asterisk"></span>
+                           <input name="responsavel" type="text" class="form-control" id="responsavel"  value="{responsavel}"/>
+                          </div>
+                      </div>
+                                      
+                      </div>
+                      <div class="row">
+                        <div class="col-md-4">
+                            <label><strong>Capacidade de abate mensal Bovinos:</strong></label>
+                            <div class="input-group">
+                              <span class="input-group-addon fa fa-asterisk"></span>
+                              <input name="bovinos" type="text" class="form-control" id="bovinos"  value="{capacidade_bov}"/>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <label><strong>Capacidade de abate mensal Ovinos:</strong></label>
+                            <div class="input-group">
+                              <span class="input-group-addon fa fa-asterisk"></span>
+                              <input name="ovinos" type="text" class="form-control" id="ovinos"  value="{capacidade_ovi}"/>
+                            </div>
+                        </div>
+                        
+                         <div class="col-md-4">
+                            <label><strong>Capacidade de abate mensal Bubalinos:</strong></label>
+                            <div class="input-group">
+                              <span class="input-group-addon fa fa-asterisk"></span>
+                              <input name="bubalinos" type="text" class="form-control" id="bubalinos"  value="{capacidade_buba}"/>
+                            </div>
+                        </div>
+                        
+                        </div>
+                          <input id="ativo" name="ativo" type="hidden"  value="{xativo}">
+                  </div>
+              </div>
+          </div>
+        </div>
+
+        <div class="row {selecionadoabt}" id="5">
+          <div class="col-12 m-t-0">
+              <h4 class="m-b-0 text-center">PROGRAMA AGREGAR-RS CARNES<br/>CADASTRO FRIGORÍFICO</h4>
+              <p class="text-muted m-t-0"></p>
+              <div class="card">
+                  <div class="card-block collapse show">              
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="card">
+                          <div class="card-block">
+                            <section class="tpmodalidade">
+                              <input type="hidden" name="{abilita}" id="selagregar" value="selecionado"/>		                               
+                              <div class="offset1">
+                                    
+                                    <p><strong>1. Indentidicação da Empresa:</strong></p>
+                                    <p>Nome/Razão Social: <span class="ide_razao"><strong class="pontilhado">{razao_social}</strong></span></p>
+                                    <p>Nome Fantasia: <span class="ide_fantasia"><strong class="pontilhado">{fantasia}</strong></span></p>       
+                                    <p>Marca Própria: <span class="ide_marcapropria"><strong class="pontilhado">{marca}</strong></span></p>
+                                    <div class="row">
+                                      <div class="col-md-8">
+                                         <label>Forma de Constituição jurídica: </label>            
+                                         <input name="form_const_juridica" type="text" class="form-control" id="form_const_juridica" value="{form_const_juri}"/>
+                                      </div>
+                                    </div>
+                    
+                                    <div class="row">
+                                      <div class="col-md-8">
+                                         <label>Data/número arquivamento do último ato constitutivo na junta Comercial: </label>            
+                                        <input name="dt_num_arq_ult_ato_junt_comerc" type="text" class="form-control" id="dt_num_arq_ult_ato_junt_comerc" value="{dt_ult_junt_com}"/>
+                                       </div>
+                                    </div>
+                    
+                                    <div class="row">
+                                      <div class="col-md-8">
+                                       <label>Capital Social registrado: </label>            
+                                       <input name="cap_social_reg" type="text" class="form-control" id="cap_social_reg" value="{capsocialreg}"/>
+                                      </div>
+                                    </div>
+                    
+                                    <p>CNPJ: <span class="ide_cnpj"></span> CGC/TE: <span class="ide_cgc"><strong class="pontilhado">{cnpj}</strong></span></p>	
+                                    <p>Modalidade: <span class="ide_modalidade"><strong class="pontilhado">{nome_mods}</strong></span></p>   
+                                    <p>Endereço do Abatedouro/Frigorífico: <span class="ide_endereco"><strong class="pontilhado">{endereco}</strong></span> N&deg;: <span class="ide_numero"><strong class="pontilhado">{numero}</strong></span></p> 
+                                    <p>Complemento: <span class="ide_complemento"><strong class="pontilhado">{complemento}</strong></span> Bairro/Distrito: <span class="ide_bairro"><strong class="pontilhado">{bairro}</strong></span></p>  
+                                    
+                                    
+                                    <div class="row">
+                                      <div class="col-md-8">
+                                       <label>Endereço do Escritório para correspondência: </label>            
+                                       <input name="escritorio_endereco" type="text" class="form-control" id="escritorio_endereco" value="{endereco_esc}"/>
+                                      </div>
+                                    </div>
+                    
+                                    <div class="row">
+                                      <div class="col-md-4">
+                                         <label>Município: </label>            
+                                         <input name="escritorio_municipio" type="text" class="form-control" id="escritorio_municipio" value="{municipio_esc}"/>                                     
+                                      </div>
+                                      <div class="col-md-4">              
+                                         <label>CEP: </label>            
+                                         <input name="escritorio_cep" type="text" class="form-control" id="escritorio_cep" value="{cep_esc}"/>
+                                      </div>
+                                    </div>
+                                     <div class="row">
+                                      <div class="col-md-4">
+                                         <label>Fone/Faz: </label>            
+                                         <input name="escritorio_fone" type="text" class="form-control" id="escritorio_fone" value="{fone_esc}"/>                                     
+                                      </div>
+                                      <div class="col-md-4">                
+                                         <label>E-mail: </label>            
+                                         <input name="escritorio_email" type="text" class="form-control" id="escritorio_email" value="{email_esc}"/>
+                                      </div>
+                                    </div>
+                    
+                                    <p>Presta serviços a terceiros: 
+                                      <label class="checkbox inline">
+                                          <input type="radio" name="terceiro_s_n" id="terceiro_s_n" value="1" {ck}> Sim
+                                        </label>
+                                        <label class="checkbox inline">
+                                          <input type="radio" name="terceiro_s_n" id="terceiro_s_n2" value="2" {ck2}> Não
+                                        </label>
+                                     </p>
+                                      
+                                     <div class="{cla}"> 
+                                     <div class="row">  
+                                         <div class="col-md-3">
+                                           <label>Razão Social: </label>            
+                                           <input name="serv_razao" type="text" class="form-control" id="serv_razao" value="" {dis}/>                                     
+                                        </div>
+                                        <div class="col-md-3">                
+                                           <label>CGC/TE: </label>            
+                                           <input name="serv_cgc" type="text" class="form-control" id="serv_cgc" value="" {dis}/>
+                                        </div>
+                                        <div class="col-md-2"> 
+                                            <label>AÇÃO:</label>
+                                            <div class="input-group">
+                                            <div class="btn-group">
+                                              <a href="#" id="add_serv" class="btn btn-primary"><i class="fa fa-plus"></i></a>
+                                              <a href="#" id="remove_serv" class="btn btn-danger"><i class="fa fa-remove"></i></a>
+                                            </div> 
+                                          </div>
+                                        </div>
+                                        </div>
+                                        <table id="tb_serv_terceiros" class="table table-striped">
+                                          <thead>
+                                            <tr>
+                                              <th>#</th>
+                                              <th>Razão Social</th>
+                                              <th>CGC/TE</th>                          
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                                <!-- START BLOCK : listserv --> 
+                                               <tr id="{id_serv}">
+                                                  <td><span class="center">
+                                                    <input type="checkbox" name="id[]" class="cinputserv" value="{id_serv}" />
+                                                  </span></td>
+                                                  <td>{razao_serv}</td>
+                                                  <td>{cgc_serv}</td>
+                                                </tr>
+                                               <!-- END BLOCK : listserv --> 
+                                                                                         
+                                          </tbody>
+                                        </table>
+                                          
+                                    </div>
+                                     
+                                    <p><strong>2.Certidões e Licenciamento:</strong></p> 
+                                   <div class="row">  
+                                    <div class="col-md-8"> 
+                                       <label>Certidão de Situação Fiscal do Tesouro do Estado, emitida em:</label>            
+                                       <textarea name="certidao_licenciamento_anexo1" class="form-control" rows="8">{certfiscal_cert}</textarea>
+                                       <label>e Licença Ambiental da FEPAM tipo:</label>
+                                       <textarea name="certidao_licenciamento_anexo2" class="form-control" rows="8">{licenca_cert}</textarea>
+                                       <label>emitida em:</label>
+                                       <input name="certidao_licenciamento_emit" type="text" class="form-control" id="certidao_licenciamento_emit" value="{emitida_cert}" />
+                                       <label>N&deg; do Protocolo da FEPAM:</label>
+                                       <input name="certidao_licenciamento_nfepam" type="text" class="form-control" id="certidao_licenciamento_nfepam" value="{numprot_cert}" />
+                                       <label>datado de:<br/><strong>Ex:99/99/9999</strong></label>
+                                       <div class="row">
+                                       <div class="col-md-2">
+                                        <input name="certidao_licenciamento_dt1" type="text" class="form-control" id="certidao_licenciamento_dt1" value="{data_cert1}" />
+                                       </div>
+                                       <span class="help-inline" style="font-size: 29px;">/</span>
+                                        <div class="col-md-2">
+                                          <input name="certidao_licenciamento_dt2" type="text" class="form-control" id="certidao_licenciamento_dt2" value="{data_cert2}" />
+                                        </div> 
+                                        <span class="help-inline" style="font-size: 29px;">/</span>
+                                        <div class="col-md-2">
+                                          <input name="certidao_licenciamento_dt3" type="text" class="form-control" id="certidao_licenciamento_dt3" value="{data_cert3}" />
+                                        </div>
+                                      </div>
+                                    </div>
+                                     </div>
+                                     
+                                      <p><strong>3.Nome dos Principais sócios ou acionistas, (se Cooperativa, membros da Diretoria), com CPF, e sua participação no capital:</strong></p>
+                                         
+                                     <div class="socio_acionista">
+                                     <div class="row">   
+                                         <div class="col-md-3">
+                                           <label>Nome: </label>            
+                                           <input name="socio_acionista_nome" type="text" class="form-control" id="socio_acionista_nome" value="" />                                     
+                                        </div>
+                                         <div class="col-md-3">                 
+                                           <label>CPF: </label>            
+                                           <input name="socio_acionista_cpf" type="text" class="form-control" id="socio_acionista_cpf" value="" />
+                                        </div>
+                                         <div class="col-md-3">                
+                                           <label>% Partic. Cap. Social: </label>            
+                                           <input name="socio_acionista_partcapsocial" type="text" class="form-control" id="socio_acionista_partcapsocial" value="" />
+                                        </div>
+                                         <div class="col-md-3">
+                                            <label>AÇÃO:</label>
+                                            <div class="input-group">
+                                            <div class="btn-group">
+                                              <a href="#" id="add_socio_acionista" class="btn btn-primary"><i class="fa fa-plus"></i></a>
+                                              <a href="#" id="remove_socio_acionista" class="btn btn-danger"><i class="fa fa-remove"></i></a>
+                                            </div> 
+                                            </div>
+                                        </div>
+                                        </div>
+                                        <table id="tb_socio_acionista" class="table table-striped">
+                                          <thead>
+                                            <tr>
+                                              <th>#</th>
+                                              <th>Nome</th>
+                                              <th>CPF</th>
+                                              <th>% Partic. Cap. Social</th>                          
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                                <!-- START BLOCK : listsocia -->
+                                                <tr id="{cod_soc}">
+                                                  <td><span class="center">
+                                                    <input type="checkbox" name="ids[]" class="cinputsocio" value="{cod_soc}" />
+                                                  </span></td>
+                                                  <td>{nome_soc}</td>
+                                                  <td>{cpf_soc}</td>
+                                                 <td>{partic_cap_social_soc}</td>
+                                                </tr>
+                                                <!-- END BLOCK : listsocia --> 
+                                                                                         
+                                          </tbody>
+                                        </table>
+                                          
+                                    </div>
+                                     
+                                     <p><strong>4.Administração:</strong></p>
+                                     <div class="row">
+                                       <div class="col-md-3">
+                                         <label>Nome Gerente/Diretor: </label>            
+                                         <input name="nome_gerente_diretor" type="text" class="form-control" id="nome_gerente_diretor" value="{nome_gerente}"/>                                     
+                                       </div>
+                                       
+                                       <div class="col-md-4">
+                                         <label>Fone/e-mail: </label>  
+                                          <div class="input-group">
+                                         <input name="fone_gerente_diretor" type="text" class="form-control" id="fone_gerente_diretor" value="{fone_gerente}"/>                      
+                                         <input name="email_gerente_diretor" type="text" class="form-control" id="email_gerente_diretor" value="{email_generente}"/>                                     
+                                         </div>
+                                       </div>
+                                     </div>
+                                       <div class="row">
+                                      <div class="col-md-3">
+                                       <label>Nome do Contador-Escritório: </label>            
+                                       <input name="nome_contador" type="text" class="form-control" id="nome_contador" value="{nome_contador}"/>                                     
+                                     </div>
+                                     
+                                     <div class="col-md-4">
+                                       <label>Fone/e-mail: </label> 
+                                       <div class="input-group">           
+                                          <input name="fone_contador" type="text" class="form-control" id="fone_contador" value="{fone_contador}"/>
+                                          <input name="email_contador" type="text" class="form-control" id="email_contador" value="{email_contador}"/>                                     
+                                        </div>
+                                     </div>
+                                     </div>
+                                     <div class="row">
+                                       <div class="col-md-3">
+                                         <label>Responsável Técnico: </label>            
+                                         <input name="nome_tecnico" type="text" class="form-control" id="nome_tecnico" value="{nome_tecnico}"/>                                     
+                                       </div>
+                                       
+                                       <div class="col-md-4">
+                                         <label>Fone/e-mail: </label> 
+                                         <div class="input-group">            
+                                          <input name="fone_tecnico" type="text" class="form-control" id="fone_tecnico" value="{fone_tecnico}"/> 
+                                          <input name="email_tecnico" type="text" class="form-control" id="email_tecnico" value="{email_tecnico}"/>                                     
+                                        </div>
+                                       </div>
+                                     </div>
+                                     <div class="row"> 
+                                     <div class="col-md-4">
+                                       <label>N&deg; CRMV: </label>            
+                                       <input name="n_crmv_tecnico" type="text" class="form-control" id="n_crmv_tecnico" value="{crmv_tecnico}"/>                                     
+                                     </div>
+                                    </div> 
+                                     <p><strong>5.Relação dos bens imóveis:</strong></p>
+                                     
+                                      <div class="relacao_bens_imoveis"> 
+                                      <div class="row">  
+                                         <div class="col-md-2">
+                                           <label>Descrição: </label>            
+                                           <input name="desc_bensimoveis" type="text" class="form-control" id="desc_bensimoveis" value="" />                                     
+                                        </div>
+                                        <div class="col-md-2">                
+                                           <label>Endereço: </label>            
+                                           <input name="endereco_bensimoveis" type="text" class="form-control" id="endereco_bensimoveis" value="" />
+                                        </div>
+                                        <div class="col-md-2">                
+                                           <label>Matricula: </label>            
+                                           <input name="matricula_bensimoveis" type="text" class="form-control" id="matricula_bensimoveis" value="" />
+                                        </div>
+                                       <div class="col-md-2">
+                                            <label>AÇÃO:</label>
+                                            <div class="input-group"> 
+                                            <div class="btn-group">
+                                              <a href="#" id="add_bensimoveis" class="btn btn-primary"><i class="fa fa-plus"></i></a>
+                                              <a href="#" id="remove_bensimoveis" class="btn btn-danger"><i class="fa fa-remove"></i></a>
+                                            </div> 
+                                          </div>
+                                        </div>
+                                        </div>
+                                        <table id="tb_bensimoveis" class="table table-striped">
+                                          <thead>
+                                            <tr>
+                                              <th>#</th>
+                                              <th>Descrição</th>
+                                              <th>Endereço</th>
+                                              <th>Matricula</th>                          
+                                            </tr>
+                                          </thead>
+                                          <tbody>
+                                                <!-- START BLOCK : listbens -->
+                                               <tr id="{cod_bens}">
+                                                  <td><span class="center">
+                                                    <input type="checkbox" name="ids[]" class="cinputbens" value="{cod_bens}" />
+                                                  </span></td>
+                                                  <td>{desc_bens}</td>
+                                                  <td>{endereco_bens}</td>
+                                                  <td>{matricula_bens}</td>
+                                                </tr> 
+                                               <!-- END BLOCK : listbens -->                                          
+                                          </tbody>
+                                        </table>
+                                          
+                                    </div>
+                                     
+                                     <p><strong>6.Quanto a inpseção estabelecimento:</strong></p>  
+                                     <label class="checkbox inline">
+                                      <input type="radio" name="inspecao_estabeleciomento"  value="1" {tipo_insp1}> SIM (municipal)
+                                    </label>
+                                    <label class="checkbox inline">
+                                      <input type="radio" name="inspecao_estabeleciomento" value="2" {tipo_insp2}> CISPOA (estadual)
+                                    </label>
+                                     <label class="checkbox inline">
+                                      <input type="radio" name="inspecao_estabeleciomento" value="3" {tipo_insp3}> SIF (federal)
+                                    </label>
+                                    <div class="row">
+                                        <div class="col-md-4">                  
+                                           <label>N&deg; do registro: </label>            
+                                           <input name="nregistro_inspecao_estabeleciomento" type="text" class="form-control" id="nregistro_inspecao_estabeleciomento" value="{nreg_insp}" />
+                                        </div>
+                                       </div>
+                                      <p><strong>7.Veterinário oficial designado para inspecionar os abates do estabelecimento:</strong></p>  
+                                       <div class="row">
+                                        <div class="col-md-3">
+                                         <label>Nome: </label>            
+                                           <input name="nome_veterinario_estabelecimento" type="text" class="form-control" id="nome_veterinario_estabelecimento" value="{nome_est}" />                                     
+                                        </div>
+                                        
+                                        <div class="col-md-3">
+                                         <label>N&deg; do CRMV: </label>            
+                                           <input name="crmv_veterinario_estabelecimento" type="text" class="form-control" id="crmv_veterinario_estabelecimento" value="{crmv_est}" />                                     
+                                        </div>
+                                         
+                                        <div class="col-md-3">
+                                         <label>Endereço: </label>            
+                                           <input name="endereco_veterinario_estabelecimento" type="text" class="form-control" id="endereco_veterinario_estabelecimento" value="{endr_est}" />                                     
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                    <div class="col-md-4">
+                                     <label>E-mail: </label>            
+                                       <input name="email_veterinario_estabelecimento" type="text" class="form-control" id="email_veterinario_estabelecimento" value="{email_est}" />                          
+                                    </div> 
+                                    </div> 
+                                     <p>Convênio c/município 
+                                       <label class="checkbox inline">
+                                          <input type="radio" name="veterinario_estabelecimento_s_n"  value="2" {convmuni_est2}> Não
+                                        </label>
+                                        <label class="checkbox inline">
+                                          <input type="radio" name="veterinario_estabelecimento_s_n"  value="1" {convmuni_est1}> Sim,
+                                        </label>                   
+                                     </p> 
+                                     <div class="row">
+                                       <div class="col-md-4">
+                                        <label>Qual Entidade/Órgão e Município: </label>            
+                                        <input name="org_municipio_veterinario_estabelecimento" type="text" class="form-control" id="org_municipio_veterinario_estabelecimento" value="{org_muni_est}"  {disa}/>
+                                        </div>
+                                    </div>
+                               </div>
+                                
+                            </section>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+
+
+        <div class="row" id="1">
+          <div class="col-12 m-t-0">                            
+              <div class="card">
+                  <div class="card-block collapse show">              
+                    <button class="btn btn-primary">Alterar</button>
+                    <a href="../php/admin.php.php" class="btn btn-default">Voltar</a>
+                  </div>
+              </div>
+          </div>
+        </div>
+
+     </form>
+    </div>
+
+</div>

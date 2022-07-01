@@ -1,0 +1,143 @@
+<div class="row">    
+  <div class="col-md-12 m-2">
+    <h3>Configurações</h3>
+  </div>
+</div>
+<div class="row">    
+  <div class="col-md-3">
+    <div class="stickyside">
+        <div class="list-group" id="top-menu">
+            <a href="#1" class="list-group-item">
+              <i class="fa fa-envelope fa-1x m-1"></i>Preenchimento e-mail
+            </a>
+            <a href="#2" class="list-group-item">
+              <i class="fa fa-file-text-o fa-1x m-1"></i>Mensagem tela login
+            </a>            
+        </div>
+    </div>
+</div>
+    
+    <div class="col-9">
+      <form action="config-exec.php" method="POST">   
+        <input type="hidden" name="act" value="saveg">
+        <div class="row" id="1">
+          <div class="col-12 m-t-0">
+              <h4 class="m-b-0">Preenchimento e-mail</h4>
+              <p class="text-muted m-t-0"></p>
+              <div class="card">
+                  <div class="card-block collapse show">
+
+                    <div class="row">
+
+                        <div class="col-md-4">
+                         <div class="form-group"> 
+                           <label>Nome:</label>
+                           <div class="input-group">
+                             <span class="input-group-addon fa fa-terminal"></span>
+                             <input class="form-control" id="nomemail" name="nomemail" value="{nomemail}" type="text">
+                           </div>
+                         </div> 
+                        </div>
+ 
+                       <div class="col-md-2">                          
+                           <div class="form-group">
+                             <label>Smtp Segure</label>
+                             <div class="input-group">
+                               <span class="input-group-addon fa fa-terminal"></span>
+                               <input class="form-control" id="smtpsegure" name="smtpsegure" value="{smtpsegure}" type="text">
+                              </div>
+                           </div>
+                       </div>
+ 
+                       <div class="col-md-2">
+                         <div class="form-group">
+                           <label>Host</label>
+                           <div class="input-group">
+                             <span class="input-group-addon fa fa-terminal"></span>
+                             <input class="form-control" id="host" name="host" value="{host}" type="text">
+                           </div>
+                         </div>
+                        </div>                      
+                     </div>
+                     <div class="row">
+                         
+                        <div class="col-md-2"> 
+                          <div class="form-group">
+                            <label>Porta</label>
+                            <div class="input-group">
+                               <span class="input-group-addon fa fa-terminal"></span>
+                               <input class="form-control" id="port" name="port" value="{port}" type="text">
+                             </div>
+                          </div>  
+                         </div>    
+
+                         <div class="col-md-4">
+                           <div class="form-group">
+                            <label>E-Mail</label>
+                            <div class="input-group">
+                              <span class="input-group-addon fa fa-terminal"></span>
+                              <input class="form-control" id="username" name="username" value="{username}" type="text">
+                            </div>
+                           </div> 
+                         </div>
+
+                         <div class="col-md-3">
+                          <div class="form-group">
+                            <label>Senha:</label>
+                            <div class="input-group">
+                              <span class="input-group-addon fa fa-terminal"></span>
+                              <input class="form-control" id="senhaem" name="senhaem" value="{senhaem}" type="password">
+                             </div>
+                           </div> 
+                         </div>
+
+                  </div>    
+
+                  </div>
+              </div>
+          </div>
+        </div>
+
+        <div class="row" id="2">
+          <div class="col-12 m-t-30">
+              <h4 class="m-b-0">Mensagem tela login</h4>
+              <p class="text-muted m-t-0"></p>
+              <div class="card">
+                  <div class="card-block collapse show">
+                    
+                    <div class="col-md-6">
+                      <div class="form-group"> 
+                        <label>Tilulo:</label>
+                        <div class="input-group">
+                          <span class="input-group-addon fa fa-terminal"></span>
+                          <input class="form-control" id="titulo" name="titulo" value="{titulo}" type="text">
+                        </div>
+                      </div> 
+                     </div>
+
+                     <div class="col-md-7">  
+                      <label>Mensagem:</label>      
+                     <textarea type="text/plain" id="myEditor" name="mensagem" style="width:800px;height:240px;">
+                         {corpo}
+                     </textarea>
+                     </div>
+
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 m-t-30">            
+            <div class="card">
+                <div class="card-block collapse show">
+                  <input type="submit" name="save" class="btn btn-success" value="SALVAR">
+                </div>
+            </div>
+        </div>
+     </div>
+
+    </form>
+    </div>
+
+</div>

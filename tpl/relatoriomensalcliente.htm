@@ -1,0 +1,41 @@
+﻿
+<div align="center"><h3>{empresa}</h3></div>
+<br/>
+<h2>Associado: <strong>{nome}</strong></h2>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>PAGAMENTO</th>
+      <th>VENCIMENTO</th>
+      <th>NUMERO</th>
+      <th style="text-align:right;">VALOR</th>
+    </tr>
+  </thead>
+  <tbody>
+ 
+  <!-- START BLOCK : listar -->       
+    <tr>
+      <td>{datapag}</td>
+      <td>{vencimento}</td> 
+      <td>{numero}</td>
+      <td style="text-align:right;">R$ {valordoc}</td>
+    </tr>
+    
+  <!-- END BLOCK : listar -->  
+ 	
+     <!-- START BLOCK : total -->     
+    <tr>
+      <td><strong>TOTAL</strong></td>
+      <td></td>
+      <td></td>
+      <td style="text-align:right;"><strong>R$ {vl_total}</strong></td>
+    </tr>    
+    <!-- END BLOCK : total --> 
+            
+  </tbody>
+</table>
+	
+<br/>
+   
+<h4>{msgmensalidade}</h4>    

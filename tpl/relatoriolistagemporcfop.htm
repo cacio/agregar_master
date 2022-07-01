@@ -1,0 +1,238 @@
+<div id="content">
+	<legend>Notas de Entrada</legend>
+    <hr>
+    <table class="table table-striped">
+        
+      <thead> 	
+        <tr>
+          <th>&ensp;</th>
+          <th>&ensp;</th>
+          <th>&ensp;</th>
+          <th>&ensp;</th>
+          <th>&ensp;</th>      	  
+          <th>&ensp;</th>          
+        </tr>
+      </thead>
+      
+      <tbody>	  
+        <!-- START BLOCK : listarcfop -->
+        <tr style="background: #eed898;">		
+            <td class="text-dt-border"><strong>CFOP:</strong>{cfop}</td>
+            <td class="text-dt-border"></td>
+            <td class="text-dt-border"></td>
+            <td class="text-dt-border"></td>
+            <td class="text-dt-border"></td>
+            <td class="text-dt-border">
+                 <!-- START BLOCK : totalcfop -->
+                 <strong>VL:</strong>{vtotalprod2}
+                 <!-- END BLOCK : totalcfop -->
+            </td> 	
+       </tr>
+        <!-- START BLOCK : listar -->
+        <tr>		
+             <td class="text-dt-border"><strong>NOTA:</strong>{numero_nota}</td>
+             <td class="text-dt-border"></td>
+             <td class="text-dt-border"></td>
+             <td class="text-dt-border"></td>
+             <td class="text-dt-border"></td>
+             <td class="text-dt-border">
+                <!-- START BLOCK : lista -->
+                  <strong>VL.NF:</strong>{totalprod}
+                <!-- END BLOCK : lista -->
+            </td> 	
+        </tr>
+        <tr>
+            <td class="text-dt">COD/SECRETAR.</td>
+            <td class="text-dt">DESCRIÇÃO</td>
+            <td class="text-dt">CAB.</td>
+            <td class="text-dt">PESO VIVO</td>
+            <td class="text-dt">PESO CARC.</td>      	  
+            <td class="text-dt">PR.UNIT</td>          
+        </tr>  
+     <!-- START BLOCK : detalhe -->
+        <tr style="background: #e0dacf;">
+            <td>{cod_secretaria}</td>
+            <td><a href="javascript:void(0);" class="editprod" data-type="select2" data-url="relaciona-exec.php?act=updateadm" data-pk="{pkrel}|{codigo_produto}" data-title="Enter">{descricao}</a></td>
+            <td><a href="javascript:void(0);" class="edit" data-type="text" data-url="lancamentos-exec.php?act=updatecabecasadm" data-pk="{codigo_produto}|{numnota}|{id}" data-title="Enter">{qtd_cabeca}</a></td>
+            <td><a href="javascript:void(0);" class="edit2" data-type="text" data-url="lancamentos-exec.php?act=updatevivorendadm" data-pk="{codigo_produto}|{numnota}|V|{peso_vivo_cabeca}|{peso_carcasa}" data-title="Enter">{peso_vivo_cabeca}</a></td>
+            <td><a href="javascript:void(0);" class="edit2" data-type="text" data-url="lancamentos-exec.php?act=updatevivorendadm" data-pk="{codigo_produto}|{numnota}|R|{peso_vivo_cabeca}|{peso_carcasa}" data-title="Enter">{peso_carcasa}</a></td>
+            <td>{preco_quilo}</td>			
+        </tr>
+      <!-- END BLOCK : detalhe --> 
+         <!-- START BLOCK : total -->	
+         <tr style="display: none;">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>TOTAL DOS PRODUTOS: {vtotalprod}</td>
+            <td>DIFERENÇA: {dif}</td>
+            <td></td>			
+        </tr>
+         <!-- END BLOCK : total -->
+        <!-- END BLOCK : listar --> 
+        <!-- END BLOCK : listarcfop --> 
+
+    <!-- START BLOCK : totalgeral -->
+        <tr>
+            <td>Total Nota:</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>{tot_nota}</td>			
+        </tr>
+        <tr>
+            <td>Total Produto:</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>{tot_prod}</td>			
+        </tr>
+        <!-- END BLOCK : totalgeral -->
+      </tbody>
+    
+        
+    </table>
+    <legend>Resumo por cfop entrada</legend>
+    <hr/>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>CFOP</th>
+                <th class="text-right">TOTAL</th>
+            </tr>
+        </thead>
+        <tbody>
+             <!-- START BLOCK : listaresumo -->
+            <tr>
+                <td>{cfop}</td>
+                <td class="text-right">{valor_total_nota}</td>
+            </tr>
+            <!-- END BLOCK : listaresumo -->
+        </tbody>
+    </tbody>
+    <tfoot>
+         <!-- START BLOCK : listaresumototal2 -->
+         <tr>
+          <td>Total:</td>
+          <td class="text-right">{tot_valor2}</td>
+      </tr>
+      <!-- END BLOCK : listaresumototal2 -->
+    </tfoot>
+    </table>
+
+    <legend>Notas de Saida</legend>
+    <hr>
+
+    <table class="table table-hover">
+	
+        <thead>
+                 
+          <tr>
+            <th>&ensp;</th>
+            <th>&ensp;</th>
+            <th>&ensp;</th>
+            <th>&ensp;</th>
+            <th>&ensp;</th>      	       
+          </tr>
+        </thead>
+        <tbody>
+      <!-- START BLOCK : listarcfop2 -->
+      <tr style="background: #eed898;">		
+        <td class="text-dt-border"><strong>CFOP:</strong>{cfop2}</td>
+        <td class="text-dt-border"></td>
+        <td class="text-dt-border"></td>
+        <td class="text-dt-border"></td>       
+        <td class="text-dt-border">
+             <!-- START BLOCK : totalcfop2 -->
+             <strong>VL:</strong>{vtotalprod22}
+             <!-- END BLOCK : totalcfop2 -->
+        </td> 	
+   </tr>
+
+      <!-- START BLOCK : listar2 -->
+          <tr>        
+              <td class="text-dt-border"><strong>NOTA:</strong>{numero_nota}</td>
+              <td class="text-dt-border"></td>
+              <td class="text-dt-border"></td>
+              <td class="text-dt-border"></td>
+              <td class="text-dt-border">                  
+                    <!-- START BLOCK : lista2 -->
+                    <strong>VL.NF:</strong>{totalprod}
+                    <!-- END BLOCK : lista2 -->                 
+              </td>
+                      
+          </tr> 
+      
+          <tr>
+              <td class="text-dt">COD/SECRETAR.</td>
+              <td class="text-dt">DESCRIÇÃO</td>
+              <td class="text-dt">PECAS</td>
+              <td class="text-dt">PESO</td>
+              <td class="text-dt">UNITÁRIO</td>      	       
+          </tr>
+      
+       <!-- START BLOCK : detalhe2 -->
+          <tr style="background: #e0dacf;">
+              <td>{cod_secretaria}</td>
+              <td><a href="javascript:void(0);" class="editprod" data-type="select2" data-url="relaciona-exec.php?act=updateadm" data-pk="{pkrel}|{codigo_produto}" data-title="Enter">{descricao}</a></td>
+              <td>{qtd_pecas}</td>
+              <td>{peso}</td>
+              <td>{preco_unitario}</td>		
+          </tr>
+        <!-- END BLOCK : detalhe2 --> 
+         
+        <!-- END BLOCK : listar2 -->
+        <!-- END BLOCK : listarcfop2 --> 
+
+        <!-- START BLOCK : totalgeral2 -->	
+      
+          <tr>
+              <td>Total Geral Nota</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="text-right">{tot_nota}</td>      	       
+          </tr>
+          <tr>
+              <td>Total Geral Produto</td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td class="text-right">{tot_prod}</td>      	       
+          </tr>
+          
+          <!-- END BLOCK : totalgeral2 -->
+        </tbody>
+          
+      </table>
+
+      <legend>Resumo por cfop saidas</legend>
+      <hr/>
+      <table class="table table-striped">
+          <thead>
+              <tr>
+                  <th>CFOP</th>
+                  <th class="text-right">TOTAL</th>
+              </tr>
+          </thead>
+          <tbody>
+               <!-- START BLOCK : listaresumo2 -->
+              <tr>
+                  <td>{cfop2}</td>
+                  <td class="text-right">{valor}</td>
+              </tr>
+              <!-- END BLOCK : listaresumo2 -->
+          </tbody>
+          <tfoot>
+               <!-- START BLOCK : listaresumototal -->
+               <tr>
+                <td>Total:</td>
+                <td class="text-right">{tot_valor}</td>
+            </tr>
+            <!-- END BLOCK : listaresumototal -->
+          </tfoot>
+      </table>
+
+    </div>

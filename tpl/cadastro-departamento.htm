@@ -1,0 +1,36 @@
+﻿<div class="container">
+   <div class="row">
+		<form action="../php/departamento-exec.php" method="post">
+        <section>
+        	
+            <input type="hidden" name="act" value="inserir"/>
+            <fieldset>
+                <legend>Cadastro de departamento</legend>
+                    <div class="input-prepend">
+                        <label>Nome:</label>
+                        <span class="add-on icon-terminal"></span>
+                        <input class="span3" id="nome" name="nome" type="text">
+                    </div>         
+                    <div class="input-prepend">
+						<label>Tipo Departamento:</label>
+                        <span class="add-on icon-list"></span>
+						<select name="tprdep" required>
+							<option value="">Seleciona</option>
+							<!-- START BLOCK : listatdp -->
+							<option value="{codigo}">{nome}</option>
+							<!-- END BLOCK : listatdp -->
+						</select>					                                            
+					</div>	 
+            </fieldset>                           
+        
+        </section>
+        <section>
+            <fieldset>
+                <input type="submit" class="btn btn-primary" value="Salvar"/>
+                <a href="../php/lista-departamento.php" class="btn btn-info">Voltar</a>
+            </fieldset>
+        </section>
+        
+         </form>
+  </div>
+</div>

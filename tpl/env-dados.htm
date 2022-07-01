@@ -1,0 +1,63 @@
+﻿<div class="row">
+  <div class="col-12">
+    <form  method="post" action="../php/documentosdigitalizado-exec.php" id="formdigitalizacao" enctype="multipart/form-data">
+    
+    <input type="hidden" name="act" value="inserir"/>
+    <input type="hidden" name="cnpj" value="{cnpj}"/>
+    <input type="hidden" name="idemp" value="{idemp}"/>
+    <section>
+      <fieldset>
+        <legend class="col-md-12"><span class="icon-file-text icon-2x"></span>Digitalizar Documentos</legend>
+       
+        <div class="col-md-4">
+            <label><strong>Motivo do envio:</strong></label>
+            <div class="input-group">
+              <span class="input-group-addon fa fa-list"></span>
+              <select name="tpdoc" class="form-control" id="tpdoc" required>
+                  <option value="">Selecione</option>
+                 <!-- START BLOCK : listamodalidadeenvio -->
+                  <option value="{id}">{nome}</option>
+  			    <!-- END BLOCK : listamodalidadeenvio -->	
+              </select>               
+            </div>
+        </div>
+         <br/>
+        <div class="docenv input-prepend span8">
+        </div>	
+        <br/>
+        <div class="col-md-5">
+          <label><strong>Título:</strong></label>
+          <div class="input-group">
+            <span class="input-group-addon fa fa-pencil"></span>
+            <input type="text" name="xtitulo" id="xtitulo" required class="form-control span8"  />
+          </div>  
+        </div>        
+         <br/>
+        <div class="col-md-5">  
+         <label><strong>Motivo:</strong></label>      
+        <textarea type="text/plain" id="myEditor" name="xdocumento" style="width:800px;height:240px;">
+            <p>Digite algo</p>
+        </textarea>
+        </div>
+        <br/>
+        
+        
+         <!--<<ul class="view_doc">
+        		
+              <h3>Nem um arquivo selecionado</h3>  
+           li><img src="../images/ext/Excel_15.png"/><a href="#">teste1</a></li>    
+        	<li><img src="../images/docsdig.png"/><a href="#">teste1</a></li>
+            
+        </ul>-->
+        
+      </fieldset>
+      <hr/>
+    </section>
+    <section>
+      <div class="col-md-12">  
+        <button class="btn btn-primary">Cadastrar</button>
+        <a href="../php/lista-documentosdigitalizadosemp.php" class="btn btn-secondary">Voltar</a> </div>
+    </section>
+    </form>
+  </div>
+</div>

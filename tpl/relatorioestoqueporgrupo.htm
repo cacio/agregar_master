@@ -1,0 +1,50 @@
+﻿
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>GRUPO</th>
+      <th>PRODUTO</th>
+      <th>ENTRADA</th>
+      <th>SAIDA</th>
+      <th>QUANTIDADE</th>
+      <th>TOTAL</th>            
+    </tr>
+  </thead>
+  <tbody>
+ 
+  <!-- START BLOCK : lista --> 
+    
+     <tr>
+      	<td colspan="6" style="background: #ffffd6;">{idgrupo} - {grupo}</td>
+	 </tr>
+    
+		<!-- START BLOCK : listaest -->
+		 <tr>
+		  <td></td>
+		  <td>{descricao}</td>
+		  <td>{entrada}</td>
+		  <td>{saida}</td>
+		  <td>{quantidade}</td>
+		  <td>{total}</td>     
+		</tr>
+	   <!-- END BLOCK : listaest --> 
+   <!-- END BLOCK : lista --> 
+    
+  
+  </tbody>
+  
+<tfoot>
+<!-- START BLOCK : total --> 	
+  	<tr>
+	  <td>Total</td>
+	  <td></td>
+	  <td>{tot_entrada}</td>
+	  <td>{tot_saida}</td>
+	  <td>{tot_quant}</td>
+	  <td>{tot_total}</td>     
+	</tr>
+<!-- END BLOCK : total --> 
+</tfoot>
+  
+</table>
+ 

@@ -1,0 +1,99 @@
+<div id="content">
+	
+<table class="table table-striped tbntnotaent">
+	
+  <thead> 	
+    <tr>
+      <th>&ensp;</th>
+      <th>&ensp;</th>
+      <th>&ensp;</th>
+      <th>&ensp;</th>
+      <th>&ensp;</th>      	  
+      <th>&ensp;</th>          
+    </tr>
+  </thead>
+  
+  <tbody>	  
+	<!-- START BLOCK : listar -->
+	<tr>		
+		 <td class="text-dt-border"><strong>CNPJ/CPF :</strong> {cnpj_cpf}</td>
+		 <td class="text-dt-border"><strong>NOME :</strong> {razao}</td>
+		 <td class="text-dt-border"><strong>INSCRIÇÃO:</strong> {insc_estadual}</td>
+		 <td class="text-dt-border"><strong>DATA:</strong>{data_emissao}</td>
+		 <td class="text-dt-border"><strong>NOTA:</strong>{numero_nota}</td>
+		 <td class="text-dt-border">
+			<!-- START BLOCK : lista -->
+		  	<strong>VL.NF:</strong>{totalprod}
+		    <!-- END BLOCK : lista -->
+		</td> 	
+	</tr>
+	<tr>
+		<td class="text-dt">COD/SECRETAR.</td>
+		<td class="text-dt">DESCRIÇÃO</td>
+		<td class="text-dt">CAB.</td>
+		<td class="text-dt">PESO VIVO</td>
+		<td class="text-dt">PESO CARC.</td>      	  
+		<td class="text-dt">PR.UNIT</td>          
+	</tr>  
+ <!-- START BLOCK : detalhe -->
+    <tr style="background: #e0dacf;">
+		<td>{cod_secretaria}</td>
+		<td><a href="javascript:void(0);" class="editprod" data-type="select2" data-url="relaciona-exec.php?act=updateadm" data-pk="{pkrel}|{codigo_produto}" data-title="Enter">{descricao}</a></td>
+		<td><a href="javascript:void(0);" class="edit" data-type="text" data-url="lancamentos-exec.php?act=updatecabecasadm" data-pk="{codigo_produto}|{numnota}|{id}" data-title="Enter">{qtd_cabeca}</a></td>
+		<td><a href="javascript:void(0);" class="edit2" data-type="text" data-url="lancamentos-exec.php?act=updatevivorendadm" data-pk="{codigo_produto}|{numnota}|V|{peso_vivo_cabeca}|{peso_carcasa}" data-title="Enter">{peso_vivo_cabeca}</a></td>
+		<td><a href="javascript:void(0);" class="edit2" data-type="text" data-url="lancamentos-exec.php?act=updatevivorendadm" data-pk="{codigo_produto}|{numnota}|R|{peso_vivo_cabeca}|{peso_carcasa}" data-title="Enter">{peso_carcasa}</a></td>
+		<td>{preco_quilo}</td>			
+    </tr>
+  <!-- END BLOCK : detalhe --> 
+	 <!-- START BLOCK : total -->	
+	 <tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td>TOTAL DOS PRODUTOS: {vtotalprod}</td>
+		<td>DIFERENÇA: {dif}</td>
+		<td></td>			
+	</tr>
+	 <!-- END BLOCK : total -->
+	<!-- END BLOCK : listar --> 
+<!-- START BLOCK : totalgeral -->
+<tr style="border-bottom: 2px solid; border-top: 2px solid;">
+	<td class="font-weight-bold">TOTAL GERAL:</td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>      	       
+</tr>
+<tr style="border-top: 2px solid;">
+	<td class="font-weight-bold">Nota:</td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td class="font-weight-bold text-right">R$ {tot_nota}</td>			
+</tr>
+<tr>
+	<td class="font-weight-bold">Produto:</td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td class="font-weight-bold text-right" style="width: 15%;">R$ {tot_prod}</td>			
+</tr>
+<tr>
+	<td class="font-weight-bold">Exportação:</td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td class="font-weight-bold text-right" style="width: 15%;">R$ {valor_glos}</td>			
+</tr>
+
+	<!-- END BLOCK : totalgeral -->
+  </tbody>
+
+	
+</table>
+
+</div>

@@ -1,0 +1,60 @@
+﻿<div class="container">
+   <div class="row">
+		<form action="" method="post" id="relatoriocontasreceberporrecebimento">
+        <section>
+        	
+            <input type="hidden" name="act" value="inserir"/>
+            <input type="hidden" name="empresa" id="empresa" value="{empresa}"/>
+            <fieldset>
+                <legend>Relatório :: Contas a receber por recebimento ::</legend>
+                 
+                    <div class="input-prepend">
+                        <label>Data  Incial:</label>
+                        <span class="add-on icon-calendar"></span>
+                        <input class="span2" id="dtadmissaoini" name="dtadmissaoini" type="text">
+                    </div>         
+            		<div class="input-prepend">
+                        <label>Data Final:</label>
+                        <span class="add-on icon-calendar"></span>
+                        <input class="span2" id="dtadmissaofin" name="dtadmissaofin" type="text">
+                    </div>
+                    
+              	     <div class="input-prepend">
+                      <label>Cliente:<i class="mp"></i></label>
+                      <span class="add-on icon-search"></span>
+                      <input class="span2" id="cliente" name="cliente" type="text">        
+                    </div> 
+                    	
+                    <div class="input-prepend"> 
+	                    <label>Analitico/Sintetico:</label>   
+                    	<select name="analisint">
+                        	<option value="">Selecione</option>
+                            <option value="A">Analitico</option>
+                            <option value="S">Sintetico</option>	
+                        </select>
+                    </div>
+                        
+            </fieldset>                           
+        
+        </section>
+        <section>
+            <fieldset>
+                <input type="submit" style="width:150px;" class="btn btn-primary btn-rounded" value="Gerar"/>
+                <a href="../php/admin.php" class="btn btn-info">Voltar</a>
+                <a href="#" class="btn btn-info icon-print" onClick="printDiv('relatorio','contasreceberporrecebimento.php');">&nbsp;Imprimir</a>
+            </fieldset>
+        </section>
+        
+         </form>
+         
+         
+         <section>        	
+            <div id="relatorio">
+            
+            
+            
+            
+            </div>            
+        </section>		 
+  </div>
+</div>

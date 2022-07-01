@@ -1,0 +1,51 @@
+﻿<div class="container">
+            <div class="row">
+<h2>Lista Atividades</h2>
+
+<br/>
+
+<a href="../php/cadastro-atividades.php" class="btn btn-primary btn-rounded">Cadastrar Atividades</a>
+
+<br/>
+
+<br/>
+
+
+
+<table id="dyntable" class="table table-bordered">
+
+       <thead>
+
+        <tr>
+            <th>Codigo</th>
+            <th >Nome</th>
+            <th>Action</th>
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+     <!-- START BLOCK : atividade --> 
+
+        <tr id="{codigo}" class="gradeA">
+            <td>{codigo}</td>
+            <td>{nome}</td>
+            <td  class="centeralign">
+			<!-- START BLOCK : per -->
+            <a href="#" id="deleteatv" class="deleteatv"><span class="icon-remove"></span></a>
+
+            <a href="../php/atualizar-atividade.php?id={codigo}"><span class="icon-pencil"></span></a></td>
+			<!-- END BLOCK : per -->
+            
+
+        </tr>
+
+      <!-- END BLOCK : atividade -->
+
+    </tbody>
+
+</table>
+
+</div>
+</div>

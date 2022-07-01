@@ -1,0 +1,195 @@
+﻿
+<div class="row page-titles">
+    <div class="col-md-4 col-8 align-self-center">                        
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="admin.php">Início</a></li>
+            <li class="breadcrumb-item">Gerenciais</li>
+            <li class="breadcrumb-item active">Lista Documentos Enviados</li>
+        </ol>
+    </div>
+    <div class="col-md-8 col-8 align-self-center text-center">
+      
+            <div class="btn-group btn-group-lg " role="group" aria-label="Basic example">                
+                <a href="#" class="btn btn-secondary bclicfilter"><i class="fa fa-filter "></i>&nbsp;Filtrar</a>
+                <a href="#" class="btn btn-secondary popmail"><span class="fa fa-envelope "></span>&nbsp;MENSAGEM</a>
+            </div>
+       
+    </div>                 
+</div>
+
+<div class="row">
+  <div class="col-12">
+    
+
+        <div class="card">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="p-20">
+                        <h2 class="font-medium text-inverse">Listagem de Arquivos Enviados</h2>
+                        <h6 class="card-subtitle">Quantidade de arquivos {num}</h6>
+                        <div class="message-box m-t-30">
+                            <table id="demo-foo-row-toggler" class="table toggle-circle table-hover">
+                            <thead>
+                                <tr>
+                                    <th data-toggle="true"> Empresa </th>       
+                                    <th data-hide="all"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- START BLOCK : listaempresanome --> 
+                                <tr>
+                                    <td>{razao_so}</td>       
+                                    <td>
+                                       <div class="message-widget active">
+                               
+                                            <!-- START BLOCK : listaempresadocumentos -->
+                                            <a href="#" id="{cod}" data-caminho="{xcaminho}" data-content="{document}" class="linkarchive">
+                                                <div class="user-img"><span class="round"><i class="fa fa-file-text-o"></i></span></div>
+                                                <div class="mail-contnet">
+                                                    <h5>{nome} <span class="badge badge-default">{status}</span></h5> <span class="mail-desc">{xmotivo}</span> <span class="time">{dt_emiss}</span></div>
+                                            </a>
+                                            
+                                           <!-- END BLOCK : listaempresadocumentos -->                                            
+
+                                        </div> 
+
+                                    </td>
+                                </tr>                                      
+                                <!-- END BLOCK : listaempresanome -->
+                            </tbody>
+                            </table>
+                                
+                              <!-- START BLOCK : nonedados -->
+                                <div class="alert alert-info">                                    
+                                <h3 class="text-info"><i class="fa fa-exclamation-circle"></i> Informação</h3> {info}
+                            </div>
+                            <!-- END BLOCK : nonedados -->    
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8 b-l">
+                    <div class="card-block">
+                        <h4 class="font-medium text-inverse">
+                            Arquivos
+                            <div class="listbtnarch hide" style="text-align: right;">
+                                <button type="button" class="btn btn-warning btn-circle btninfoarchev" data-placement="top" data-toggle="popover" data-trigger="hover"  data-original-title='Motivo' data-html='true'><i class="fa fa-info"></i> </button>
+                                <a class="btn btn-info btn-circle btninfoedit"><i class="fa fa-pencil"></i> </a>                                
+                            </div>
+                        </h4>
+                        <hr/>
+                        
+                        <div class="load"></div>
+                        <div class="row conteudo_archive"> 
+                          <div class="nonearchive"></div>
+                        
+
+
+                         </div>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+
+<div class="hide filter-content">
+        
+        <div class="f-titulo"></div>
+        <div class="f-content">
+            <form id="frmfiltrar" action="" method="post">
+                <input type="hidden" name="filtro" value="1">
+                 <div class="col-md-12">
+                    <label><strong>Empresa:</strong></label>
+                    <div class="input-group">
+                        <span class="input-group-addon fa fa-list"></span>
+                        <select name="empresa" class="form-control" id="empresa">
+                            <option value="">Selecione</option>
+                            <!-- START BLOCK : listaempresa -->
+                            <option value="{cod}">{razao_social}</option>
+                            <!-- END BLOCK : listaempresa -->
+                        </select>
+                    </div>
+                </div>
+                <br/>
+                <div class="col-md-12">
+                    <label>Data Inicial:</label>
+                    <div class="input-group">
+                        <span class="input-group-addon fa fa-calendar"></span>
+                        <input class="form-control dtini"   name="dataini" type="text">
+                    </div>
+                </div>
+                <br/>
+                <div class="col-md-12">
+                    <label>Data Final:</label>
+                    <div class="input-group">
+                        <span class="input-group-addon fa fa-calendar"></span>
+                        <input class="form-control dtfin" name="datafin" type="text">
+                    </div>
+               </div>
+               <br/>
+               <div class="col-md-12">
+                <button class="btn  btn-block btn-primary" type="submit">FILTRAR</button>
+               </div>
+           </form>
+        </div>
+</div>
+
+<div class="hide post-mail">    
+    <div class="cv-title">
+        <i class="icon-envelope icon-2x"></i>&nbsp;<strong>ENVIAR MENSAGEM</strong>
+    </div>
+    <div class="cv-content">
+        <div class="row">
+            <div class="col-12">
+                <form id="formmensagem" action="../php/mensagem-exec.php">
+                    <input id="act" name="act" type="hidden" value="enviar">
+                    <input id="tipo" name="tipo" type="hidden" value="{idsys}">
+                    <div class="col-md-12">
+                        <label><strong>Modalidade:</strong></label>
+                        <div class="input-group">
+                            <span class="input-group-addon fa fa-list"></span>
+                            <select name="cmodalid" class="form-control" id="cmodalid" required>
+                                <option value="">Selecione</option>
+                                <!-- START BLOCK : listamod -->
+                                <option value="{cod_mod}">{nome_mod}</option>
+                                <!-- END BLOCK : listamod -->
+                            </select>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="col-md-12">
+                        <label><strong>Empresas:</strong></label>
+                         <div class="input-group">
+                            <span class="input-group-addon fa fa-list"></span>
+                            <select name="cvempresa" class="form-control" id="cvempresa">
+                                <option value="">Selecione uma modalidade</option>
+                                
+                                
+                            </select>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="col-md-12">
+                      <label><strong>Titulo:</strong></label>
+                      <div class="input-group">
+                        <span class="input-group-addon fa fa-terminal"></span>
+                        <input class="form-control" id="cvtitulo" name="cvtitulo" type="text">
+                      </div>
+                    </div>
+                     <br/> 
+                     <div class="col-md-12">
+                        <label><strong>Mensagem:</strong></label> <br/>     
+                        <textarea type="text/plain"  name="cvmensagem" style="width:400px;height:240px;"></textarea>
+                    </div>
+                    <br/>
+                    <button class="btn  btn-block btn-primary" type="submit"><i class="icon-paper-plane"></i> ENVIAR</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

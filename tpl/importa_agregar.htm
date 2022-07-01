@@ -1,0 +1,255 @@
+
+		<div class="row page-titles">
+			<div class="col-md-6 col-8 align-self-center">
+				<!--<h3 class="text-themecolor m-b-0 m-t-0">Bem Vindo {log}, ao Sistema Agregar</h3>-->
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item"><a href="javascript:void(0)">INICIO</a></li>
+					<li class="breadcrumb-item active">Agregar</li>
+				</ol>
+			</div>                    
+		</div>
+
+		 <div class="row">
+				<div class="col-12">
+					<div class="card">
+						<div class="card-block wizard-content">
+							<h4 class="card-title">AGREGAR &rsaquo; Importação via Arquivo XML</h4>
+							<h6 class="card-subtitle">Selecione os arquivos XML ou  ZIP, com os arquivos para importação, e siga as etapas para apuração</h6>
+							<div class="tab-wizard wizard-circle">
+								<!-- Step 1 -->
+								<h6>Arquivos</h6>
+								<section>
+																	
+									<form method="post" action="#" id="upload">
+
+										<div class="row">
+
+											<div class="col-md-2">
+												<label>Competência:</label>
+												<div class="input-group">
+	                                                <span class="input-group-addon"><i class="icon-calender"></i></span>
+	                                                <input type="text" class="form-control date-picker" id="datepicker-autoclose" name="mesanocomp" placeholder="MM/AAAA">
+	                                                 
+	                                            </div>
+                                        	</div>
+											<div class="col-md-6">
+												<label>Selecione um ou mais arquivo(s) XML:</label>
+												<i class="help-block"><small>Obs: .XML ou .ZIP</small></i>
+												<label class="custom-file d-block">
+
+													<input type="file" id="file_upload" name="file_upload" class="custom-file-input" aria-describedby="fileHelp" accept=".xml,.zip,.rar" multiple>
+													<span class="custom-file-control"></span>
+
+												</label>
+											</div>
+
+											<!--<div class="col-md-6">
+												<label>AÇÃO</label>	
+												<div class="row">
+													<div class="col-md-offset-3 col-md-9">													
+														<button class="btn btn-success" type="submit">IMPORTAR</button>
+													</div>
+												</div>
+											</div>-->
+										</div>
+										<hr>																								
+									</form>
+										
+									<div class="col-lg-12 b-l dtcomp">
+                                    <div class="card-block">
+                                        <h4 class="font-medium text-inverse">Detalhe da Competencia </h4>
+                                        <div><hr></div>
+                                       <div class="row">	
+											<div class="col-md-6 col-lg-3 col-xlg-3">
+												<div class="card card-inverse card-info">
+													<div class="box bg-info text-center">
+														<h1 class="font-light text-white num_entradas">00</h1>
+														<h6 class="text-white">NOTAS DE ENTRADA</h6>
+													</div>
+												</div>
+											</div>
+
+											<div class="col-md-6 col-lg-3 col-xlg-3">
+												<div class="card card-inverse card-warning">
+													<div class="box text-center">
+														<h1 class="font-light text-white num_saida">00</h1>
+														<h6 class="text-white">NOTAS DE SAIDA</h6>
+													</div>
+												</div>
+											</div>
+                                       	</div>
+                                      	<div><hr></div>
+										
+											
+										<div class="row">
+                                            <div class="col-md-3 col-xs-6 b-r"> 
+                                               <strong>VALOR ENTRADA</strong>
+                                               <button type="button" class="btn btn-info btn-circle filtro_entsai" data-id="1" data-toggle="tooltip" data-placement="top" title="" data-original-title="Listar todas as notas de saida"><i class="fa fa-list"></i></button>
+                                                <br>
+                                                <p class="text-dark val_entrada">0,00</p>
+                                                
+                                            </div>
+                                            <div class="col-md-3 col-xs-6 b-r">
+                                                <strong>VALOR SAIDA</strong>
+                                                <button type="button" class="btn btn-warning btn-circle filtro_entsai" data-id="2" data-toggle="tooltip" data-placement="top" title="" data-original-title="Listar todas as notas de Entradas"><i class="fa fa-list"></i> </button>
+                                                <br>
+                                                <p class="text-dark val_saida">0,00</p>                                                
+                                            </div>
+                                            
+                                            <div class="col-md-3 col-xs-6 b-r">
+                                           		<button type="button" class="btn btn-primary btn-circle btn-lg filtro_entsai" data-id="3" data-toggle="tooltip" data-placement="top" title="" data-original-title="Listar todas as notas de saida e entrada"><i class="fa fa-list"></i> </button>     
+                                            </div>
+                                            
+                                           
+                                        </div>																					                                      	                                      	
+                                        <!--<div class="total-revenue4" style="height: 350px;"></div>-->                                        
+                                    </div>
+                                    
+                                    <div class="row" id="dadosnotas">
+                               			
+										<table id="dyntable_notas" class="table table-bordered">
+										  <thead>
+											<tr>
+											  <th style="text-align:center;">NOTA</th>
+											  <th style="text-align:center;">DATA</th>
+											  <th style="text-align:center;">CHAVE DE ACESSO</th>
+											  <th style="text-align:center;">ENTRADA/SAIDA</th>
+											  <th style="text-align:center;">CLIENTE/FORNECEDOR</th>
+											  <th style="text-align:center;">VALOR</th>
+											  <th style="text-align:center;">AÇÃO</th>
+											</tr>
+										  </thead>
+										  <tbody>
+
+
+
+										  </tbody>
+										</table>        
+                              		          
+                               		          
+									</div>
+                               
+                               
+                                </div>
+											
+									
+								</section>
+								<!-- Step 2 -->
+								<h6>Validação</h6>
+								<section>
+										
+									<div class="col-lg-12 b-l validacaoarquivos">	
+										
+										<div class="card-block">
+											<h4 class="font-medium text-inverse">Validação dos arquivos <button type="button" class="btn btn-info btn-circle btn-lg revalidarprocesso"><i class="fa fa-refresh"></i> </button> <button type="button" class="btn btn-warning btn-circle btn-lg printer_erros_infos"><i class="fa fa-print"></i> </button></h4>
+											<div><hr></div>
+										   <div class="row">	
+												<div class="col-md-6 col-lg-3 col-xlg-3">
+													<div class="card card-inverse card-danger">
+														<div class="box bg-danger text-center">
+															<button type="button" class="btn btn-danger btn-circle list_erros"><i class="fa fa-list"></i> </button>
+															<h1 class="font-light text-white num_erros">00</h1>
+															<h6 class="text-white">NUMERO DE ERROS</h6>
+														</div>
+													</div>
+												</div>
+												
+												<div class="col-md-6 col-lg-3 col-xlg-3">
+												<div class="card card-inverse card-warning">
+													<div class="box text-center">
+														<button type="button" class="btn btn-warning btn-circle list_infos"><i class="fa fa-list"></i> </button>
+														<h1 class="font-light text-white num_info">00</h1>
+														<h6 class="text-white">NUMERO DE ALERTAS</h6>
+													</div>
+												</div>
+											</div>
+												
+											</div>
+
+											<div class="printer_content">
+												<div class="titulovalidacao text-center hide">
+														<div style="text-align:right; margin-right: 50px;">{dthj}</div>
+														<div style="font-size: 18px; font-weight: bold;border: 1px #000000 solid;">VALIDAÇÕES AGREGAR</div>
+												</div>
+												<hr>
+												<div class="valid_erros" style="border-left: 5px solid #009efb;"></div>
+												<div class="valid_infos" style="border-left: 5px solid #009efb;"></div>
+											</div>
+
+											<div><hr></div>
+
+											<!--<div class="total-revenue4" style="height: 350px;"></div>-->                                        
+										</div>
+										
+										<a href="#" class="btn btn-primary func">Ocultar</a> 
+										<div class="box">
+											<table id="dyntable_notas_valid" class="table table-bordered">
+											  <thead>
+												<tr>
+												  <th style="text-align:center;">NOTA</th>
+												  <th style="text-align:center;">DATA</th>
+												  <th style="text-align:center;">CHAVE DE ACESSO</th>
+												  <th style="text-align:center;">ENTRADA/SAIDA</th>
+												  <th style="text-align:center;">CLIENTE/FORNECEDOR</th>
+												  <th style="text-align:center;">VALOR</th>
+												  <th style="text-align:center;">AÇÃO</th>
+												</tr>
+											  </thead>
+											  <tbody>
+
+
+
+											  </tbody>
+											</table>
+										</div>
+										<div id="boxprodnota">  
+											  <form id="frmnotaxml" action="lancamentos-exec.php">
+												<input type="hidden" name="act" value="updatenotas"/>
+												<input type="hidden" name="numeronota" id="numeronota" value=""/>
+												<input type="hidden" name="filenames[]" id="filenames" value=""/>
+											   <div id="dadosprodnota" class="hide">
+
+													                        	
+													<br/>
+													<br/>
+												 <p class="stdformbutton">
+													<button class="btn btn-large btn-block btn-primary">GRAVAR DADOS</button>
+													<!--<button type="reset" class="btn">Voltar</button>-->
+												 </p>
+											   </div>
+
+										     </form>			
+									   </div>
+										
+									
+									</div>
+
+								</section>
+								<!-- Step 3 -->
+								<h6>Apuração</h6>
+								<section>
+									
+								    <div class="container panel panel-default">
+								    	<div class="col-lg-3 col-md-4" style="text-align: center; margin-left: 37%;"><button type="button" class="btn btn-block btn-success print_apura"><i class="fa fa-print"></i> IMPRIMIR APURAÇÃO</button></div>
+								        <div id="content" class="panel-body"></div>
+								    </div>	
+
+
+								</section>
+								<!-- Step 4 -->
+								<h6>Geração</h6>
+								<section>
+
+									<div class="codigoprotocolo" style="text-align: center;">
+										
+
+									</div>	
+
+								</section>
+							</div>
+						</div>
+					</div>
+				</div>
+		</div>
+                
+                
