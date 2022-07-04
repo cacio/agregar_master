@@ -32,8 +32,8 @@
 						'SMTPSecure'=>'ssl',
 						'Host'=>'smtp.gmail.com',
 						'Port'=>465,
-						'Username'=>'caciorenato@gmail.com',
-						'Password'=>'CacioWeb023,._@#$023',		
+						'Username'=>'',
+						'Password'=>'',		
 					);
 
 
