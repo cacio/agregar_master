@@ -1342,16 +1342,7 @@
 				$pathFile      = '../arquivos/'.$_SESSION['cnpj'].'/config.json';
 				$configJson    = file_get_contents($pathFile);
 				$installConfig = json_decode($configJson);
-				
-				/*$db = new MysqliDb(Array (
-					'host' => '162.214.92.178',
-					'username' => 'agregarc_agregar', 
-					'password' => 'Pr0d@5Iq',
-					'db'=> 'agregarc_agregar',
-					'port' => 3306,
-					'prefix' => '',
-					'charset' => 'utf8'));*/
-
+			
 					$db = new MysqliDb(Array (
 						'host' => 'localhost',
 						'username' => 'root', 
